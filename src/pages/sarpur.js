@@ -1,7 +1,8 @@
 import React from "react"
+import View from "../pageComponents/Sarpur"
 
 const Sarpur = () => {
-  return <div>sarpur</div>
+  return <View></View>
 }
 
 export default Sarpur
