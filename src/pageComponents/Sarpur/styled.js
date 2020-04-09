@@ -30,10 +30,28 @@ export const YearBox = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   &&:hover {
-    background: ${redColor};
+    cursor: pointer;
+    .slykjan {
+      background: rgba(160, 69, 69, 0.6);
+    }
   }
+
   h1 {
     color: white;
     font-size: 2rem;
+    z-index: 4;
+  }
+  .slykjan {
+    pointer-events: none;
+    background: rgba(160, 69, 69, 0);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: background 0.2s;
+    @media (max-width: 900px) {
+      background: rgba(160, 69, 69, 0.6);
+    }
   }
 `

@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import Img from "gatsby-image"
 import { breakpoints } from "../../constants"
 
@@ -7,7 +7,11 @@ export const Container = styled.div`
   padding: 0;
   position: relative;
   overflow: hidden;
-  margin-bottom: -3.5rem;
+  ${props =>
+    props.frontpage &&
+    css`
+      margin-bottom: -3.5rem;
+    `}
   /** mobile */
   height: 60vh;
   @media only screen and (min-width: ${breakpoints.desktop}) {

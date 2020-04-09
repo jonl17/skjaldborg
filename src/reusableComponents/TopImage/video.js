@@ -4,10 +4,10 @@ import { useSelector } from "react-redux"
 import Logo from "../Logo"
 import CloudinaryVideo from "./cloudinaryVideo"
 
-export default ({ videoSource }) => {
+export default ({ videoSource, frontpage }) => {
   const platform = useSelector(state => state.reducer.platform)
   return (
-    <Container>
+    <Container frontpage={frontpage}>
       <CloudinaryVideo publicId={videoSource}></CloudinaryVideo>
       {platform === "mobile" ? (
         <LogoMobileWrap>
