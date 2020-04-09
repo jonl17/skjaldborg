@@ -11,6 +11,7 @@ import Footer from "../../layouts/Footer"
 
 const Sarpur = () => {
   const icelandic = useSelector(state => state.reducer.icelandic)
+
   return (
     <Container>
       <Header></Header>

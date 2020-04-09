@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { redColor } from "../../layouts/PageContainer/styled"
 
 export const Container = styled.div`
   .title-wrap {
@@ -10,7 +11,7 @@ export const Container = styled.div`
   }
 `
 
-const BoxSize = "250px"
+const BoxSize = "300px"
 export const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(${BoxSize}, 1fr));
@@ -19,8 +20,20 @@ export const Grid = styled.div`
   justify-content: space-evenly;
 `
 export const YearBox = styled.div`
-  background: lightgray;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  overflow: hidden;
+  background-image: url(${props => props.bgImg});
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  &&:hover {
+    background: ${redColor};
+  }
+  h1 {
+    color: white;
+    font-size: 2rem;
+  }
 `

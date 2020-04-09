@@ -1,31 +1,38 @@
-import React from "react"
-import { Grid, YearBox } from "./styled"
-const years = [
-  "2007",
-  "2008",
-  "2009",
-  "2010",
-  "2011",
-  "2012",
-  "2013",
-  "2014",
-  "2015",
-  "2016",
-  "2017",
-  "2018",
-  "2019",
-]
+import React, { useEffect, useState } from "react"
+import useGetFirebase from "../../hooks/useGetFirebase"
+import { collectionData } from "rxfire/firestore"
+
+// components
+import { Grid } from "./styled"
+import Year from "./year"
 
 const Years = () => {
-  return (
-    <Grid>
-      {years.map((item, index) => (
-        <YearBox key={index}>
-          <h1>{item}</h1>
-        </YearBox>
-      ))}
-    </Grid>
-  )
+  const {
+    isLoading,
+    db: { firestore },
+  } = useGetFirebase()
+  const [years, setYears] = useState([])
+
+  useEffect(() => {
+    if (!isLoading) {
+      collectionData(firestore.collection("sarpur"), "id").subscribe(items => {
+        setYears(items)
+      })
+    }
+  }, [isLoading, firestore])
+
+  if (!isLoading) {
+    return (
+      <Grid>
+        {years
+          .slice(0)
+          .reverse()
+          .map((year, index) => (
+            <Year key={index} year={year}></Year>
+          ))}
+      </Grid>
+    )
+  } else return null
 }
 
 export default Years
