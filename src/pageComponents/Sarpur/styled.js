@@ -20,6 +20,8 @@ export const Grid = styled.div`
   justify-content: space-evenly;
 `
 export const YearBox = styled.div`
+  height: 100%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,11 +31,10 @@ export const YearBox = styled.div`
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
+  transition: 0.1s;
   &&:hover {
     cursor: pointer;
-    .slykjan {
-      background: rgba(160, 69, 69, 0.6);
-    }
+    transform: scale(1.02);
   }
 
   h1 {
@@ -43,7 +44,7 @@ export const YearBox = styled.div`
   }
   .slykjan {
     pointer-events: none;
-    background: rgba(160, 69, 69, 0);
+    background: rgba(160, 69, 69, 0.5);
     height: 100%;
     width: 100%;
     position: absolute;
@@ -51,7 +52,7 @@ export const YearBox = styled.div`
     left: 0;
     transition: background 0.2s;
     @media (max-width: 900px) {
-      background: rgba(160, 69, 69, 0.6);
+      background: rgba(160, 69, 69, 0.5);
     }
   }
 `
