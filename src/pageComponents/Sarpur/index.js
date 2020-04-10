@@ -14,7 +14,6 @@ const Sarpur = () => {
 
   return (
     <Container>
-      <Header></Header>
       <TopImage publicId="images/sarpur"></TopImage>
       <div className="content-wrap">
         <div className="title-wrap">
@@ -24,7 +23,6 @@ const Sarpur = () => {
         </div>
         <Years></Years>
       </div>
-      <Footer></Footer>
     </Container>
   )
 }

@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { redColor } from "../../layouts/PageContainer/styled"
+import { Link } from "gatsby"
 
 export const Container = styled.div`
   .title-wrap {
@@ -19,7 +19,7 @@ export const Grid = styled.div`
   grid-gap: 25px;
   justify-content: space-evenly;
 `
-export const YearBox = styled.div`
+export const YearBox = styled(Link)`
   height: 100%;
   width: 100%;
   display: flex;
@@ -27,11 +27,12 @@ export const YearBox = styled.div`
   align-items: center;
   position: relative;
   overflow: hidden;
-  background-image: url(${props => props.bgImg});
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
   transition: 0.1s;
+  text-decoration: none;
+  color: inherit;
   &&:hover {
     cursor: pointer;
     transform: scale(1.02);

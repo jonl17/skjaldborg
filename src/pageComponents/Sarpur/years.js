@@ -15,9 +15,15 @@ const Years = () => {
 
   useEffect(() => {
     if (!isLoading) {
-      collectionData(firestore.collection("sarpur"), "id").subscribe(items => {
+      let subscription
+      subscription = collectionData(
+        firestore.collection("sarpur"),
+        "id"
+      ).subscribe(items => {
         setYears(items)
       })
+
+      return () => subscription.unsubscribe()
     }
   }, [isLoading, firestore])
 
