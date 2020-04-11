@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { ADD_ADRIR } from "../../../../../state/action"
-import { greenColor } from "../../../../../layouts/PageContainer/styled"
+import { greenColor } from "@constants"
 
 // components
 import { InputWrap, Button } from "./styled"

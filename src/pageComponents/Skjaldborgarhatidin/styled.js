@@ -1,6 +1,5 @@
 import styled from "styled-components"
-import { greenColor } from "../../layouts/PageContainer/styled"
-import { breakpoints } from "../../constants"
+import { greenColor, breakpoints } from "@constants"
 
 export const Container = styled.div``
 export const Wrap = styled.div`

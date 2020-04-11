@@ -1,9 +1,6 @@
 import styled from "styled-components"
 import Img from "gatsby-image"
-import {
-  greenTextColor,
-  redColor,
-} from "../../../../layouts/PageContainer/styled"
+import { greenTextColor, redColor } from "@constants"
 
 export const Box = styled.div`
   text-decoration: none;

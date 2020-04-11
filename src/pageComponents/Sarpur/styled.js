@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { Link } from "gatsby"
+import { redColor } from "@constants"
 
 export const Container = styled.div`
   .title-wrap {
@@ -7,7 +8,7 @@ export const Container = styled.div`
   }
   .content-wrap {
     box-sizing: border-box;
-    padding: 0 2rem 6rem 2rem;
+    padding: 6rem 2rem 6rem 2rem;
   }
 `
 

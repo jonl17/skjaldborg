@@ -122,29 +122,6 @@ module.exports = {
         },
       },
     },
-    // {
-    //   resolve: `gatsby-source-firestore`,
-    //   options: {
-    //     credential: require("./priv-key.json"),
-    //     types: [
-    //       {
-    //         type: "Movie",
-    //         collection: "movies",
-    //         map: doc => ({
-    //           title: doc.title,
-    //           accepted: doc.accepted,
-    //           description: doc.description,
-    //           director: doc.director,
-    //           imageLocation: doc.imageLocation,
-    //           duration: doc.duration,
-    //           applicantId: doc.applicantId,
-    //           applicantName: doc.applicantName,
-    //           createdAt: doc.createdAt,
-    //         }),
-    //       },
-    //     ],
-    //   },
-    // },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
@@ -178,6 +155,15 @@ module.exports = {
         anonymize: true,
         // Setting this parameter is also optional
         respectDNT: true,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-alias-imports`,
+      options: {
+        alias: {
+          "@constants": "src/constants",
+        },
+        extensions: ["js"],
       },
     },
   ],

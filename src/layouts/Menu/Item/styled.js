@@ -1,7 +1,6 @@
 import styled from "styled-components"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
-import { greenColor } from "../../PageContainer/styled"
-import { breakpoints } from "../../../constants"
+import { greenColor, breakpoints } from "@constants"
 
 export const Text = styled.h1`
   margin: 0;

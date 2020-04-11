@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { redColor } from "../../../layouts/PageContainer/styled"
+import { redColor } from "@constants"
 
 export const Box = styled.div`
   @import url("https://css.gg/check-o.css");

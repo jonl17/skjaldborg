@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { greenColor } from "../../PageContainer/styled"
+import { greenColor } from "@constants"
 import { Link } from "gatsby"
 
 export const Box = styled(Link)`

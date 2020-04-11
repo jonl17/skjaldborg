@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components"
+import { redColor } from "@constants"
 
 export const Container = styled.div`
   max-width: 9rem;
@@ -10,9 +11,9 @@ export const Container = styled.div`
     font-size: 1.6rem;
     color: white;
     ${props =>
-      props.color === "white" &&
+      props.color === "red" &&
       css`
-        color: white;
+        color: ${redColor};
       `}
   }
   p {
@@ -21,9 +22,9 @@ export const Container = styled.div`
     color: white;
     font-size: 0.9rem;
     ${props =>
-      props.color === "white" &&
+      props.color === "red" &&
       css`
-        color: white;
+        color: ${redColor};
       `}
   }
 `

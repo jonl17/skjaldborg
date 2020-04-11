@@ -1,6 +1,5 @@
 import styled, { css } from "styled-components"
-import { redColor } from "../../layouts/PageContainer/styled"
-import { breakpoints } from "../../constants"
+import { redColor, breakpoints } from "@constants"
 
 export default styled.h1`
   color: ${redColor};

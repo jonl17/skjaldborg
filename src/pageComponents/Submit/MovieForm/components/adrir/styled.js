@@ -1,6 +1,5 @@
 import styled from "styled-components"
-import { breakpoints } from "../../../../../constants"
-import { redColor } from "../../../../../layouts/PageContainer/styled"
+import { redColor, breakpoints } from "@constants"
 
 export const InputWrap = styled.div`
   display: flex;

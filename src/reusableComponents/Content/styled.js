@@ -1,6 +1,5 @@
 import styled from "styled-components"
-import { redColor } from "../../layouts/PageContainer/styled"
-import { breakpoints } from "../../constants"
+import { redColor, breakpoints } from "@constants"
 
 export const Container = styled.div`
   line-height: 138%;

@@ -17,3 +17,8 @@ export const Loader = styled.div`
   opacity: 1;
   transition: 1s;
 `
+export const PageWrap = styled.div`
+  background: white;
+  position: absolute;
+  width: 100%;
+`

@@ -1,7 +1,6 @@
 import styled from "styled-components"
-import { greenColor } from "../../../PageContainer/styled"
+import { greenColor, breakpoints } from "@constants"
 import { Link } from "gatsby"
-import { breakpoints } from "../../../../constants"
 
 export const Button = styled.div`
   text-decoration: none;

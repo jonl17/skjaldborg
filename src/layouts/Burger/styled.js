@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components"
-import { redColor } from "../PageContainer/styled"
+import { redColor } from "@constants"
 
 export const Container = styled.div`
   height: 30px;

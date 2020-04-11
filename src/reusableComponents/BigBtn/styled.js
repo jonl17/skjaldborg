@@ -1,7 +1,6 @@
 import styled, { css } from "styled-components"
 import { Link } from "gatsby"
-import { redColor, greenColor } from "../../layouts/PageContainer/styled"
-import { breakpoints } from "../../constants"
+import { redColor, greenColor, breakpoints } from "@constants"
 
 export const Text = styled.p`
   height: 3rem;

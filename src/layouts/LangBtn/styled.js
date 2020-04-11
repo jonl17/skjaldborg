@@ -1,6 +1,5 @@
 import styled, { css } from "styled-components"
-import { redColor } from "../PageContainer/styled"
-import { breakpoints } from "../../constants"
+import { redColor, breakpoints } from "@constants"
 
 export const Box = styled.div`
   position: absolute;

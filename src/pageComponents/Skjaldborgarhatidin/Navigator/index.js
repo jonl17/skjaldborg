@@ -1,8 +1,7 @@
 import React from "react"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import styled from "styled-components"
-import { redColor } from "../../../layouts/PageContainer/styled"
-import { breakpoints } from "../../../constants"
+import { redColor, breakpoints } from "@constants"
 import { useSelector } from "react-redux"
 
 const Anchor = styled(AniLink)`

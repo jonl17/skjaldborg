@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components"
 import { Link } from "gatsby"
 import ArrowSvg from "../../../../static/assets/svg/arrow.svg"
-import { greenTextColor, redColor } from "../../../layouts/PageContainer/styled"
+import { greenTextColor, redColor } from "@constants"
 
 export const Box = styled.div`
   text-align: center;

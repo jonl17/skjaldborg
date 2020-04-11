@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { greenColor } from "../../layouts/PageContainer/styled"
+import { greenColor } from "@constants"
 import Img from "gatsby-image"
 import { breakpoints } from "../../constants"
 

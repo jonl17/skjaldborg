@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components"
-import { greenColor } from "../PageContainer/styled"
+import { greenColor } from "@constants"
 
 const appear = keyframes`
   from {

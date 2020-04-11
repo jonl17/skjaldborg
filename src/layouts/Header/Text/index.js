@@ -1,9 +1,9 @@
 import React from "react"
 import { Container } from "./styled"
 
-const Text = ({ meta, about, footer }) => {
+const Text = ({ meta, about, footer, red }) => {
   return (
-    <Container color={footer ? "white" : "red"}>
+    <Container color={red ? "red" : "white"}>
       {about ? (
         <>
           <h1 className="titlar">{meta.title}</h1>

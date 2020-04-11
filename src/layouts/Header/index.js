@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { graphql, StaticQuery } from "gatsby"
 import { useSelector } from "react-redux"
 
@@ -12,13 +12,22 @@ const Header = ({
   },
 }) => {
   const platform = useSelector(state => state.reducer.platform)
+  const pathname = useSelector(state => state.reducer.pathname)
+  const [red, setRed] = useState(false)
+  useEffect(() => {
+    if (pathname.includes("/sarpur")) {
+      setRed(true)
+    } else {
+      setRed(false)
+    }
+  }, [pathname])
   return (
     <Wrap>
       <Container platform={platform}>
-        <Logo></Logo>
+        <Logo red={red}></Logo>
         {platform === "desktop" ? (
           <div id="box">
-            <Text meta={siteMetadata} info></Text>
+            <Text red={red} meta={siteMetadata} info></Text>
           </div>
         ) : null}
       </Container>

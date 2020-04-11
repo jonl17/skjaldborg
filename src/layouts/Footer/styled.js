@@ -1,6 +1,5 @@
 import styled from "styled-components"
-import { redColor } from "../PageContainer/styled"
-import { breakpoints } from "../../constants"
+import { redColor, breakpoints } from "@constants"
 
 export const Wrap = styled.div`
   background: ${redColor};

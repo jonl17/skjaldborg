@@ -1,7 +1,6 @@
 import styled from "styled-components"
-import { redColor } from "../../layouts/PageContainer/styled"
+import { redColor, breakpoints } from "@constants"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
-import { breakpoints } from "../../constants"
 
 export const Container = styled.div`
   display: grid;
