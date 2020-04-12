@@ -1,6 +1,6 @@
 import React from "react"
-import SarpurIndex from "../pageComponents/Sarpur"
-import SarpurYear from "../pageComponents/SarpurYear"
+import SarpurYearsIndex from "../pageComponents/SarpurYearsIndex"
+import SarpurMoviesIndex from "../pageComponents/SarpurMoviesIndex"
 import { Router } from "@reach/router"
 import Header from "../layouts/Header"
 import Footer from "../layouts/Footer"
@@ -10,8 +10,8 @@ const Sarpur = () => {
     <>
       <Header></Header>
       <Router basepath="/sarpur">
-        <SarpurIndex path="/"></SarpurIndex>
-        <SarpurYear path="/:year"></SarpurYear>
+        <SarpurYearsIndex path="/"></SarpurYearsIndex>
+        <SarpurMoviesIndex path="/:year"></SarpurMoviesIndex>
       </Router>
       <Footer></Footer>
     </>

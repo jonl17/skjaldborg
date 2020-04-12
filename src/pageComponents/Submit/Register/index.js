@@ -7,9 +7,10 @@ import EmailPwLogin from "../ManualLogin/EmailPwLogin"
 import { authState } from "rxfire/auth"
 import useGetFirebase from "../../../hooks/useGetFirebase"
 import ManualLogin from "../ManualLogin"
-import Arrow from "../Success/arrow"
+import Arrow from "../../../reusableComponents/Arrow"
 import { useSelector } from "react-redux"
 import Footer from "../../../layouts/Footer"
+import Header from "../../../layouts/Header"
 
 // applicant form
 const Register = () => {
@@ -42,15 +43,24 @@ const Register = () => {
 
   return (
     <>
+      <Header></Header>
       <Container>
-        <Arrow
-          hideonstate={!manualSignUp ? "hide" : null}
-          onClick={() => setManualSignUp(false)}
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-evenly",
+          }}
         >
-          Tilbaka
-        </Arrow>
-        <PageTitle nopad>{icelandic ? "Tengiliður" : "Contact"}</PageTitle>
-
+          <Arrow
+            rotation="-180deg"
+            hideonstate={!manualSignUp ? "hide" : null}
+            onClick={() => setManualSignUp(false)}
+          >
+            Tilbaka
+          </Arrow>
+          <PageTitle nopad>{icelandic ? "Tengiliður" : "Contact"}</PageTitle>
+        </div>
         {manualSignUp ? (
           <ManualLogin></ManualLogin>
         ) : (

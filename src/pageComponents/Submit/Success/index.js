@@ -4,13 +4,15 @@ import { useSelector } from "react-redux"
 
 import { Box, Title, Anchor, HomeText } from "./styled"
 import Footer from "../../../layouts/Footer"
+import Header from "../../../layouts/Header"
 
-import Arrow from "./arrow"
+import Arrow from "../../../reusableComponents/Arrow"
 
 const Success = () => {
   const icelandic = useSelector(state => state.reducer.icelandic)
   return (
     <>
+      <Header></Header>
       <Box>
         <Title>
           {icelandic ? "Innsending tókst!" : "Submission was successful!"}

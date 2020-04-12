@@ -11,7 +11,7 @@ export const greenTextColor = "#9DD79A"
 export const Container = styled.div`
   box-sizing: border-box;
   min-height: 85vh;
-  margin-bottom: 20rem;
+  margin-bottom: 22rem;
 `
 export const Loader = styled.div`
   opacity: 1;

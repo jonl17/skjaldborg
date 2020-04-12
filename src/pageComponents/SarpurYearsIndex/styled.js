@@ -1,6 +1,5 @@
 import styled from "styled-components"
 import { Link } from "gatsby"
-import { redColor } from "@constants"
 
 export const Container = styled.div`
   .title-wrap {
@@ -20,7 +19,7 @@ export const Grid = styled.div`
   grid-gap: 25px;
   justify-content: space-evenly;
 `
-export const YearBox = styled(Link)`
+export const GridBox = styled(Link)`
   height: 100%;
   width: 100%;
   display: flex;

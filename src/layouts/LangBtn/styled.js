@@ -1,5 +1,5 @@
-import styled, { css } from "styled-components"
-import { redColor, breakpoints } from "@constants"
+import styled from "styled-components"
+import { breakpoints } from "@constants"
 
 export const Box = styled.div`
   position: absolute;
@@ -18,13 +18,9 @@ export const Text = styled.p`
   font-size: 1.1rem;
   font-family: les;
   color: white;
-  ${props =>
-    props.umsokn &&
-    css`
-      @media only screen and (min-width: ${breakpoints.desktop}) {
-        color: ${redColor};
-      }
-    `}
+  @media (min-width: ${breakpoints.desktop}) {
+    color: ${props => props.color};
+  }
 `
 export const Lang = styled.span`
   text-decoration: ${props => (props.selected ? "underline" : "none")};

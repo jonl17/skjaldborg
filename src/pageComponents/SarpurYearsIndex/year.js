@@ -1,18 +1,18 @@
 import React from "react"
 import FadeInSection from "../../techComponents/FadeInSection"
 
-import { YearBox } from "./styled"
+import { GridBox } from "./styled"
 
 const Year = ({ year }) => {
   return (
     <FadeInSection intensity="10">
-      <YearBox
+      <GridBox
         to={"/sarpur/" + year.id}
         style={{ backgroundImage: `url(${year.image})` }}
       >
         <div className="slykjan"></div>
         <h1>{year.id}</h1>
-      </YearBox>
+      </GridBox>
     </FadeInSection>
   )
 }

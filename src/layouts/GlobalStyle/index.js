@@ -17,4 +17,8 @@ export const GlobalStyle = createGlobalStyle`
     .tl-edges {
         overflow: inherit !important;
     }
+    a {
+        text-decoration: none; 
+        color: inherit;
+    }
 `

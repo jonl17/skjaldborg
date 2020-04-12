@@ -5,6 +5,7 @@ import { useSelector } from "react-redux"
 import { Container, Wrap } from "./styled"
 import Logo from "../../reusableComponents/Logo"
 import Text from "./Text"
+import { redColor } from "../../constants"
 
 const Header = ({
   data: {
@@ -13,21 +14,21 @@ const Header = ({
 }) => {
   const platform = useSelector(state => state.reducer.platform)
   const pathname = useSelector(state => state.reducer.pathname)
-  const [red, setRed] = useState(false)
+  const [color, setColor] = useState("white")
   useEffect(() => {
-    if (pathname.includes("/sarpur")) {
-      setRed(true)
+    if (pathname.includes("/sarpur") || pathname.includes("/umsokn")) {
+      setColor(`${redColor}`)
     } else {
-      setRed(false)
+      setColor("white")
     }
   }, [pathname])
   return (
     <Wrap>
       <Container platform={platform}>
-        <Logo red={red}></Logo>
+        <Logo color={color}></Logo>
         {platform === "desktop" ? (
           <div id="box">
-            <Text red={red} meta={siteMetadata} info></Text>
+            <Text color={color} meta={siteMetadata} info></Text>
           </div>
         ) : null}
       </Container>
