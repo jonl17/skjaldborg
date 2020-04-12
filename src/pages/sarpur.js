@@ -1,6 +1,6 @@
 import React from "react"
-import SarpurYearsIndex from "../pageComponents/SarpurYearsIndex"
-import SarpurMoviesIndex from "../pageComponents/SarpurMoviesIndex"
+import SarpurYearsIndex from "../pageComponents/Sarpur/YearsIndex"
+import SarpurMoviesIndex from "../pageComponents/Sarpur/MoviesIndex"
 import { Router } from "@reach/router"
 import Header from "../layouts/Header"
 import Footer from "../layouts/Footer"

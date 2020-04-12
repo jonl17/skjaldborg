@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react"
-import useGetFirebase from "../../hooks/useGetFirebase"
+import useGetFirebase from "../../../hooks/useGetFirebase"
 import { collectionData } from "rxfire/firestore"
 
 // components
-import { Grid } from "./styled"
+import { Grid } from "../styled"
 import Year from "./year"
 
 const Years = () => {

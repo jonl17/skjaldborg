@@ -1,7 +1,7 @@
 import React from "react"
-import FadeInSection from "../../techComponents/FadeInSection"
+import FadeInSection from "../../../techComponents/FadeInSection"
 
-import { GridBox } from "./styled"
+import { GridBox } from "../styled"
 
 const Year = ({ year }) => {
   return (

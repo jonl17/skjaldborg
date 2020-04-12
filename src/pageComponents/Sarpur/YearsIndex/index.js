@@ -1,7 +1,7 @@
 import React from "react"
 
 // components
-import Template from "../../reusableComponents/SarpurTemplate"
+import Template from "../../../reusableComponents/SarpurTemplate"
 import Years from "./years"
 
 // Árin yfirlitssíða

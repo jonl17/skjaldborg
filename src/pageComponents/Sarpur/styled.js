@@ -42,6 +42,8 @@ export const GridBox = styled(Link)`
     color: white;
     font-size: 2rem;
     z-index: 4;
+    max-width: 85%;
+    text-align: center;
   }
   .slykjan {
     pointer-events: none;
