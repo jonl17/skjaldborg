@@ -23,6 +23,9 @@ export const Grid = styled.div`
 export const GridItemWrap = styled.div`
   position: relative;
   transition: 0.1s;
+  height: 100%;
+  width: 100%;
+
   &&:hover {
     cursor: pointer;
     transform: scale(1.02);
