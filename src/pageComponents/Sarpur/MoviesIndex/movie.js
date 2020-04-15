@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from "react"
-import { GridBox } from "../styled"
+import { GridBox, BackupBox, GridItemWrap } from "../styled"
 import { useSelector } from "react-redux"
 
 const Movie = ({ movie }) => {
   const pathname = useSelector(state => state.reducer.pathname)
-  const fallbackPic =
-    "https://res.cloudinary.com/dynkhs6v9/image/upload/c_scale,f_auto,q_auto,w_710/v1586345013/images/skjaldborg_logo.jpg"
   const [src, setSrc] = useState("")
 
   useEffect(() => {
@@ -21,13 +19,16 @@ const Movie = ({ movie }) => {
   }, [movie, pathname])
   if (movie) {
     return (
-      <GridBox
-        to={pathname + "/" + movie.id}
-        style={{ backgroundImage: `url(${src})` }}
-      >
-        <div className="slykjan"></div>
-        <h1 dangerouslySetInnerHTML={{ __html: movie.title }}></h1>
-      </GridBox>
+      <GridItemWrap>
+        <BackupBox></BackupBox>
+        <GridBox
+          to={pathname + "/" + movie.id}
+          style={{ backgroundImage: `url(${src})` }}
+        >
+          <div className="slykjan"></div>
+          <h1 dangerouslySetInnerHTML={{ __html: movie.title }}></h1>
+        </GridBox>
+      </GridItemWrap>
     )
   } else return null
 }

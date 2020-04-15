@@ -19,6 +19,15 @@ export const Grid = styled.div`
   grid-gap: 25px;
   justify-content: space-evenly;
 `
+
+export const GridItemWrap = styled.div`
+  position: relative;
+  transition: 0.1s;
+  &&:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+  }
+`
 export const GridBox = styled(Link)`
   height: 100%;
   width: 100%;
@@ -30,13 +39,9 @@ export const GridBox = styled(Link)`
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
-  transition: 0.1s;
   text-decoration: none;
   color: inherit;
-  &&:hover {
-    cursor: pointer;
-    transform: scale(1.02);
-  }
+  z-index: 1;
 
   h1 {
     color: white;
@@ -55,8 +60,18 @@ export const GridBox = styled(Link)`
     top: 0;
     left: 0;
     transition: background 0.2s;
+    z-index: 2;
     @media (max-width: 900px) {
       background: rgba(160, 69, 69, 0.5);
     }
   }
+`
+export const BackupBox = styled.div`
+  pointer-events: none;
+  background: rgba(160, 69, 69, 1);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 `

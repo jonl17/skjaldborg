@@ -11,9 +11,12 @@ const Template = ({ title, children, year, link }) => {
     <Container>
       <div className="content-wrap">
         <div className="title-wrap">
-          <PageTitle style={{ textAlign: "center" }}>
-            {icelandic ? title.is : title.en}
-          </PageTitle>
+          <PageTitle
+            dangerouslySetInnerHTML={{
+              __html: icelandic ? title.is : title.en,
+            }}
+            style={{ textAlign: "center" }}
+          ></PageTitle>
           {year ? <YearTitle link={link} year={year}></YearTitle> : null}
         </div>
         {children}

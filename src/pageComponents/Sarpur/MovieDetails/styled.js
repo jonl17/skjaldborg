@@ -41,6 +41,8 @@ export const ContentWrap = styled.div`
 export const ParticipantsWrap = styled.div`
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
+  padding-right: 3rem;
   .item {
     margin: 1rem 0;
     p {
@@ -50,6 +52,7 @@ export const ParticipantsWrap = styled.div`
     .role {
       color: ${greenColor};
       text-transform: uppercase;
+      font-family: titlar;
     }
     .name {
       color: ${redColor};

@@ -10,7 +10,7 @@ const Content = ({ movie }) => {
   const [src, setSrc] = useState("")
   useEffect(() => {
     const fallbackPic =
-      "https://res.cloudinary.com/dynkhs6v9/image/upload/c_scale,f_auto,q_auto,w_710/v1586345013/images/skjaldborg_logo.jpg"
+      "https://res.cloudinary.com/dynkhs6v9/image/upload/c_scale,f_auto,q_auto,w_937/v1586956574/images/skjaldborg_tomsaeti_zrrv5o.png"
     if (movie.image && movie.image.filename !== "") {
       let url =
         "https://res.cloudinary.com/dynkhs6v9/image/upload/c_scale,q_auto,w_960/v1586423368" +
