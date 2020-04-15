@@ -41,6 +41,7 @@ export const GridBox = styled(Link)`
   h1 {
     color: white;
     font-size: 2rem;
+    text-transform: uppercase;
     z-index: 4;
     max-width: 85%;
     text-align: center;

@@ -16,9 +16,9 @@ const Container = styled(Link)`
   }
 `
 
-const YearTitle = ({ year }) => {
+const YearTitle = ({ year, link }) => {
   return (
-    <Container to="/sarpur">
+    <Container to={link}>
       <Arrow rotation={"-180deg"}></Arrow>
       <h2>{year}</h2>
     </Container>

@@ -12,7 +12,7 @@ const Footer = () => {
   return (
     <Wrap>
       <Container>
-        {platform === "desktop" ? <Logo footer></Logo> : null}
+        {platform === "desktop" ? <Logo color="white" footer></Logo> : null}
         <Contact></Contact>
         <Postlist></Postlist>
       </Container>

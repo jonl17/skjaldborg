@@ -6,7 +6,11 @@ import Movies from "./movies"
 
 const SarpurYear = ({ year }) => {
   return (
-    <Template year={year} title={{ is: "Sarpur", en: "Archive" }}>
+    <Template
+      link={"/sarpur"}
+      year={year}
+      title={{ is: "Sarpur", en: "Archive" }}
+    >
       <Movies year={year}></Movies>
     </Template>
   )

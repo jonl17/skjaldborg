@@ -5,7 +5,7 @@ import { useSelector } from "react-redux"
 import YearTitle from "./yearTitle"
 
 // Sarpur yfirlit fyrir ár & myndir í hverju ári
-const Template = ({ title, children, year }) => {
+const Template = ({ title, children, year, link }) => {
   const icelandic = useSelector(state => state.reducer.icelandic)
   return (
     <Container>
@@ -14,7 +14,7 @@ const Template = ({ title, children, year }) => {
           <PageTitle style={{ textAlign: "center" }}>
             {icelandic ? title.is : title.en}
           </PageTitle>
-          {year ? <YearTitle year={year}></YearTitle> : null}
+          {year ? <YearTitle link={link} year={year}></YearTitle> : null}
         </div>
         {children}
       </div>
