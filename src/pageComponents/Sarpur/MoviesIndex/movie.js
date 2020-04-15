@@ -4,10 +4,11 @@ import { useSelector } from "react-redux"
 
 const Movie = ({ movie }) => {
   const pathname = useSelector(state => state.reducer.pathname)
+  const fallbackPic =
+    "https://res.cloudinary.com/dynkhs6v9/image/upload/c_scale,f_auto,q_auto,w_710/v1586345013/images/skjaldborg_logo.jpg"
   const [src, setSrc] = useState("")
+
   useEffect(() => {
-    const fallbackPic =
-      "https://res.cloudinary.com/dynkhs6v9/image/upload/c_scale,f_auto,q_auto,w_710/v1586345013/images/skjaldborg_logo.jpg"
     if (movie.image && movie.image.filename !== "") {
       let url =
         "https://res.cloudinary.com/dynkhs6v9/image/upload/c_scale,q_auto,w_960/v1586423368" +
@@ -15,11 +16,7 @@ const Movie = ({ movie }) => {
         "/" +
         movie.image.filename +
         ".jpg"
-
-      fetch(url).then(resp => {
-        if (!resp.ok) setSrc(fallbackPic)
-        else setSrc(url)
-      })
+      setSrc(url)
     }
   }, [movie, pathname])
   if (movie) {
