@@ -8,6 +8,7 @@ const Wrap = styled.div`
   video {
     position: absolute;
     height: 100%;
+    width: 100%;
     object-fit: cover;
     margin-bottom: -1rem;
     margin-left: 0rem;
@@ -37,8 +38,8 @@ const CloudinaryVideo = ({ publicId }) => {
         {platform === "mobile" || platform === "tablet" ? (
           <Transformation crop="fill"></Transformation>
         ) : (
-          <Transformation quality="100"></Transformation>
-        )}
+            <Transformation quality="100"></Transformation>
+          )}
       </Video>
     </Wrap>
   )

@@ -4,7 +4,6 @@ import { ContentWrap } from "./styled"
 import Participants from "./participants"
 
 const Content = ({ movie }) => {
-  console.log(movie)
   let pathname = useSelector(state => state.reducer.pathname)
   pathname = pathname.replace(movie.id, "")
   const [src, setSrc] = useState("")

@@ -12,6 +12,7 @@ const Template = ({ title, children, year, link }) => {
       <div className="content-wrap">
         <div className="title-wrap">
           <PageTitle
+            nopad
             dangerouslySetInnerHTML={{
               __html: icelandic ? title.is : title.en,
             }}

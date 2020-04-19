@@ -4,7 +4,7 @@ import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 export const Container = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-template-columns: 1fr;
   grid-gap: 0rem;
   width: 100%;
   margin: 0 auto;
@@ -13,9 +13,6 @@ export const Container = styled.div`
   margin-top: -3.5rem;
   grid-auto-rows: minmax(15rem, 20rem);
 
-  @media only screen and (min-width: ${breakpoints.tablet}) {
-    grid-template-columns: 1fr;
-  }
   /** desktop */
   @media only screen and (min-width: ${breakpoints.desktop}) {
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
