@@ -43,7 +43,7 @@ const metadata = {
   dropdownpages: dropdownPages,
   contact: {
     email: "skjaldborg@skjaldborg.is",
-    tel: "+354 820 3646",
+    tel: "+354 866 6977",
     socialMedia: [
       {
         name: "facebook",
