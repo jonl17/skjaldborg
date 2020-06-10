@@ -4,7 +4,7 @@ config({ path: `.env.development` })
 const pages = [
   { name: `Heim`, name_en: `Home`, slug: `/` },
   { name: `Hátíðin`, name_en: `The Festival`, slug: `/hatidin` },
-  { name: `Umsókn`, name_en: `Application`, slug: `/umsokn` },
+  // { name: `Umsókn`, name_en: `Application`, slug: `/umsokn` },
   { name: `Sarpur`, name_en: `Archive`, slug: `/sarpur` },
   // { name: `Heimildamyndir`, slug: `/heimildamyndir` },
   // { name: `Dagskrá`, slug: `/dagskra` },
