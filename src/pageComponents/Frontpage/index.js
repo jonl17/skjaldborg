@@ -1,16 +1,13 @@
-import React from "react"
-import { Container, SubmitBtnWrap } from "./styled"
-import BigBtn from "../../reusableComponents/BigBtn"
 import { graphql, StaticQuery } from "gatsby"
-import ExcerptBtns from "../../reusableComponents/ExcerptBtns"
-import Sponsors from "../../reusableComponents/Sponsors"
-
-import TopVideo from "../../reusableComponents/TopImage/video"
-
+import React from "react"
+import { useSelector } from "react-redux"
 import Footer from "../../layouts/Footer"
 import Header from "../../layouts/Header"
-import { useSelector } from "react-redux"
+import ExcerptBtns from "../../reusableComponents/ExcerptBtns"
+import Sponsors from "../../reusableComponents/Sponsors"
 import Topimage from "../../reusableComponents/TopImage"
+import TopVideo from "../../reusableComponents/TopImage/video"
+import { Container } from "./styled"
 
 const Frontpage = ({ data: { imageSharp, video } }) => {
   const platform = useSelector(state => state.reducer.platform)
@@ -28,13 +25,6 @@ const Frontpage = ({ data: { imageSharp, video } }) => {
           ></TopVideo>
         )}
 
-{  /*   <SubmitBtnWrap>
-        <BigBtn
-          frontpage
-          text={icelandic ? "Senda inn mynd" : "Submit a film"}
-          action="/umsokn"
-        ></BigBtn>
-      </SubmitBtnWrap> */ }
       <ExcerptBtns />
 
       <Sponsors></Sponsors>
