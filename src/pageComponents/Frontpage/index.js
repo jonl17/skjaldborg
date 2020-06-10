@@ -28,13 +28,13 @@ const Frontpage = ({ data: { imageSharp, video } }) => {
           ></TopVideo>
         )}
 
-      <SubmitBtnWrap>
+{  /*   <SubmitBtnWrap>
         <BigBtn
           frontpage
           text={icelandic ? "Senda inn mynd" : "Submit a film"}
           action="/umsokn"
         ></BigBtn>
-      </SubmitBtnWrap>
+      </SubmitBtnWrap> */ }
       <ExcerptBtns />
 
       <Sponsors></Sponsors>
