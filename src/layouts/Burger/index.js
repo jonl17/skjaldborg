@@ -1,7 +1,7 @@
 import React from "react"
-import { Container, Line } from "./styled"
-import { useSelector, useDispatch } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 import { triggerMenu } from "../../state/action"
+import { Container, Line } from "./styled"
 
 // open burger menu
 const dispatches = (dispatch, trigger) => {
@@ -18,11 +18,11 @@ const Burger = () => {
       <Line three></Line>
     </Container>
   ) : (
-    <Container onClick={() => dispatches(dispatch, "closed")}>
-      <Line one ex></Line>
-      <Line three ex></Line>
-    </Container>
-  )
+      <Container onClick={() => dispatches(dispatch, "closed")}>
+        <Line one ex></Line>
+        <Line three ex></Line>
+      </Container>
+    )
 }
 
 export default Burger
