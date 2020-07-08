@@ -5,6 +5,15 @@ media_folder: "static/assets"
 public_folder: "assets"
 
 collections:
+  # Heimildarmyndir
+  - name: "heimildarmyndir"
+    label: "Heimildarmyndir"
+    folder: "static/heimildarmyndir"
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { label: "Titill", name: "title", widget: "string" }
   # Styrktaraðilar | Top 5
   - name: "styrktaradilar_top5"
     label: "Styrktaraðilar Top 5"

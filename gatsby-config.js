@@ -6,7 +6,7 @@ const pages = [
   { name: `Hátíðin`, name_en: `The Festival`, slug: `/hatidin` },
   // { name: `Umsókn`, name_en: `Application`, slug: `/umsokn` },
   { name: `Sarpur`, name_en: `Archive`, slug: `/sarpur` },
-  // { name: `Heimildamyndir`, slug: `/heimildamyndir` },
+  { name: `Heimildamyndir`, slug: `/heimildamyndir` },
   // { name: `Dagskrá`, slug: `/dagskra` },
 ]
 const dropdownPages = [
@@ -178,8 +178,8 @@ module.exports = {
           projectId: process.env.GATSBY_PROJECT_ID,
           storageBucket: process.env.GATSBY_STORAGE_BUCKET,
           appId: process.env.GATSBY_APP_ID,
-        }
-      }
-    }
+        },
+      },
+    },
   ],
 }
