@@ -1,6 +1,6 @@
 ---
 title: "MÍR: Byltingin lengi lifi"
-image: assets/mir.png
+image: mir.png
 director: Haukur Hallsson
 producer: Haukur Hallsson, Gunnar Ragnarsson
 production_company: FAMU, Skýlið Studio
