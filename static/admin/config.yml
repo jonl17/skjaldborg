@@ -5,15 +5,26 @@ media_folder: "static/assets"
 public_folder: "assets"
 
 collections:
-  # Heimildarmyndir
-  - name: "heimildarmyndir"
-    label: "Heimildarmyndir"
-    folder: "static/heimildarmyndir"
+  # Frumsýningar 2020
+  - name: "frumsyning"
+    label: "Frumsýningar"
+    folder: "static/frumsyningar"
     create: true
     editor:
       preview: false
     fields:
       - { label: "Titill", name: "title", widget: "string" }
+      - { label: "Mynd", name: "image", widget: "image" }
+      - { label: "Stutt lýsing", name: "body", widget: "markdown" }
+      - { label: "Leikstjóri", name: "director", widget: "string" }
+      - { label: "Framleiðandi", name: "producer", widget: "string", required: false }
+      - { label: "Framleiðslufyrirtæki", name: "production_company", widget: "string", required: false }
+      - { label: "Klipping", name: "editing", widget: "string", required: false }
+      - { label: "Kvikmyndataka", name: "filming", widget: "string", required: false }
+      - { label: "Tónskáld", name: "composer", widget: "string", required: false }
+      - { label: "Hljóðhönnun", name: "sound_design", widget: "string", required: false }
+      - { label: "Lengd í mín.", name: "length_in_min", widget: "number", required: false }
+      - { label: "Stikla", name: "Trailer", widget: "string", hint: "Slóð á stiklu", required: false }
   # Styrktaraðilar | Top 5
   - name: "styrktaradilar_top5"
     label: "Styrktaraðilar Top 5"
