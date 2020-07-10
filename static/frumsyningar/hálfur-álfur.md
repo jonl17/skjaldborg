@@ -1,6 +1,6 @@
 ---
 title: Hálfur Álfur
-image: assets/halfur_alfur.png
+image: halfur_alfur.png
 director: Jón Bjarki Magnússon
 producer: Jón Bjarki Magnússon, Hlín Ólafsdóttir
 production_company: SKAK bíófilm
