@@ -10,6 +10,9 @@ collections:
     label: "Verk í vinnslu"
     folder: "static/verk-i-vinnslu"
     create: true
+    path: "{{title}}/index"
+    media_folder: ""
+    public_folder: ""
     editor:
       preview: false
     fields:
@@ -30,6 +33,9 @@ collections:
     label: "Frumsýningar"
     folder: "static/frumsyningar"
     create: true
+    path: "{{title}}/index"
+    media_folder: ""
+    public_folder: ""
     editor:
       preview: false
     fields:
