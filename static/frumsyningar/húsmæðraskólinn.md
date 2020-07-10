@@ -1,6 +1,6 @@
 ---
 title: Húsmæðraskólinn
-image: assets/husmadresa.png
+image: husmadresa.png
 director: Stefanía Thors
 producer: Helgi Svavar Helgason
 production_company: Mús & Kött
