@@ -1,6 +1,6 @@
 ---
 title: Góði hirðirinn
-image: assets/cinema.jpg
+image: barnatryggingar-velja-leið.jpg
 director: Helga Rakel Rafnsdóttir
 producer: Helga Rakel Rafnsdóttir
 production_company: Skarkali ehf.
