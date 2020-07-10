@@ -1,6 +1,6 @@
 ---
 title: Að sýna sig og sjá aðra
-image: assets/ad_syna_sig.png
+image: ad_syna_sig.png
 director: Sandra Björg Ernudóttir
 producer: Sandra Björg Ernudóttir
 editing: Sandra Björg Ernudóttir
