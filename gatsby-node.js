@@ -1,8 +1,6 @@
 const { fmImagesToRelative } = require("gatsby-remark-relative-images")
-const path = require("path")
-const slugify = require("slugify")
 
-exports.onCreateNode = ({ node, getNode, actions }) => {
+exports.onCreateNode = ({ node }) => {
   fmImagesToRelative(node)
 }
 
@@ -19,7 +17,6 @@ exports.onCreatePage = async ({ page, actions }) => {
     page.matchPath = "/sarpur/*"
     createPage(page)
   }
-
 }
 
 // env variable fix
