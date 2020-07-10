@@ -1,6 +1,6 @@
 ---
 title: Just A Closer Walk With Thee
-image: assets/walk_w_trees.png
+image: walk_w_trees.png
 director: Matthew Barney
 producer: Les Aventures de President Bongo
 production_company: Radio Bongo ehf
