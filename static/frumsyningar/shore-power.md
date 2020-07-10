@@ -1,6 +1,6 @@
 ---
 title: Shore Power
-image: assets/shore_power.png
+image: shore_power.png
 director: Jessica Auer
 producer: Jessica Auer
 production_company: Ströndin Studio (Ströndin Atelier ehf.)
