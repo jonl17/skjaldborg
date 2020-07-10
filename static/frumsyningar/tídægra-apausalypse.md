@@ -1,6 +1,6 @@
 ---
 title: Tídægra, Apausalypse
-image: assets/tigaegra.png
+image: tigaegra.png
 director: Anní Ólafsdóttir, Andri Snær Magnason
 producer: Andri Snær Magnason, Anní Ólafsdóttir
 production_company: Elsku Rut
