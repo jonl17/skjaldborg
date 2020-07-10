@@ -1,6 +1,6 @@
 ---
 title: Er ást?
-image: assets/er_ast.png
+image: er_ast.png
 director: Kristín Andrea Þórðardóttir
 producer: Kristín Andrea Þórðardóttir
 production_company: Andrá kvikmyndafélag í samstarfi við Poppoli Pictures
