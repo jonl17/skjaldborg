@@ -1,6 +1,6 @@
 ---
 title: Aftur Heim?
-image: assets/aftur_hjem.png
+image: aftur_hjem.png
 director: Dögg Mósesdóttir
 producer: Dögg Mósesdóttir
 production_company: Freyja Filmwork
