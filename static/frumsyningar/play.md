@@ -1,6 +1,6 @@
 ---
 title: PLAY!
-image: assets/play.png
+image: play.png
 director: Þórunn Hafstað
 producer: Heather Millard og Þórður Jónsson
 production_company: Compass Films
