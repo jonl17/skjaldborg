@@ -1,4 +1,7 @@
 const { fmImagesToRelative } = require("gatsby-remark-relative-images")
+const path = require("path")
+const slugify = require("slugify")
+const { url } = require("inspector")
 
 exports.onCreateNode = ({ node }) => {
   fmImagesToRelative(node)
@@ -25,5 +28,40 @@ exports.onCreateWebpackConfig = ({ actions }) => {
     node: {
       fs: "empty",
     },
+  })
+}
+
+exports.createPages = async ({ actions, graphql, reporter }) => {
+  const { createPage } = actions
+  const movieTemplate = path.resolve(`src/templates/heimildamynd/index.js`)
+  const result = await graphql(`
+    {
+      frumsyningar: allMarkdownRemark(
+        sort: { fields: frontmatter___title }
+        filter: { fileAbsolutePath: { regex: "/frumsyning/" } }
+      ) {
+        nodes {
+          id
+          frontmatter {
+            title
+          }
+        }
+      }
+    }
+  `)
+  if (result.errors) {
+    reporter.panicOnBuild("Error while running graphql query!")
+    return
+  }
+  result.data.frumsyningar.nodes.forEach(item => {
+    const prefix = "/heimildamyndir/"
+    const url = prefix + slugify(item.frontmatter.title, { lower: true })
+    createPage({
+      path: url,
+      component: movieTemplate,
+      context: {
+        id: item.id,
+      },
+    })
   })
 }

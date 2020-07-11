@@ -4,6 +4,7 @@ import Footer from "../layouts/Footer"
 import Template from "../reusableComponents/SarpurTemplate"
 import Documentaries from "../pageComponents/Documentaries"
 import { graphql } from "gatsby"
+import { useSelector } from "react-redux"
 
 const TITLES = {
   is: "Heimildamyndir 2020",
@@ -13,12 +14,19 @@ const TITLES = {
 const Heimildamyndir = ({
   data: { frumsyningar: docs, verk_i_vinnslu: wips },
 }) => {
+  const icelandic = useSelector(state => state.reducer.icelandic)
   return (
     <>
       <Header mode='red' />
       <Template title={TITLES}>
-        <Documentaries docs={docs} title='Frumsýningar' />
-        <Documentaries docs={wips} title='Verk í vinnslu' />
+        <Documentaries
+          docs={docs}
+          title={icelandic ? "Frumsýningar" : "Premieres"}
+        />
+        <Documentaries
+          docs={wips}
+          title={icelandic ? "Verk í vinnslu" : "Work in progress"}
+        />
       </Template>
       <Footer />
     </>
