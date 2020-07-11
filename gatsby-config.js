@@ -125,6 +125,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `verk-i-vinnslu`,
+        path: `${__dirname}/static/verk-i-vinnslu`,
+      },
+    },
+    {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
