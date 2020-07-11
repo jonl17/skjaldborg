@@ -1,6 +1,6 @@
 ---
 title: Senur úr listrænu ferli
-image: barnatryggingar-velja-leið.jpg
+image: temp.jpg
 director: Ívar Erik Yeoman
 producer: Anton Máni Svansson
 production_company: Join Motion Pictures
