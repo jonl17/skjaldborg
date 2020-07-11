@@ -17,7 +17,8 @@ const Heimildamyndir = ({
     <>
       <Header mode='red' />
       <Template title={TITLES}>
-        <Documentaries docs={docs} />
+        <Documentaries docs={docs} title='Frumsýningar' />
+        <Documentaries docs={wips} title='Verk í vinnslu' />
       </Template>
       <Footer />
     </>

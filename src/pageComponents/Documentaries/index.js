@@ -1,16 +1,22 @@
-import React, { useState, useEffect, useContext } from "react"
+import React from "react"
 import { Grid } from "../Sarpur/styled"
 import Movie from "./movie"
-import { RootContext } from "../../context/main"
+import PageTitle from "../../reusableComponents/PageTitle"
+import { Fade } from "react-reveal"
 
-const Documentaries = ({ docs }) => {
+const Documentaries = ({ docs, title }) => {
   return (
     docs && (
-      <Grid>
-        {docs.nodes.map((movie, index) => (
-          <Movie movie={movie} key={index}></Movie>
-        ))}
-      </Grid>
+      <>
+        <PageTitle nopad>{title}</PageTitle>
+        <Grid>
+          {docs.nodes.map((movie, index) => (
+            <Fade bottom distance='25px' delay={index * 50}>
+              <Movie movie={movie} key={index}></Movie>
+            </Fade>
+          ))}
+        </Grid>
+      </>
     )
   )
 }
