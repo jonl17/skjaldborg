@@ -3,9 +3,7 @@ import { GridBox, BackupBox, GridItemWrap } from "../Sarpur/styled"
 import { useSelector } from "react-redux"
 import slugify from "slugify"
 
-const Movie = ({ movie }) => {
-  const pathname = useSelector(state => state.reducer.pathname)
-
+const Movie = ({ movie, pathname }) => {
   if (movie) {
     return (
       <GridItemWrap>
