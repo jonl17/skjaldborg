@@ -1,6 +1,6 @@
 ---
 title: Endalok Upphafsins (e. First and Last Men)
-image: barnatryggingar-velja-leið.jpg
+image: johann.png
 director: Jóhann Jóhannsson
 producer: Þórir Snær Sigurjónsson
 production_company: Zik Zak Filmworks
