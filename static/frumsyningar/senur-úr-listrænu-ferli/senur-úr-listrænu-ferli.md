@@ -1,6 +1,6 @@
 ---
 title: Senur úr listrænu ferli
-image: temp.jpg
+image: senururlistrænuferli-still.png
 director: Ívar Erik Yeoman
 producer: Anton Máni Svansson
 production_company: Join Motion Pictures
