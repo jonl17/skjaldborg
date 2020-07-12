@@ -54,7 +54,7 @@ export const query = graphql`
           Trailer
           image {
             childImageSharp {
-              fluid {
+              fluid(quality: 75, maxHeight: 550) {
                 ...GatsbyImageSharpFluid
                 src
               }
@@ -78,7 +78,7 @@ export const query = graphql`
           Trailer
           image {
             childImageSharp {
-              fluid {
+              fluid(quality: 75, maxHeight: 550) {
                 ...GatsbyImageSharpFluid
                 src
               }
