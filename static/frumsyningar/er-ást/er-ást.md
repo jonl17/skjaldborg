@@ -1,5 +1,5 @@
 ---
-title: Er ást?
+title: Er ást
 image: er_ast.png
 director: Kristín Andrea Þórðardóttir
 producer: Kristín Andrea Þórðardóttir
