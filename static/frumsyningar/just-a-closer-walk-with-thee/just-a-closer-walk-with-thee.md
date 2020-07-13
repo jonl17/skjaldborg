@@ -11,4 +11,4 @@ sound_design: Nicolas Liebing
 length_in_min: 37
 Trailer: https://www.dropbox.com/s/64xh2ins0sl9k54/10.11_Main_AssemblyExport.mp4?dl=0
 ---
-Innblásinn af Belgíska ævintýramanninum Tinna heldur tónlistarmaðurinn Stephan Stephensen —President Bongo— í langferð er hann hleypir af stokkunum metnaðarfullu langtímaverkefni sem ber yfirskriftina Les Adventures de President Bongo. Just a Closer Walk With Thee er sjötta platan í seríunni og skartar mynd eftir Matthew Barney.
+**Just a Closer Walk with Thee er óður til Ólafs Stephensen jazzgeggjara og auglýsingamanns sem féll frá 2016. Lagið er amerískt þjóðlag og vinsæll jarðarfararsálmur í New Orleans. Myndin lýsir á óhlutbundinn hátt einhverskonar jarðaför en á sama tíma nýrri byrjun, lífshlaupi og frelsi.**
