@@ -1,5 +1,5 @@
 ---
-title: Aftur Heim?
+title: Aftur heim?
 image: aftur_hjem.png
 director: Dögg Mósesdóttir
 producer: Dögg Mósesdóttir
@@ -11,6 +11,4 @@ sound_design: Nicolas Liebing
 length_in_min: 71
 Trailer: https://vimeo.com/422477420/4a38175612
 ---
-Dögg Mósesdóttir leikstjóri er viðstödd þrjár ólíkar heimafæðingar sem fá hana til að endurmeta sína eigin fæðingarreynslu og upplifun sína af kvenleikanum. 
-
-Nýjar spurningar vakna um hvað það þýðir í raun og veru að eiga heima og hvaða hormónar og tilfinningar spila þar hlutverk.
+Sögur kvenna í heimafæðingu í gegnum linsu kvikmyndagerðarkonu sem skoðar viðhorf sitt til kvenleikans eftir tilraun til að að eiga heima.
