@@ -37,3 +37,12 @@ export const CoverImageContainer = styled.div`
   position: fixed;
   filter: brightness(0.8);
 `
+
+export const InfoContainer = styled.div`
+  position: relative;
+  background: white;
+  z-index: 4;
+  padding: 2.5rem;
+  box-sizing: border-box;
+  display: flex;
+`

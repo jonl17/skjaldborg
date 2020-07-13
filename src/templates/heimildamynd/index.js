@@ -4,6 +4,7 @@ import Header from "../../layouts/Header"
 import Footer from "../../layouts/Footer"
 import { graphql, Link } from "gatsby"
 import CoverImage from "./components/CoverImage"
+import Info from "./components/Info"
 import { Container } from "./styled"
 import Arrow from "../../reusableComponents/Arrow"
 import { Fade } from "react-reveal"
@@ -35,6 +36,7 @@ const Movie = ({ data: { movie }, pageContext }) => {
             </div>
           </div>
         </Container>
+        <Info html={html} />
         <Footer />
       </PageContainer>
     </>
@@ -44,6 +46,7 @@ const Movie = ({ data: { movie }, pageContext }) => {
 export const query = graphql`
   query($id: String!) {
     movie: markdownRemark(id: { eq: $id }) {
+      html
       frontmatter {
         title
         image {
