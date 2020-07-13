@@ -59,20 +59,21 @@
     "react-helmet": "^5.2.1",
     "react-hook-form": "^4.10.2",
     "react-redux": "^7.2.0",
+    "react-reveal": "^1.2.2",
     "react-router-dom": "^5.1.2",
     "redux": "^4.0.5",
     "rxfire": "^3.12.1",
     "rxjs": "^6.5.5",
-    "slugify": "^1.4.0",
+    "slugify": "^1.4.4",
     "styled-components": "^4.4.1",
     "styled-theming": "^2.2.0"
   },
   "devDependencies": {
-    "gatsby-plugin-alias-imports": "^1.0.5",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.10.1",
     "eslint-plugin-prettier": "^3.1.3",
     "eslint-plugin-react": "^7.19.0",
+    "gatsby-plugin-alias-imports": "^1.0.5",
     "prettier": "2.0.4"
   }
 }

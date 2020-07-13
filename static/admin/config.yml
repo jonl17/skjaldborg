@@ -17,17 +17,69 @@ collections:
       preview: false
     fields:
       - { label: "Titill", name: "title", widget: "string" }
+      - {
+          label: "Titill enska",
+          name: "title-en",
+          widget: "string",
+          required: false,
+        }
       - { label: "Mynd", name: "image", widget: "image" }
-      - { label: "Stutt lýsing", name: "body", widget: "markdown" }
+      - {
+          label: "Stutt lýsing",
+          name: "body",
+          widget: "markdown",
+          hint: "Settu enska þýðingu undir --ENSKA-- í nýrri línu",
+        }
       - { label: "Leikstjóri", name: "director", widget: "string" }
-      - { label: "Framleiðandi", name: "producer", widget: "string", required: false }
-      - { label: "Framleiðslufyrirtæki", name: "production_company", widget: "string", required: false }
-      - { label: "Klipping", name: "editing", widget: "string", required: false }
-      - { label: "Kvikmyndataka", name: "filming", widget: "string", required: false }
-      - { label: "Tónskáld", name: "composer", widget: "string", required: false }
-      - { label: "Hljóðhönnun", name: "sound_design", widget: "string", required: false }
-      - { label: "Lengd í mín.", name: "length_in_min", widget: "number", required: false }
-      - { label: "Stikla", name: "Trailer", widget: "string", hint: "Slóð á stiklu", required: false }
+      - {
+          label: "Framleiðandi",
+          name: "producer",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Framleiðslufyrirtæki",
+          name: "production_company",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Klipping",
+          name: "editing",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Kvikmyndataka",
+          name: "filming",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Tónskáld",
+          name: "composer",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Hljóðhönnun",
+          name: "sound_design",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Lengd í mín.",
+          name: "length_in_min",
+          widget: "number",
+          required: false,
+        }
+      - {
+          label: "Stikla",
+          name: "Trailer",
+          widget: "string",
+          hint: "Slóð á stiklu",
+          required: false,
+        }
   # Frumsýningar 2020
   - name: "frumsyning"
     label: "Frumsýningar"
@@ -40,17 +92,69 @@ collections:
       preview: false
     fields:
       - { label: "Titill", name: "title", widget: "string" }
+      - {
+          label: "Titill enska",
+          name: "title-en",
+          widget: "string",
+          required: false,
+        }
       - { label: "Mynd", name: "image", widget: "image" }
-      - { label: "Stutt lýsing", name: "body", widget: "markdown" }
+      - {
+          label: "Stutt lýsing",
+          name: "body",
+          widget: "markdown",
+          hint: "Settu enska þýðingu undir --ENSKA-- í nýrri línu",
+        }
       - { label: "Leikstjóri", name: "director", widget: "string" }
-      - { label: "Framleiðandi", name: "producer", widget: "string", required: false }
-      - { label: "Framleiðslufyrirtæki", name: "production_company", widget: "string", required: false }
-      - { label: "Klipping", name: "editing", widget: "string", required: false }
-      - { label: "Kvikmyndataka", name: "filming", widget: "string", required: false }
-      - { label: "Tónskáld", name: "composer", widget: "string", required: false }
-      - { label: "Hljóðhönnun", name: "sound_design", widget: "string", required: false }
-      - { label: "Lengd í mín.", name: "length_in_min", widget: "number", required: false }
-      - { label: "Stikla", name: "Trailer", widget: "string", hint: "Slóð á stiklu", required: false }
+      - {
+          label: "Framleiðandi",
+          name: "producer",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Framleiðslufyrirtæki",
+          name: "production_company",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Klipping",
+          name: "editing",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Kvikmyndataka",
+          name: "filming",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Tónskáld",
+          name: "composer",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Hljóðhönnun",
+          name: "sound_design",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Lengd í mín.",
+          name: "length_in_min",
+          widget: "number",
+          required: false,
+        }
+      - {
+          label: "Stikla",
+          name: "Trailer",
+          widget: "string",
+          hint: "Slóð á stiklu",
+          required: false,
+        }
   # Styrktaraðilar | Top 5
   - name: "styrktaradilar_top5"
     label: "Styrktaraðilar Top 5"
