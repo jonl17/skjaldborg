@@ -1,5 +1,5 @@
 ---
-title: Just A Closer Walk With Thee
+title: Just a Closer Walk with Thee
 title-en: ""
 image: walk_w_trees.png
 director: Matthew Barney
