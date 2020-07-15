@@ -1,5 +1,6 @@
 ---
 title: Barinn
+title-en: The Bar
 image: screenshot-2020-07-10-at-13.53.25.png
 director: Árni Sveinsson
 producer: Árni Sveinsson & Guðný Jónsdóttir
