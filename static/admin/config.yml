@@ -80,6 +80,11 @@ collections:
           hint: "Slóð á stiklu",
           required: false,
         }
+      - label: "Dagskrá"
+        name: "dagskra"
+        widget: "list"
+        collapsed: false
+        field: { label: "Dagsetning", name: "dagsetning", widget: "datetime", required: false }
   # Frumsýningar 2020
   - name: "frumsyning"
     label: "Frumsýningar"
@@ -155,6 +160,11 @@ collections:
           hint: "Slóð á stiklu",
           required: false,
         }
+      - label: "Dagskrá"
+        name: "dagskra"
+        widget: "list"
+        collapsed: false
+        field: { label: "Dagsetning", name: "dagsetning", widget: "datetime", required: false }  
   # Styrktaraðilar | Top 5
   - name: "styrktaradilar_top5"
     label: "Styrktaraðilar Top 5"

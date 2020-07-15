@@ -4,7 +4,7 @@ import { useSelector } from "react-redux"
 import useSetTargetBlank from "../../hooks/useSetTargetBlank"
 
 const splitLang = html => {
-  return html.split("<p>-ENSKA-</p>")
+  return html.split("<p>--ENSKA--</p>")
 }
 
 const Content = ({ html }) => {
@@ -24,7 +24,7 @@ const Content = ({ html }) => {
 
   return (
     <Container
-      id="content-wrap"
+      id='content-wrap'
       dangerouslySetInnerHTML={{ __html: lang }}
     ></Container>
   )

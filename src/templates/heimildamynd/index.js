@@ -8,9 +8,11 @@ import Info from "./components/Info"
 import { Container } from "./styled"
 import Arrow from "../../reusableComponents/Arrow"
 import { Fade } from "react-reveal"
+import { useSelector } from "react-redux"
 
 const Movie = ({ data: { movie }, pageContext }) => {
   const { html, frontmatter } = movie
+  const icelandic = useSelector(state => state.reducer.icelandic)
   return (
     <>
       <Header />
@@ -20,7 +22,7 @@ const Movie = ({ data: { movie }, pageContext }) => {
           <div className='title-container'>
             <div>
               <Fade right distance='15px'>
-                <h1>{frontmatter.title}</h1>
+                <h1>{icelandic ? frontmatter.title : frontmatter.title_en}</h1>
               </Fade>
               <Fade right distance='12.5px' delay={150}>
                 <h2>{frontmatter.director}</h2>
@@ -49,6 +51,7 @@ export const query = graphql`
       html
       frontmatter {
         title
+        title_en
         image {
           childImageSharp {
             fluid(quality: 85) {
