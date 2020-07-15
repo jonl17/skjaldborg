@@ -11,7 +11,8 @@ composer: Nicolas Liebing, Úlfur Eldjárn og Daniel S. Schreiber
 sound_design: Nicolas Liebing
 length_in_min: 71
 Trailer: https://player.vimeo.com/video/422477420
-dagskra: []
+dagskra:
+  - 2020-08-02T12:20:35.747Z
 ---
 Sögur kvenna í heimafæðingu í gegnum linsu kvikmyndagerðarkonu sem skoðar viðhorf sitt til kvenleikans eftir tilraun til að að eiga heima.
 
