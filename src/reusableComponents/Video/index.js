@@ -4,6 +4,9 @@ import styled from "styled-components"
 const Player = styled.iframe`
   height: 350px;
   width: 600px;
+  @media (max-width: 850px) {
+    width: 100%;
+  }
 `
 
 const Video = ({ src, className = "" }) => {

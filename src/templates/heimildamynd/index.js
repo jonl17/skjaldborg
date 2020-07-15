@@ -61,6 +61,12 @@ export const query = graphql`
         }
         Trailer
         director
+        producer
+        production_company
+        editing
+        filming
+        composer
+        sound_design
       }
     }
   }
