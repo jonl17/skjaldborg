@@ -42,7 +42,20 @@ export const InfoContainer = styled.div`
   position: relative;
   background: white;
   z-index: 4;
-  padding: 2.5rem;
+  padding: 4rem 2.5rem;
   box-sizing: border-box;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "dagskra texti"
+    "hlutverk stikla";
+  grid-gap: 1rem;
+  .textiWrap {
+    grid-area: texti;
+    padding: 0;
+  }
+  .videoWrap {
+    grid-area: stikla;
+  }
 `

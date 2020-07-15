@@ -7,7 +7,7 @@ const splitLang = html => {
   return html.split("<p>--ENSKA--</p>")
 }
 
-const Content = ({ html }) => {
+const Content = ({ html, className = "" }) => {
   const [lang, setLang] = useState(splitLang(html)[0])
   const icelandic = useSelector(state => state.reducer.icelandic)
 
@@ -24,6 +24,7 @@ const Content = ({ html }) => {
 
   return (
     <Container
+      className={className}
       id='content-wrap'
       dangerouslySetInnerHTML={{ __html: lang }}
     ></Container>

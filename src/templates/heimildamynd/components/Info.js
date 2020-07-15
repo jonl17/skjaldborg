@@ -1,12 +1,13 @@
 import React from "react"
 import { InfoContainer } from "../styled"
 import Content from "../../../reusableComponents/Content"
+import Video from "../../../reusableComponents/Video"
 
-const Info = ({ html }) => {
-  console.log(html)
+const Info = ({ html, frontmatter }) => {
   return (
     <InfoContainer>
-      <Content html={html} />
+      <Content html={html} className='textiWrap' />
+      <Video src={frontmatter.Trailer} className='videoWrap' />
     </InfoContainer>
   )
 }

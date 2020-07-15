@@ -38,7 +38,7 @@ const Movie = ({ data: { movie }, pageContext }) => {
             </div>
           </div>
         </Container>
-        <Info html={html} />
+        <Info html={html} frontmatter={frontmatter} />
         <Footer />
       </PageContainer>
     </>
@@ -59,6 +59,7 @@ export const query = graphql`
             }
           }
         }
+        Trailer
         director
       }
     }
