@@ -47,13 +47,27 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           }
         }
       }
+      verk_i_vinnslu: allMarkdownRemark(
+        sort: { fields: frontmatter___title }
+        filter: { fileAbsolutePath: { regex: "/verk-i-vinnslu/" } }
+      ) {
+        nodes {
+          id
+          frontmatter {
+            title
+          }
+        }
+      }
     }
   `)
   if (result.errors) {
     reporter.panicOnBuild("Error while running graphql query!")
     return
   }
-  result.data.frumsyningar.nodes.forEach(item => {
+  const joinedArrays = result.data.frumsyningar.nodes.concat(
+    result.data.verk_i_vinnslu.nodes
+  )
+  joinedArrays.forEach(item => {
     const prefix = "/heimildamyndir/"
     const url = prefix + slugify(item.frontmatter.title, { lower: true })
     createPage({

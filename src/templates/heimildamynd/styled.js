@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const Container = styled.div`
   .title-container {
-    height: 100vh;
+    height: 65vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,7 +30,7 @@ export const Container = styled.div`
   }
 `
 export const CoverImageContainer = styled.div`
-  height: 100vh;
+  height: 65vh;
   width: 100%;
   top: 0;
   left: 0;
