@@ -61,6 +61,9 @@ export const InfoContainer = styled.div`
   .participantsWrap {
     grid-area: hlutverk;
   }
+  .datesWrap {
+    grid-area: dagskra;
+  }
   @media (max-width: 850px) {
     padding: 2rem 15px;
     grid-template-columns: 1fr;

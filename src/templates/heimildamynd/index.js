@@ -67,6 +67,7 @@ export const query = graphql`
         filming
         composer
         sound_design
+        dagskra
       }
     }
   }

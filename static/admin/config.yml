@@ -84,7 +84,15 @@ collections:
         name: "dagskra"
         widget: "list"
         collapsed: false
-        field: { label: "Dagsetning", name: "dagsetning", widget: "datetime", required: false }
+        field:
+          {
+            label: "Dagsetning",
+            name: "dagsetning",
+            widget: "datetime",
+            required: false,
+            dateFormat: "DD.MM.YYYY",
+            timeFormat: "HH:mm",
+          }
   # Frumsýningar 2020
   - name: "frumsyning"
     label: "Frumsýningar"
@@ -164,7 +172,15 @@ collections:
         name: "dagskra"
         widget: "list"
         collapsed: false
-        field: { label: "Dagsetning", name: "dagsetning", widget: "datetime", required: false }  
+        field:
+          {
+            label: "Dagsetning",
+            name: "dagsetning",
+            widget: "datetime",
+            required: false,
+            dateFormat: "DD.MM.YYYY",
+            timeFormat: "HH:mm",
+          }
   # Styrktaraðilar | Top 5
   - name: "styrktaradilar_top5"
     label: "Styrktaraðilar Top 5"
