@@ -10,7 +10,7 @@ filming: Helga Rakel Rafnsdóttir, Arnar Þórisson
 composer: ""
 sound_design: Huldar Freyr Arnarson
 length_in_min: 48
-Trailer: https://player.vimeo.com/video/427557401
+Trailer: ""
 dagskra:
   - 2020-08-01T15:00:00.000Z
 ---
