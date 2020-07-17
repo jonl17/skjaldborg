@@ -1,8 +1,16 @@
 import React from "react"
-import { Anchor, Button, Text, Fill } from "./styled"
+import { Anchor, Button, Text, Fill, ExternalAnchor } from "./styled"
 import { useSelector } from "react-redux"
 
-const BigBtn = ({ button, buttonSubmit, text, action, white }) => {
+const BigBtn = ({
+  button,
+  buttonSubmit,
+  text,
+  action,
+  white,
+  className = "",
+  externalLink,
+}) => {
   const postlisted = useSelector(state => state.reducer.postlisted)
 
   if (button) {
@@ -14,14 +22,23 @@ const BigBtn = ({ button, buttonSubmit, text, action, white }) => {
     )
   } else if (buttonSubmit) {
     return (
-      <Button white={white} type="submit">
+      <Button white={white} type='submit'>
         <Fill></Fill>
         <span style={{ zIndex: 1 }}>{text}</span>
       </Button>
     )
+  } else if (externalLink) {
+    return (
+      <Text className={className}>
+        <ExternalAnchor target='_blank' href={action} white={white}>
+          <Fill></Fill>
+          <span style={{ zIndex: 1 }}>{text}</span>
+        </ExternalAnchor>
+      </Text>
+    )
   } else {
     return (
-      <Text>
+      <Text className={className}>
         <Anchor white={white} to={action}>
           <Fill></Fill>
           <span style={{ zIndex: 1 }}>{text}</span>

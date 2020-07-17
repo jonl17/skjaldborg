@@ -5,6 +5,8 @@ import { redColor, greenColor, breakpoints } from "@constants"
 export const Text = styled.p`
   height: 3rem;
   max-width: 20rem;
+  min-width: 10rem;
+  width: 100%;
   text-align: center;
   font-size: 1.5rem;
   margin: 0 auto;
@@ -37,6 +39,20 @@ export const Anchor = styled(Link)`
     color: white;
   }
 `
+
+export const ExternalAnchor = styled.a`
+  ${BTNstyle};
+  border: 2px solid ${props => (props.white ? "white" : redColor)};
+  &&:hover {
+    color: ${redColor};
+    border-color: ${redColor};
+  }
+  @media only screen and (min-width: ${breakpoints.desktop}) {
+    border-color: white;
+    color: white;
+  }
+`
+
 export const Button = styled.button`
   ${BTNstyle};
   border: 2px solid ${props => (props.white ? "white" : redColor)};
@@ -60,6 +76,9 @@ export const Fill = styled.span`
     width: 0%;
   }
   ${Anchor}:hover & {
+    width: 100%;
+  }
+  ${ExternalAnchor}:hover & {
     width: 100%;
   }
   ${Button}:hover & {
