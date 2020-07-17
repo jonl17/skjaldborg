@@ -10,7 +10,7 @@ filming: Morten Vilhelm
 composer: Andi
 sound_design: Hjalti Karl Hafsteinsson
 length_in_min: 22
-Trailer: https://player.vimeo.com/video/376547827
+Trailer: ""
 dagskra:
   - 2020-08-02T10:10:00.000Z
 ---
