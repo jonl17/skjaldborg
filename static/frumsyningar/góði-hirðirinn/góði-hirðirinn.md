@@ -9,7 +9,7 @@ editing: Stefanía Thors, Helga Rakel Rafnsdóttir
 filming: Helga Rakel Rafnsdóttir, Arnar Þórisson
 composer: ""
 sound_design: Huldar Freyr Arnarson
-length_in_min: 48
+length_in_min: 46
 Trailer: ""
 dagskra:
   - 2020-08-01T15:00:00.000Z
