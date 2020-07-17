@@ -10,7 +10,7 @@ filming: Bjarni Felix Bjarnason
 composer: Úlfur Eldjárn
 sound_design: Kjartan Kjartansson
 length_in_min: 50
-Trailer: https://player.vimeo.com/video/266324266
+Trailer: ""
 dagskra:
   - 2020-08-02T15:00:00.000Z
 ---
