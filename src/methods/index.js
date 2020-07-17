@@ -1,20 +1,34 @@
-export const convert = timestampSeconds => {
-  // Months array
-  var months_arr = [
-    "Jan",
-    "Feb",
-    "Mar",
-    "Apr",
-    "May",
-    "Jun",
-    "Jul",
-    "Aug",
-    "Sep",
-    "Oct",
-    "Nov",
-    "Dec",
-  ]
+// Months array
+export const months_arr = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
+]
+export const months_arr_is = [
+  "Janúar",
+  "Febrúar",
+  "Mars",
+  "Apríl",
+  "Maí",
+  "Júní",
+  "Júlí",
+  "Ágúst",
+  "September",
+  "Október",
+  "Nóvember",
+  "Desember",
+]
 
+export const convert = timestampSeconds => {
   // Convert timestamp to milliseconds
   var date = new Date(timestampSeconds * 1000)
 
@@ -55,4 +69,13 @@ export const convert = timestampSeconds => {
 
 export const titleToURL = title => {
   return title.replace(/ /g, "-").toLowerCase()
+}
+
+export const formatTime = date => {
+  const hour = date.getHours()
+  let minutes = date.getMinutes()
+  if (minutes < 10) {
+    minutes = "0" + minutes
+  }
+  return `kl. ${hour}:${minutes}`
 }

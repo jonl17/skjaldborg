@@ -5,6 +5,31 @@ media_folder: "static/assets"
 public_folder: "assets"
 
 collections:
+  - name: "dagskra"
+    label: "Dagskrá"
+    folder: "static/dagskra"
+    create: true
+    path: "{{title}}/index"
+    media_folder: ""
+    public_folder: ""
+    editor:
+      preview: false
+    fields:
+      - { label: "Titill", name: "title", widget: "string" }
+      - {
+          label: "Titill enska",
+          name: "title-en",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Dagsetning",
+          name: "dagsetning",
+          widget: "datetime",
+          required: false,
+          dateFormat: "DD.MM.YYYY",
+          timeFormat: "HH:mm",
+        }
   # Verk í vinnslu 2020
   - name: "verkivinnslu"
     label: "Verk í vinnslu"

@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { redColor, greenColor } from "../../../constants"
+import { formatTime, months_arr_is } from "../../../methods"
 
 const Container = styled.div`
   display: flex;
@@ -21,11 +22,14 @@ const DateWrap = styled.div`
   }
 `
 
-const Date = ({ dagsetning }) => {
+const SingleDate = ({ dagsetning }) => {
+  const date = new Date(dagsetning)
   return (
     <DateWrap>
-      <h1 className='date'>{dagsetning}</h1>
-      <h1 className='time'>kl. 15:00</h1>
+      <h1 className='date'>{`${date.getDate()}. ${
+        months_arr_is[date.getMonth()]
+      }`}</h1>
+      <h1 className='time'>{formatTime(date)}</h1>
     </DateWrap>
   )
 }
@@ -34,7 +38,7 @@ const Dates = ({ dates }) => {
   return (
     <Container>
       {dates.map((item, index) => (
-        <Date key={index} dagsetning={item} />
+        <SingleDate key={index} dagsetning={item} />
       ))}
     </Container>
   )

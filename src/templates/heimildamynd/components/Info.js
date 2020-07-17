@@ -12,7 +12,9 @@ const Info = ({ html, frontmatter }) => {
         <Dates dates={frontmatter.dagskra} className='datesWrap' />
       )}
       <Content html={html} className='textiWrap' />
-      <Video src={frontmatter.Trailer} className='videoWrap' />
+      {frontmatter.Trailer && (
+        <Video src={frontmatter.Trailer} className='videoWrap' />
+      )}
       <Participants frontmatter={frontmatter} className='participantsWrap' />
     </InfoContainer>
   )
