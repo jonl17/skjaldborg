@@ -1,6 +1,6 @@
 ---
 title: Endalok Upphafsins
-title-en: First and Last Men
+title-en: Last and First Men
 image: l-fm_still.jpg
 director: Jóhann Jóhannsson
 producer: Þórir Snær Sigurjónsson
