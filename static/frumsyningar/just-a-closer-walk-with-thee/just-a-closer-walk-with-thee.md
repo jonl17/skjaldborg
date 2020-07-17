@@ -10,7 +10,7 @@ filming: Matthew Barney Studios
 composer: Sonny Greco
 sound_design: Nicolas Liebing
 length_in_min: 37
-Trailer: https://www.dropbox.com/s/64xh2ins0sl9k54/10.11_Main_AssemblyExport.mp4?dl=0
+Trailer: ""
 dagskra:
   - 2020-08-02T10:10:00.000Z
 ---
