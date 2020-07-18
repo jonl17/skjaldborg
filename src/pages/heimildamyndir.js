@@ -43,6 +43,7 @@ export const query = graphql`
         html
         frontmatter {
           title
+          title_en
           director
           producer
           production_company
