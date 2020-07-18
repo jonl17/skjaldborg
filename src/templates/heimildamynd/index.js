@@ -14,10 +14,10 @@ const Movie = ({ data: { movie }, pageContext, location }) => {
   const { html, frontmatter } = movie
   const icelandic = useSelector(state => state.reducer.icelandic)
 
-  const [redirectUrl, setRedirectUrl] = useState("/heimildamyndir/")
+  const [redirectUrl, setRedirectUrl] = useState("/heimildamyndir")
   useEffect(() => {
     if (location.state.fromSchedule) {
-      setRedirectUrl("/dagskra/")
+      setRedirectUrl("/dagskra")
     }
   }, [location])
   return (

@@ -26,7 +26,11 @@ const Item = ({ item }) => {
           duration={1}
           className='titlar'
           activeStyle={{ color: `rgb(188,220,186)` }}
-          partiallyActive={item.name === "Sarpur" || item.name === "Umsókn"}
+          partiallyActive={
+            item.name === "Sarpur" ||
+            item.name === "Umsókn" ||
+            item.name === "Heimildamyndir"
+          }
           onClick={() =>
             dispatch({
               type: TRIGGER_MENU,
