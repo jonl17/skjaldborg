@@ -80,5 +80,5 @@ export const formatTime = (date, nonVerbose) => {
   if (nonVerbose) {
     return `${hour}:${minutes}`
   }
-  return `kl. ${hour}:${minutes}`
+  return `kl. ${hour}.${minutes}`
 }

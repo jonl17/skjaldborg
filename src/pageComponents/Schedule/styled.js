@@ -35,9 +35,12 @@ export const ItemContainer = styled.div`
     margin-bottom: 0;
     margin-top: 0;
     padding: 1rem 0;
+    @media (max-width: 750px) {
+      font-size: 1rem;
+    }
   }
   .time {
-    width: 200px;
+    width: 15%;
     @media (max-width: 750px) {
       width: 100px;
     }
@@ -45,10 +48,28 @@ export const ItemContainer = styled.div`
     border-right: 1px solid ${redColor};
   }
   .title {
-    width: 100%;
+    width: 85%;
     padding-left: 125px;
     @media (max-width: 750px) {
       padding-left: 25px;
+    }
+  }
+  .nonMovie {
+    color: ${greenColor};
+    text-transform: none;
+    font-family: les;
+  }
+  .green-plus {
+    color: ${greenColor};
+  }
+  .movieTitleWrap {
+    position: relative;
+    span {
+      position: absolute;
+      left: -25px;
+      @media (max-width: 750px) {
+        left: -15px;
+      }
     }
   }
 `

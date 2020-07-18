@@ -13,6 +13,7 @@ const Dagskra = ({ data: { ekki_myndir, frumsyningar, verk_i_vinnslu } }) => {
         title: item.frontmatter.title,
         title_en: item.frontmatter.title_en,
         dagsetning: new Date(item.frontmatter.dagsetning),
+        movie: false,
       })
     )
     frumsyningar.nodes.forEach(item => {
@@ -21,6 +22,7 @@ const Dagskra = ({ data: { ekki_myndir, frumsyningar, verk_i_vinnslu } }) => {
           title: item.frontmatter.title,
           title_en: item.frontmatter.title_en,
           dagsetning: new Date(d),
+          movie: true,
         })
       )
     })
