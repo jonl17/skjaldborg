@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import { redColor, greenColor } from "../../constants"
 
 export const Container = styled.div`
@@ -53,7 +53,7 @@ export const ItemContainer = styled.div`
     padding: 1rem 0;
     display: inline-block;
     @media (max-width: 750px) {
-      font-size: 1rem;
+      font-size: 1.2rem;
     }
   }
   .time {
@@ -91,7 +91,18 @@ export const ItemContainer = styled.div`
 `
 
 export const InformationWrap = styled.div`
-  padding-bottom: 2.5rem;
+  overflow: hidden;
+
+  padding-bottom: 0;
+  height: 0;
+
+  ${props =>
+    props.display &&
+    css`
+    height: 100%;
+    padding:-bottom: 2.5rem;
+  `}
+
   .inner-wrap {
     margin: 1.5rem 0 2rem 0;
     padding: 0;
@@ -103,6 +114,32 @@ export const InformationWrap = styled.div`
     a {
       border-color: ${redColor};
       color: ${redColor};
+      &:hover {
+        border-color: white;
+        color: white;
+      }
     }
+  }
+`
+
+export const ResizeBox = styled.div`
+  height: 25px;
+  width: 25px;
+  display: inline-block;
+  position: absolute;
+  left: -30px;
+  margin: 0;
+  padding: 0;
+
+  span {
+    width: 100%;
+    height: 45%;
+    border-bottom: 2px solid ${redColor};
+  }
+  .first {
+    transform: rotate(90deg);
+  }
+  .hide {
+    opacity: 0;
   }
 `

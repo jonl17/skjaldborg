@@ -1,16 +1,15 @@
 import React, { useState } from "react"
 import { formatTime } from "../../methods"
-import { Link } from "gatsby"
 import Content from "../../reusableComponents/Content"
 import { ItemContainer, InformationWrap } from "./styled"
 import slugify from "slugify"
 import { useSelector } from "react-redux"
 import BigBtn from "../../reusableComponents/BigBtn"
 
-const Information = ({ html, title }) => {
+const Information = ({ html, title, display }) => {
   const icelandic = useSelector(state => state.reducer.icelandic)
   return (
-    <InformationWrap>
+    <InformationWrap display={display}>
       <Content html={html} className='inner-wrap' />
       <BigBtn
         state={{ fromSchedule: true }}
@@ -20,6 +19,10 @@ const Information = ({ html, title }) => {
       ></BigBtn>
     </InformationWrap>
   )
+}
+
+const ResizeIcon = ({ displayText }) => {
+  return <span className='green-plus'>{displayText ? "-" : "+"}</span>
 }
 
 const Item = ({ item, hideTime }) => {
@@ -44,7 +47,11 @@ const Item = ({ item, hideTime }) => {
               ? `(${item.frontmatter.length_in_min})`
               : null}
           </h2>
-          {displayText && <Information html={item.html} title={item.title} />}
+          <Information
+            html={item.html}
+            title={item.title}
+            display={displayText}
+          />
         </div>
       ) : (
         <h2 className='title nonMovie les-text'>{item.title}</h2>
