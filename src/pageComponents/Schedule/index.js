@@ -28,12 +28,16 @@ const Schedule = ({ schedule }) => {
     <Container>
       <div className='content-wrap'>
         <PageTitle>{icelandic ? "Dagskrá" : "Schedule"} 2020</PageTitle>
+        <div className='vertical-border' />
         {DAYS.map((day, index) => (
           <Day
             key={index}
             nameOfDay={icelandic ? day.name.is : day.name.en}
             date={icelandic ? day.date.is : day.date.en}
             schedule={schedule[day.key]}
+            verkIvinnslu={
+              day.key === "saturday" ? schedule.verk_i_vinnslu : null
+            }
           />
         ))}
       </div>

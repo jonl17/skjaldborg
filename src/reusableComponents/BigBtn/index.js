@@ -10,6 +10,7 @@ const BigBtn = ({
   white,
   className = "",
   externalLink,
+  state,
 }) => {
   const postlisted = useSelector(state => state.reducer.postlisted)
 
@@ -39,7 +40,7 @@ const BigBtn = ({
   } else {
     return (
       <Text className={className}>
-        <Anchor white={white} to={action}>
+        <Anchor state={state} white={white} to={action}>
           <Fill></Fill>
           <span style={{ zIndex: 1 }}>{text}</span>
         </Anchor>

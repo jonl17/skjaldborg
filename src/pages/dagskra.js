@@ -24,17 +24,20 @@ const Dagskra = ({ data: { ekki_myndir, frumsyningar, verk_i_vinnslu } }) => {
           dagsetning: new Date(d),
           movie: true,
           frontmatter: { ...item.frontmatter },
+          html: item.html,
         })
       )
     })
+
     list.sort((a, b) => (a.dagsetning > b.dagsetning ? 1 : -1))
 
     setSchedule({
       friday: list.filter(item => item.dagsetning.getDate() === 31),
       saturday: list.filter(item => item.dagsetning.getDate() === 1),
       sunday: list.filter(item => item.dagsetning.getDate() === 2),
+      verk_i_vinnslu: verk_i_vinnslu,
     })
-  }, [ekki_myndir, frumsyningar])
+  }, [ekki_myndir, frumsyningar, verk_i_vinnslu])
   return (
     <>
       <Header mode='red' />
@@ -62,6 +65,7 @@ export const query = graphql`
       filter: { fileAbsolutePath: { regex: "/frumsyningar/" } }
     ) {
       nodes {
+        html
         frontmatter {
           title
           title_en
@@ -74,6 +78,7 @@ export const query = graphql`
       filter: { fileAbsolutePath: { regex: "/verk-i-vinnslu/" } }
     ) {
       nodes {
+        html
         frontmatter {
           title
           title_en
