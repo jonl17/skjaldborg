@@ -20,7 +20,8 @@ const Item = ({ item, hideTime }) => {
           state={{ fromSchedule: true }}
         >
           <h2 className='movieTitleWrap'>
-            <span className='green-plus'>+</span> {item.title}
+            <span className='green-plus'>+</span> {item.title} (
+            {item.frontmatter.length_in_min})
           </h2>
         </Link>
       ) : (

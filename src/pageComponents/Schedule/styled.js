@@ -40,12 +40,7 @@ export const ItemContainer = styled.div`
     }
   }
   .time {
-    width: 15%;
-    @media (max-width: 750px) {
-      width: 100px;
-    }
-    padding-right: 25px;
-    border-right: 1px solid ${redColor};
+    width: 65px;
   }
   .title {
     width: 85%;

@@ -206,6 +206,7 @@ collections:
             dateFormat: "DD.MM.YYYY",
             timeFormat: "HH:mm",
           }
+      - { label: "Heiðursgestur", name: "honour_gest", widget: "boolean", default: false }
   # Styrktaraðilar | Top 5
   - name: "styrktaradilar_top5"
     label: "Styrktaraðilar Top 5"

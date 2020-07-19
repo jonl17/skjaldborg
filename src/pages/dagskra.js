@@ -23,6 +23,7 @@ const Dagskra = ({ data: { ekki_myndir, frumsyningar, verk_i_vinnslu } }) => {
           title_en: item.frontmatter.title_en,
           dagsetning: new Date(d),
           movie: true,
+          frontmatter: { ...item.frontmatter },
         })
       )
     })
@@ -65,6 +66,7 @@ export const query = graphql`
           title
           title_en
           dagskra
+          length_in_min
         }
       }
     }
@@ -76,6 +78,7 @@ export const query = graphql`
           title
           title_en
           dagskra
+          length_in_min
         }
       }
     }
