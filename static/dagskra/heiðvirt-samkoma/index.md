@@ -1,5 +1,5 @@
 ---
-title: FJÖR Á FLAKI
+title: LÖGLEGT LAUGARDAGSPARTÝ
 title-en: ""
 dagsetning: 2020-08-01T21:00:58.534Z
 ---
