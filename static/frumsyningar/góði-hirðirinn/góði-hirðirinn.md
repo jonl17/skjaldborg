@@ -8,7 +8,7 @@ production_company: Skarkali ehf.
 editing: Stefanía Thors, Helga Rakel Rafnsdóttir
 filming: Helga Rakel Rafnsdóttir, Arnar Þórisson
 composer: ""
-sound_design: Huldar Freyr Arnarson
+sound_design: Huldar Freyr Arnarson & Ragna Kjartansdóttir
 length_in_min: 46
 Trailer: ""
 dagskra:
