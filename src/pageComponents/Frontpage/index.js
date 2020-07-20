@@ -20,7 +20,12 @@ const Frontpage = ({ data: { imageSharp, video } }) => {
       <TopVideo frontpage videoSource='videos/Forsida_skura_xcbhav'></TopVideo>
 
       <div className='btnWrap'>
-        <BigBtn action={"/dagskra"} text={icelandic ? "Dagskrá" : "Schedule"} />
+        {/* <BigBtn action={"/dagskra"} text={icelandic ? "Dagskrá" : "Schedule"} /> */}
+        <BigBtn
+          externalLink
+          action={dagskraPDF}
+          text={icelandic ? "Dagskrá" : "Schedule"}
+        />
       </div>
 
       <ExcerptBtns />
