@@ -14,7 +14,7 @@ Einnig er hægt að keyra leiðina að hluta og sigla með ferjunni Baldri frá 
 
 Á [heimasíðu](https://www.westfjords.is) markaðsstofu Vestfjarða er að finna allar helstu upplýsingar um áningarstaði, veitingastaði, ferðaþjónustuaðila og gistimöguleika.
 
-\-ENSKA-
+\--ENSKA--
 
 We encourage all our guests to plan further travels around the West Fjords before and/or after the festival. In close proximity to Patreksfjordur are some of Iceland’s most cherished natural attractions such as Dynjandi waterfall, Latrabjarg bird watcher's paradise and Raudasandur beach.
 
