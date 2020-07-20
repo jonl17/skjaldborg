@@ -12,6 +12,7 @@ length_in_min: 57
 Trailer: https://player.vimeo.com/video/343704098
 dagskra:
   - 2020-08-01T10:00:00.000Z
+honour_guest: false
 ---
 Rétt utan við borgina starfaði einstakur leikskóli um skeið þar sem leiksvæðið var ósnert náttúran allt um kring. Leikstýran varði síðustu vikunni fyrir lokun með nemendum náttúrunnar. Leikurinn leiðir okkur inn í heim þar sem börnin skoða veröldina út frá sínum forsendum þar sem hinir fullorðnu eru hvergi sjáanlegir. Skyndilega verður rof í þessari tilveru þegar hinir fullorðnu skerast í leikinn og krökkunum er smalað inn í hádegismat; þann síðasta á þessum stað.
 
