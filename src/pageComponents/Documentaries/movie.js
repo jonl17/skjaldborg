@@ -4,6 +4,7 @@ import { useSelector } from "react-redux"
 import slugify from "slugify"
 
 const Movie = ({ movie, pathname }) => {
+  const icelandic = useSelector(state => state.reducer.icelandic)
   if (movie) {
     return (
       <GridItemWrap>
@@ -17,9 +18,15 @@ const Movie = ({ movie, pathname }) => {
           }}
         >
           <div className='slykjan'></div>
-          <h1
-            dangerouslySetInnerHTML={{ __html: movie.frontmatter.title }}
-          ></h1>
+          {!icelandic && movie.frontmatter.title_en ? (
+            <h1
+              dangerouslySetInnerHTML={{ __html: movie.frontmatter.title_en }}
+            ></h1>
+          ) : (
+            <h1
+              dangerouslySetInnerHTML={{ __html: movie.frontmatter.title }}
+            ></h1>
+          )}
         </GridBox>
       </GridItemWrap>
     )

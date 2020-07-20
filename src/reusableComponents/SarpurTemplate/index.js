@@ -9,8 +9,8 @@ const Template = ({ title, children, year, link }) => {
   const icelandic = useSelector(state => state.reducer.icelandic)
   return (
     <Container>
-      <div className="content-wrap">
-        <div className="title-wrap">
+      <div className='content-wrap'>
+        <div className='title-wrap'>
           <PageTitle
             nopad
             dangerouslySetInnerHTML={{

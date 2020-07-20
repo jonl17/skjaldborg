@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import PageContainer from "../../layouts/PageContainer"
 import Header from "../../layouts/Header"
 import Footer from "../../layouts/Footer"
@@ -10,9 +10,16 @@ import Arrow from "../../reusableComponents/Arrow"
 import { Fade } from "react-reveal"
 import { useSelector } from "react-redux"
 
-const Movie = ({ data: { movie }, pageContext }) => {
+const Movie = ({ data: { movie }, pageContext, location }) => {
   const { html, frontmatter } = movie
   const icelandic = useSelector(state => state.reducer.icelandic)
+
+  const [redirectUrl, setRedirectUrl] = useState("/heimildamyndir")
+  useEffect(() => {
+    if (location.state.fromSchedule) {
+      setRedirectUrl("/dagskra")
+    }
+  }, [location])
   return (
     <>
       <Header />
@@ -28,7 +35,7 @@ const Movie = ({ data: { movie }, pageContext }) => {
                 <h2>{frontmatter.director}</h2>
               </Fade>
               <Fade right distance='10px' delay={250}>
-                <Link to='/heimildamyndir/'>
+                <Link to={redirectUrl}>
                   <div className='back-btn-wrap'>
                     <Arrow rotation='-180deg' />
                     <h3>Tilbaka</h3>

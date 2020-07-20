@@ -71,11 +71,14 @@ export const titleToURL = title => {
   return title.replace(/ /g, "-").toLowerCase()
 }
 
-export const formatTime = date => {
+export const formatTime = (date, nonVerbose) => {
   const hour = date.getHours()
   let minutes = date.getMinutes()
   if (minutes < 10) {
     minutes = "0" + minutes
   }
-  return `kl. ${hour}:${minutes}`
+  if (nonVerbose) {
+    return `${hour}:${minutes}`
+  }
+  return `kl. ${hour}.${minutes}`
 }

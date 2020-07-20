@@ -12,7 +12,7 @@ const TITLES = {
 }
 
 const Heimildamyndir = ({
-  data: { frumsyningar: docs, verk_i_vinnslu: wips },
+  data: { frumsyningar: docs, verk_i_vinnslu: wips, honourGuest },
 }) => {
   const icelandic = useSelector(state => state.reducer.icelandic)
   return (
@@ -27,6 +27,10 @@ const Heimildamyndir = ({
           docs={wips}
           title={icelandic ? "Verk í vinnslu" : "Work in progress"}
         />
+        <Documentaries
+          docs={honourGuest}
+          title={icelandic ? "Heiðursgestur" : "Honour guest"}
+        />
       </Template>
       <Footer />
     </>
@@ -37,12 +41,16 @@ export const query = graphql`
   {
     frumsyningar: allMarkdownRemark(
       sort: { fields: frontmatter___title }
-      filter: { fileAbsolutePath: { regex: "/frumsyning/" } }
+      filter: {
+        fileAbsolutePath: { regex: "/frumsyning/" }
+        frontmatter: { honour_guest: { eq: false } }
+      }
     ) {
       nodes {
         html
         frontmatter {
           title
+          title_en
           director
           producer
           production_company
@@ -74,6 +82,38 @@ export const query = graphql`
           title
           director
           producer
+          length_in_min
+          Trailer
+          image {
+            childImageSharp {
+              fluid(quality: 75, maxHeight: 550) {
+                ...GatsbyImageSharpFluid
+                src
+              }
+            }
+          }
+        }
+      }
+    }
+    honourGuest: allMarkdownRemark(
+      sort: { fields: frontmatter___title }
+      filter: {
+        fileAbsolutePath: { regex: "/frumsyning/" }
+        frontmatter: { honour_guest: { eq: true } }
+      }
+    ) {
+      nodes {
+        html
+        frontmatter {
+          title
+          title_en
+          director
+          producer
+          production_company
+          editing
+          filming
+          composer
+          sound_design
           length_in_min
           Trailer
           image {

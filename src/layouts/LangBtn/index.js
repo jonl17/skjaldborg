@@ -12,7 +12,12 @@ const LangBtn = () => {
   const [color, setColor] = useState("white")
 
   useEffect(() => {
-    if (pathname.includes("/umsokn") || pathname.includes("/sarpur") || pathname.includes("/heimildamyndir")) {
+    if (
+      pathname.includes("/umsokn") ||
+      pathname.includes("/sarpur") ||
+      pathname.includes("/heimildamyndir") ||
+      pathname.includes("/dagskra")
+    ) {
       setColor(`${redColor}`)
     } else setColor("white")
   }, [pathname])
