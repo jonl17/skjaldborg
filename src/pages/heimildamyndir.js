@@ -24,12 +24,12 @@ const Heimildamyndir = ({
           title={icelandic ? "Frumsýningar" : "Premieres"}
         />
         <Documentaries
-          docs={wips}
-          title={icelandic ? "Verk í vinnslu" : "Work in progress"}
-        />
-        <Documentaries
           docs={honourGuest}
           title={icelandic ? "Heiðursgestur" : "Honour guest"}
+        />
+        <Documentaries
+          docs={wips}
+          title={icelandic ? "Verk í vinnslu" : "Work in progress"}
         />
       </Template>
       <Footer />
