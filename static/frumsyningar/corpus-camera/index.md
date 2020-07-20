@@ -2,7 +2,7 @@
 title: Corpus Camera
 image: corpus_camera_still.jpg
 director: Hrafnhildur Gunnarsdóttir
-length_in_min: -1
+length_in_min: 0
 dagskra:
   - 2020-08-01T15:00:00.000Z
 honour_guest: true

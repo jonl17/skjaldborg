@@ -3,7 +3,7 @@ title: Hver hengir upp þvottinn?
 title-en: Who hangs the Laundry?
 image: hver_hengir_upp_þvottinn_still.jpg
 director: Hrafnhildur Gunnarsdóttir
-length_in_min: -1
+length_in_min: 0
 dagskra:
   - 2020-07-31T20:00:00.000Z
 honour_guest: true
