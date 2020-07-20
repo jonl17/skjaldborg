@@ -3,7 +3,7 @@ title: Hrein og bein
 title-en: Straight Out
 image: hrein_og_bein_still.jpg
 director: Hrafnhildur Gunnarsdóttir
-length_in_min: -1
+length_in_min: 0
 dagskra:
   - 2020-08-01T21:00:00.000Z
 honour_guest: true
