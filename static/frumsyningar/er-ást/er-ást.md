@@ -3,7 +3,7 @@ title: Er ást
 title-en: Resonance
 image: er_ast.png
 director: Kristín Andrea Þórðardóttir
-producer: Kristín Andrea Þórðardóttir
+producer: Kristín Andrea Þórðardóttir & Olaf de Fleur
 production_company: Andrá kvikmyndafélag í samstarfi við Poppoli Pictures
 editing: Sighvatur Ómar Kristinsson
 filming: Bjarni Felix Bjarnason
