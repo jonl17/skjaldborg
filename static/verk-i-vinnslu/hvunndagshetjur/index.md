@@ -1,6 +1,6 @@
 ---
 title: Hvunndagshetjur
-title-en: Hvunndagshetjur
+title-en: Everyday heroes
 image: hvunndagshetjur.png
 director: Magnea B. Valdimarsdóttir
 producer: María Lea Ævarsdóttir/Júlíus Kemp
