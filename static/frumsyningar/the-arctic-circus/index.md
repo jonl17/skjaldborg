@@ -1,5 +1,6 @@
 ---
 title: The Arctic Circus
+title-en: The Arctic Circus
 image: the_arctic_circus.png
 director: Haakon Sand & Gudmund Sand
 producer: Sandbox AS & Dag Maartmann
