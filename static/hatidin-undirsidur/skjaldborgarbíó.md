@@ -13,7 +13,7 @@ Samstarf Lionsklúbbsins og aðstandenda Skjaldborgar - hátíðar íslenskra he
 
 Það er einsdæmi á Íslandi og jafnvel á heimsvísu að sjálfboðaliðasamtök á borð við Lionsklúbbinn reki kvikmyndahús í svo fámennum bæ. Þetta þykir aðstandendum hátíðarinnar mikil fyrirmyndar samfélagsþjónusta!
 
-\-ENSKA-
+\--ENSKA--
 
 Skjaldborg cinema is located on Adalstraeti 27 ([See on map](https://goo.gl/maps/efTnr7t5kKAKGBJz5)) and is generally known as Skjaldborg. It was built as an initiative of local political independence party Skjöldur who felt the town needed a community hall. The first gathering in the much anticipated community hall was held on May 23rd 1935 and given the name Skjaldborg. 
 
