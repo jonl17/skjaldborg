@@ -4,7 +4,8 @@ title-en: Acting out
 image: ekki_einleikid.png
 director: Ásthildur Kjartansdóttir
 producer: Ásthildur Kjartansdóttir, Anna Þóra Steinþórsdóttir
-Trailer: https://player.vimeo.com/video/378826968
+length_in_min: ""
+Trailer: https://player.vimeo.com/video/439795651
 dagskra:
   - 2020-08-01T14:00:00.000Z
 ---
