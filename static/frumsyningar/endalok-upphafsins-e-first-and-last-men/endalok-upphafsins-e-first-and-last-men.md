@@ -13,6 +13,7 @@ length_in_min: 70
 Trailer: https://www.youtube.com/embed/nqDBlBKlbDA
 dagskra:
   - 2020-08-02T19:00:00.000Z
+honour_guest: false
 ---
 Í myndinni flökkum við um svæði í niðurníðslu þar sem sorglegir atburðir hafa gerst - staðir hlaðnir táknrænni merkingu. Gegnum myndina skynjum við nærveru, einhverskonar vitund sem er að reyna að hafa samband við okkur.
 
