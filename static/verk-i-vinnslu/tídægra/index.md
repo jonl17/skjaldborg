@@ -1,7 +1,7 @@
 ---
 title: Tídægra
 title-en: Apausalypse
-image: tidaegra.png
+image: screenshot-2020-07-20-at-10.23.12.png
 director: Anní Ólafsdóttir & Andri Snær Magnason
 producer: Andri Snær Magnason & Anní Ólafsdóttir
 sound_design: ""
