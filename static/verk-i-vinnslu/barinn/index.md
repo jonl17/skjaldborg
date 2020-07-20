@@ -4,7 +4,7 @@ title-en: The Bar
 image: barinn_still.png
 director: Árni Sveinsson
 producer: Árni Sveinsson & Guðný Jónsdóttir
-Trailer: https://www.youtube.com/embed/xy6mLVsno9k
+Trailer: ""
 dagskra:
   - 2020-08-02T14:00:00.000Z
 ---
