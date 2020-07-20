@@ -22,10 +22,6 @@ const Information = ({ html, title, display }) => {
   )
 }
 
-const ResizeIcon = ({ displayText }) => {
-  return <span className='green-plus'>{displayText ? "-" : "+"}</span>
-}
-
 const Item = ({ item, hideTime }) => {
   const [displayText, setDisplayText] = useState(false)
   const [title, setTitle] = useState(item.title)
