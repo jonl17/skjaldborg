@@ -4,7 +4,12 @@ title-en: Apausalypse
 image: screenshot-2020-07-20-at-10.23.12.png
 director: Anní Ólafsdóttir & Andri Snær Magnason
 producer: Andri Snær Magnason & Anní Ólafsdóttir
-sound_design: ""
+production_company: Elsku Rut
+editing: Sighvatur Ómar Kristinsson, Eva Lind Höskuldsdóttir, Anní Ólafsdóttir
+filming: Andri Haraldsson
+composer: Ásta Fanney Sigurðardóttir
+sound_design: Huldar Freyr
+length_in_min: 35
 Trailer: https://www.youtube.com/embed/R1rdOA61CnI
 dagskra:
   - 2020-08-02T14:00:00.000Z
