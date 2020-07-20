@@ -1,5 +1,6 @@
 ---
 title: MEGAS
+title-en: MEGAS
 image: megas.png
 director: Spessi
 producer: Jón Karl Helgason, Spessi ljósmyndari
