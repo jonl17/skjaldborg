@@ -32,11 +32,11 @@ const Item = ({ item, hideTime }) => {
     } else {
       setTitle(item.title)
     }
-  }, [icelandic])
+  }, [icelandic, item])
   return (
     <ItemContainer>
       {hideTime ? (
-        <h2 className='time'></h2>
+        <span className='time' />
       ) : (
         <h2 className='time'>{formatTime(item.dagsetning, true)}</h2>
       )}

@@ -35,9 +35,6 @@ const Schedule = ({ schedule }) => {
             nameOfDay={icelandic ? day.name.is : day.name.en}
             date={icelandic ? day.date.is : day.date.en}
             schedule={schedule[day.key]}
-            verkIvinnslu={
-              day.key === "saturday" ? schedule.verk_i_vinnslu : null
-            }
           />
         ))}
       </div>
