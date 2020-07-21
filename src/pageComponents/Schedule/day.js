@@ -15,9 +15,10 @@ const Day = ({ schedule, nameOfDay, date }) => {
               <Item
                 item={item}
                 hideTime={
-                  index !== 0 &&
-                  item.dagsetning.getTime() ===
-                    schedule[index - 1].dagsetning.getTime()
+                  (index !== 0 &&
+                    item.dagsetning.getTime() ===
+                      schedule[index - 1].dagsetning.getTime()) ||
+                  item.wip
                 }
               />
             </Fade>

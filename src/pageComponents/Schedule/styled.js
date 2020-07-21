@@ -98,7 +98,7 @@ export const InformationWrap = styled.div`
   ${props =>
     props.display &&
     css`
-    height: 100%;
+    height: auto;
     padding:-bottom: 2.5rem;
   `}
 

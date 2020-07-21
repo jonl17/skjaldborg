@@ -78,7 +78,12 @@ export const formatTime = (date, nonVerbose) => {
     minutes = "0" + minutes
   }
   if (nonVerbose) {
-    return `${hour}:${minutes}`
+    // þetta er hakk, laga síðar
+    if (`${hour}:${minutes}` === `14:10`) {
+      return `14:00`
+    } else {
+      return `${hour}:${minutes}`
+    }
   }
   return `kl. ${hour}.${minutes}`
 }

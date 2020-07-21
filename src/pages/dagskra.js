@@ -14,6 +14,7 @@ const Dagskra = ({ data: { ekki_myndir, frumsyningar, verk_i_vinnslu } }) => {
         title_en: item.frontmatter.title_en,
         dagsetning: new Date(item.frontmatter.dagsetning),
         movie: false,
+        wip: false,
       })
     )
     frumsyningar.nodes.forEach(item => {
@@ -25,6 +26,7 @@ const Dagskra = ({ data: { ekki_myndir, frumsyningar, verk_i_vinnslu } }) => {
           movie: true,
           frontmatter: { ...item.frontmatter },
           html: item.html,
+          wip: false,
         })
       )
     })
@@ -37,11 +39,12 @@ const Dagskra = ({ data: { ekki_myndir, frumsyningar, verk_i_vinnslu } }) => {
           movie: true,
           frontmatter: { ...item.frontmatter },
           html: item.html,
+          wip: true,
         })
       )
     })
 
-    list.sort((a, b) => (a.dagsetning > b.dagsetning ? 1 : -1))
+    list.sort((a, b) => a.dagsetning - b.dagsetning)
 
     setSchedule({
       friday: list.filter(item => item.dagsetning.getDate() === 31),

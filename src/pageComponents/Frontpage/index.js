@@ -11,7 +11,6 @@ import { Container } from "./styled"
 import dagskraPDF from "../../../static/assets/dagskra.pdf"
 
 const Frontpage = ({ data: { imageSharp, video } }) => {
-  const platform = useSelector(state => state.reducer.platform)
   const icelandic = useSelector(state => state.reducer.icelandic)
   return (
     <Container>
