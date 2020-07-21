@@ -9,7 +9,7 @@ const pages = [
     name_en: `Documentaries`,
     slug: `/heimildamyndir`,
   },
-  // { name: `Dagskrá`, slug: `/dagskra` },
+  { name: `Dagskrá`, slug: `/dagskra` },
   { name: `Sarpur`, name_en: `Archive`, slug: `/sarpur` },
   // { name: `Umsókn`, name_en: `Application`, slug: `/umsokn` },
 ]
