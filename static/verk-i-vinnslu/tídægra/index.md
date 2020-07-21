@@ -9,6 +9,7 @@ editing: Sighvatur Ómar Kristinsson, Eva Lind Höskuldsdóttir, Anní Ólafsdó
 filming: Andri Haraldsson
 composer: Ásta Fanney Sigurðardóttir
 sound_design: Huldar Freyr
+length_in_min: 0
 Trailer: https://www.youtube.com/embed/R1rdOA61CnI
 dagskra:
   - 2020-08-02T14:10:00.000Z
