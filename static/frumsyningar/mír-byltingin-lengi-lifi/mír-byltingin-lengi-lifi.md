@@ -15,7 +15,7 @@ dagskra:
   - 2020-08-02T10:10:00.000Z
 honour_guest: false
 ---
-Félagið MÍR var stofnað árið 1950 í þeim tilgangi að styrkja menningarlegt samstarf Íslands og Ráðstjórnarríkjanna. Nú eitthundrað árum eftir rússnesku byltinguna heldur félagið byltingunni á lífi með vikulegum kvikmyndasýningum á gömlum rússneskum ræmum. En er þetta einungis fortíðarþrá eða hefur félagið arfleið sem vert er að varðveita?
+Félagið MÍR var stofnað árið 1950 í þeim tilgangi að efla menningartengsl Íslands og Ráðstjórnarríkjanna sálugu. Nú þremur áratugum eftir fall járntjaldsins heldur félagið enn lífi í byltingunni með vikulegum sýningum á gömlum sovéskum kvikmyndum. En er hér einungis fortíðarþrá á ferðinni eða á félagið arfleifð sem vert er að varðveita?
 
 \--ENSKA--
 
