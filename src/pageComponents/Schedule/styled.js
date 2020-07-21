@@ -68,8 +68,7 @@ export const ItemContainer = styled.div`
   }
   .nonMovie {
     color: white;
-    text-transform: none;
-    font-family: les;
+    text-transform: uppercase;
   }
   .green-plus {
     color: white;
