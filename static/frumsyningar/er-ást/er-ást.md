@@ -9,7 +9,7 @@ editing: Sighvatur Ómar Kristinsson
 filming: Bjarni Felix Bjarnason
 composer: Úlfur Eldjárn
 sound_design: Kjartan Kjartansson
-length_in_min: 50
+length_in_min: 53
 Trailer: ""
 dagskra:
   - 2020-08-02T15:00:00.000Z
