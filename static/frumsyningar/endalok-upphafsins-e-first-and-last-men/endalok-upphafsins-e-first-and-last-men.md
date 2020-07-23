@@ -1,5 +1,5 @@
 ---
-title: Endalok Upphafsins
+title: Endalok Upphafsins / Last and First Men
 title-en: Last and First Men
 image: l-fm_still.jpg
 director: Jóhann Jóhannsson
