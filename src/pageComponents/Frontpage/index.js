@@ -8,7 +8,8 @@ import Sponsors from "../../reusableComponents/Sponsors"
 import TopVideo from "../../reusableComponents/TopImage/video"
 import BigBtn from "../../reusableComponents/BigBtn"
 import { Container } from "./styled"
-import dagskraPDF from "../../../static/assets/dagskra.pdf"
+import Postlist from "../../reusableComponents/Postlist"
+import PDF from "../../../static/assets/Forsala_armbanda.pdf"
 
 const Frontpage = ({ data: { imageSharp, video } }) => {
   const icelandic = useSelector(state => state.reducer.icelandic)
@@ -19,7 +20,16 @@ const Frontpage = ({ data: { imageSharp, video } }) => {
       <TopVideo frontpage videoSource='videos/Forsida_skura_xcbhav'></TopVideo>
 
       <div className='btnWrap'>
+        <BigBtn
+          externalLink
+          action={PDF}
+          text={icelandic ? "Forsala armbanda" : "Presale"}
+          className='nopad'
+        />
         <BigBtn action={"/dagskra"} text={icelandic ? "Dagskrá" : "Schedule"} />
+      </div>
+      <div className='postlistWrap'>
+        <Postlist className='postlist' />
       </div>
 
       <ExcerptBtns />

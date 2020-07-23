@@ -9,7 +9,29 @@ export const Container = styled.div`
     height: 100vh;
     width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    .nopad {
+      padding-bottom: 0;
+    }
+  }
+  .postlistWrap {
+    position: absolute;
+    height: 65vh;
+    top: 22rem;
+    @media (max-width: 750px) {
+      top: 0;
+    }
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .postlist {
+      height: auto;
+      width: auto;
+    }
   }
 `
 

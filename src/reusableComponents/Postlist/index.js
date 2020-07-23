@@ -8,14 +8,13 @@ import { RootContext } from "../../context/main"
 // components
 import { Form, Input, Button } from "./styled"
 
-const Postlist = () => {
+const Postlist = ({ className }) => {
   const [store, setStore] = useState(null)
 
   const { firestore } = useContext(RootContext)
 
   useEffect(() => {
-    if (firestore)
-      setStore(firestore)
+    if (firestore) setStore(firestore)
   }, [firestore])
 
   const icelandic = useSelector(state => state.reducer.icelandic)
@@ -41,25 +40,25 @@ const Postlist = () => {
   }
 
   return (
-    <Form onSubmit={handleSubmit(onSubmit)}>
+    <Form className={className} onSubmit={handleSubmit(onSubmit)}>
       <Input
         disabled={postlisted}
         ref={register({ required: true })}
-        name="netfang"
-        type="email"
+        name='netfang'
+        type='email'
         placeholder={icelandic ? "Netfang" : "Email"}
       ></Input>
       <Button
         disabled={postlisted}
-        type="submit"
+        type='submit'
         value={
           postlisted
             ? icelandic
               ? "Skráður"
               : "Registered"
             : icelandic
-              ? "Skrá mig á póstlista"
-              : "Sign up for postlist"
+            ? "Skrá mig á póstlista"
+            : "Sign up for postlist"
         }
       ></Button>
     </Form>
