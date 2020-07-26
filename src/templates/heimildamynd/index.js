@@ -16,7 +16,7 @@ const Movie = ({ data: { movie }, pageContext, location }) => {
 
   const [redirectUrl, setRedirectUrl] = useState("/heimildamyndir")
   useEffect(() => {
-    if (location.state.fromSchedule) {
+    if (location.state && location.state.fromSchedule) {
       setRedirectUrl("/dagskra")
     }
   }, [location])
