@@ -1,6 +1,6 @@
 ---
-title: Artic Fish
-logo: /assets/arctic.svg
-sponsor_url: 'http://www.arcticfish.is/'
+title: Kukl
+logo: /assets/kukl-logoweb.png
+sponsor_url: 'https://www.kukl.is/'
 ---
 
