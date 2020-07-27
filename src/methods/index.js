@@ -82,8 +82,19 @@ export const formatTime = (date, nonVerbose) => {
     if (`${hour}:${minutes}` === `14:10`) {
       return `14:00`
     } else {
+      if (isCoupleOfMinutesOver(minutes)) {
+        return `${hour}:00`
+      }
       return `${hour}:${minutes}`
     }
   }
-  return `kl. ${hour}.${minutes}`
+  if (isCoupleOfMinutesOver(minutes)) {
+    return `${hour}:00`
+  } else {
+    return `kl. ${hour}.${minutes}`
+  }
+}
+
+export const isCoupleOfMinutesOver = minutes => {
+  return minutes - 9 < 0
 }

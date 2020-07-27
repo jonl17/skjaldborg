@@ -2,6 +2,7 @@ import React from "react"
 import { DayContainer } from "./styled"
 import { Fade } from "react-reveal"
 import Item from "./Item"
+import { isCoupleOfMinutesOver } from "../../methods"
 
 const Day = ({ schedule, nameOfDay, date }) => {
   return (
@@ -18,7 +19,9 @@ const Day = ({ schedule, nameOfDay, date }) => {
                   (index !== 0 &&
                     item.dagsetning.getTime() ===
                       schedule[index - 1].dagsetning.getTime()) ||
-                  item.wip
+                  item.wip ||
+                  (item.dagsetning.getMinutes() !== 0 &&
+                    isCoupleOfMinutesOver(item.dagsetning.getMinutes()))
                 }
               />
             </Fade>
