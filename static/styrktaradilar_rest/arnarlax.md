@@ -1,6 +1,6 @@
 ---
-title: Arnarlax
-logo: /assets/arnarlax.png
-sponsor_url: 'https://www.arnarlax.is/'
+title: Vestri
+logo: /assets/logo-vestri.png
+sponsor_url: 'http://www.oddihf.is/fyrirtaekid/Um_Vestra_ehf/'
 ---
 
