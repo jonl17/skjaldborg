@@ -12,7 +12,7 @@ sound_design: Björn Viktorsson
 length_in_min: 45
 Trailer: https://player.vimeo.com/video/427523731
 dagskra:
-  - 2020-08-01T12:20:00.000Z
+  - 2020-08-01T12:21:00.000Z
 honour_guest: false
 ---
 Heimildarmynd sem veitir einstaka innsýn í vinnu leikstjórans Hlyns Pálmasonar við gerð kvikmyndarinnar Hvítur, Hvítur Dagur. Með aðgang að vídjódagbókum Hlyns og með því að fylgja tökuliði myndarinnar eftir eins og fluga á vegg, fangar verkið senur úr listrænu ferli þessa margverðlaunaða kvikmyndagerðarmanns á myndrænan og einlægan hátt.
