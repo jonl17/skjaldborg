@@ -6,7 +6,7 @@ director: Árni Sveinsson
 producer: Árni Sveinsson & Guðný Jónsdóttir
 Trailer: ""
 dagskra:
-  - 2020-08-02T14:10:00.000Z
+  - 2020-08-02T14:03:00.000Z
 ---
 Kaffibarinn er einn af fáum hverfisbörum Reykjavíkur sem enn heldur velli. Íslensk skemmtanamenning, bókmenntir og kvikmyndir sem tengjast sögu barsins eru ræddar af öllum helstu þátttakendum, gestum og starfsmönnum barsins. 25 ára sögu Kaffibarsins er gerð skil á hispurslausan hátt og án allrar ábyrgðar þátttakenda.
 
