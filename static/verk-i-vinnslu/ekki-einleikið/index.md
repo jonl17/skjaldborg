@@ -5,7 +5,7 @@ image: ekki_einleikid.png
 director: Ásthildur Kjartansdóttir
 producer: Ásthildur Kjartansdóttir, Anna Þóra Steinþórsdóttir
 length_in_min: 0
-Trailer: https://player.vimeo.com/video/439795651
+Trailer: https://player.vimeo.com/video/441760352
 dagskra:
   - 2020-08-01T14:01:00.000Z
 ---
