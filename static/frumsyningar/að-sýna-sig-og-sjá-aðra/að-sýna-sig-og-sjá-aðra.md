@@ -11,7 +11,7 @@ sound_design: Sandra Björg Ernudóttir
 length_in_min: 14
 Trailer: ""
 dagskra:
-  - 2020-08-01T10:00:00.000Z
+  - 2020-09-19T14:30:00.000Z
 honour_guest: false
 ---
 Þann 1. febrúar árið 2020 var þorranum fagnað í félagsheimilinu Klifi í Ólafsvík. Þar var samankominn fjöldi Ólsara til að sýna sig og sjá aðra. Skyggnst verður inn í undirbúning og framkvæmd þorrablótsins.
