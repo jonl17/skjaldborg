@@ -12,7 +12,7 @@ sound_design: Huldar Freyr
 length_in_min: 0
 Trailer: https://www.youtube.com/embed/R1rdOA61CnI
 dagskra:
-  - 2020-08-02T14:10:00.000Z
+  - 2020-09-20T11:00:00.000Z
 ---
 Þegar heimurinn nam staðar vegna Kóróna veirunnar og sýningu myndar Andra Snæs og Anní Ólafsdóttur var frestað fóru þau af stað og gerðu aðra mynd, Apausalypse / Tídægru. Þau fóru um og tóku viðtöl við skáld, heimspekinga og listamenn í leit að dýpri merkingu í óvissunni, hvað þýðir það þegar heimurinn nemur staðar?
 
