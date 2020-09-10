@@ -12,7 +12,7 @@ sound_design: Herman Edholm
 length_in_min: 25
 Trailer: https://player.vimeo.com/video/285608356
 dagskra:
-  - 2020-08-01T10:01:00.000Z
+  - 2020-09-20T16:30:00.000Z
 honour_guest: false
 ---
 Through the documentary The Arctic Circus, we experience the different personalities of the circus group, the society they travel through and the incredible landscapes. We enter a circus that through its performances tries to modernize and change the perception of the traditional circus. This is a portrait of a group of people who live by bringing joy to others, and with a desire to build a cultural understanding of circus as a great art form.
