@@ -9,7 +9,7 @@ const pages = [
     name_en: `Documentaries`,
     slug: `/heimildamyndir`,
   },
-  { name: `Dagskrá`, slug: `/dagskra` },
+  // { name: `Dagskrá`, slug: `/dagskra` },
   { name: `Sarpur`, name_en: `Archive`, slug: `/sarpur` },
   // { name: `Umsókn`, name_en: `Application`, slug: `/umsokn` },
 ]
@@ -41,8 +41,8 @@ const metadata = {
   logo:
     "https://res.cloudinary.com/dynkhs6v9/image/upload/v1586345013/images/skjaldborg_logo.jpg",
   year: 2020,
-  period: "31. júlí – 3. ágúst",
-  location: `Patreksfjörður`,
+  period: "18. - 20. september",
+  location: `Reykjavík`,
   pages: pages,
   dropdownpages: dropdownPages,
   contact: {

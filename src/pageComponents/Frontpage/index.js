@@ -12,24 +12,28 @@ import Postlist from "../../reusableComponents/Postlist"
 import PDF from "../../../static/assets/Forsala_armbanda.pdf"
 
 const Frontpage = ({ data: { imageSharp, video } }) => {
-  const icelandic = useSelector(state => state.reducer.icelandic)
+  const icelandic = useSelector((state) => state.reducer.icelandic)
   return (
     <Container>
       <Header />
 
-      <TopVideo frontpage videoSource='videos/Forsida_skura_xcbhav'></TopVideo>
+      <TopVideo frontpage videoSource="videos/Forsida_skura_xcbhav"></TopVideo>
 
-      <div className='btnWrap'>
+      <div className="btnWrap">
         <BigBtn
           externalLink
-          action={PDF}
-          text={icelandic ? "Forsala armbanda" : "Presale"}
-          className='nopad'
+          action="https://bioparadis.is/"
+          text={icelandic ? "Miðasala í Bíó Paradís" : "Tickets in Bíó Paradís"}
+          className="nopad"
         />
-        <BigBtn action={"/dagskra"} text={icelandic ? "Dagskrá" : "Schedule"} />
+        <BigBtn
+          externalLink
+          action="https://bioparadis.is/vidburdir/skjaldborg-2020/"
+          text={icelandic ? "Dagskrá í Bíó Paradís" : "Schedule at Bíó Paradís"}
+        />
       </div>
-      <div className='postlistWrap'>
-        <Postlist className='postlist' />
+      <div className="postlistWrap">
+        <Postlist className="postlist" />
       </div>
 
       <ExcerptBtns />
@@ -41,7 +45,7 @@ const Frontpage = ({ data: { imageSharp, video } }) => {
   )
 }
 
-export default props => (
+export default (props) => (
   <StaticQuery
     query={graphql`
       {
@@ -59,6 +63,6 @@ export default props => (
         }
       }
     `}
-    render={data => <Frontpage data={data} {...props}></Frontpage>}
+    render={(data) => <Frontpage data={data} {...props}></Frontpage>}
   ></StaticQuery>
 )
