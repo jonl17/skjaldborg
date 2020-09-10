@@ -12,7 +12,7 @@ sound_design: Huldar Freyr Arnarson & Ragna Kjartansdóttir
 length_in_min: 46
 Trailer: ""
 dagskra:
-  - 2020-08-01T15:00:00.000Z
+  - 2020-09-20T18:00:00.000Z
 honour_guest: false
 ---
 Á landi Þorbjörns Steingrímssonar á Garðstöðum við Ísafjarðardjúp eru hátt í 600 bílhræ. Góði hirðirinn veltir upp spurningum um manneskjuna, umhverfi og fagurfræði. Myndin er sería af lifandi póstkortum frá afskektum stað sem sumir sjá sem ævintýraland á meðan aðrir býsnast yfir draslinu.
