@@ -12,7 +12,7 @@ sound_design: Nicolas Liebing
 length_in_min: 71
 Trailer: https://player.vimeo.com/video/422477420
 dagskra:
-  - 2020-07-28T00:52:16.344Z
+  - 2020-09-18T20:00:00.000Z
 honour_guest: false
 ---
 Sögur kvenna í heimafæðingu í gegnum linsu kvikmyndagerðarkonu sem skoðar viðhorf sitt til kvenleikans eftir tilraun til að að eiga heima.
