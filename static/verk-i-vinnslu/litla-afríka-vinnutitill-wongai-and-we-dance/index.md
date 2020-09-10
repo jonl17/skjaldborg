@@ -6,7 +6,7 @@ director: Hanna Björk Valsdóttir
 producer: Hanna Björk Valsdóttir
 Trailer: https://player.vimeo.com/video/426201693
 dagskra:
-  - 2020-08-02T14:10:00.000Z
+  - 2020-08-02T14:03:00.000Z
 ---
 Tónlistarmenn og dansarar frá Gíneu í Vestur Afríku setjast að í Reykjavík og kenna Íslendingum að dansa afríska dansa í Kramhúsinu, menningarmiðstöð í hjarta borgarinnar. Við kynnumst lífinu þeirra á Íslandi og lífinu sem þeir fóru frá í Gíneu, þegar dansarar frá Kramhúsinu ferðast til Conakry til að æfa með dansflokki þar í borg.
 
