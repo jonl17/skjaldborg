@@ -5,7 +5,7 @@ image: hrein_og_bein_still.jpg
 director: Hrafnhildur Gunnarsdóttir
 length_in_min: 0
 dagskra:
-  - 2020-08-01T21:00:00.000Z
+  - 2020-09-19T13:00:00.000Z
 honour_guest: true
 ---
 **Hrein og bein - Sögur úr íslensku samfélagi**

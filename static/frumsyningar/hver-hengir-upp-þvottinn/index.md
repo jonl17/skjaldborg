@@ -5,7 +5,7 @@ image: hver_hengir_upp_þvottinn_still.jpg
 director: Hrafnhildur Gunnarsdóttir
 length_in_min: 0
 dagskra:
-  - 2020-07-31T20:00:00.000Z
+  - 2020-09-19T13:00:00.000Z
 honour_guest: true
 ---
 **Hver hengir upp þvottinn? Þvottar, stríð og rafmagn í Beirut**

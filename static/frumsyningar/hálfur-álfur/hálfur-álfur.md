@@ -12,7 +12,7 @@ sound_design: Kiron Guidi, Arnar Ingi Gunnarsson
 length_in_min: 64
 Trailer: https://player.vimeo.com/video/373964241
 dagskra:
-  - 2020-08-02T15:00:00.000Z
+  - 2020-09-19T19:30:00.000Z
 honour_guest: false
 ---
 Vitavörðurinn Trausti tengist sínum innri álfi á meðan hann undirbýr hundrað ára afmælið eða eigin jarðarför. Á sama tíma hörfar Hulda inn í heim horfinna ljóða með aðstoð stækkunarglersins síns. Þegar hann brestur í söng skipar hún honum að hætta þessum öskrum. Í Hálfum Álfi er lífinu fagnað, þrátt fyrir þann veruleika sem bíður okkar allra.

@@ -12,7 +12,7 @@ sound_design: Kjartan Kjartansson
 length_in_min: 52
 Trailer: https://player.vimeo.com/video/442225734
 dagskra:
-  - 2020-08-02T15:00:00.000Z
+  - 2020-09-19T21:00:00.000Z
 honour_guest: false
 ---
 Helena Jónsdóttir, kvikmyndaleikstjóri, og Þorvaldur Þorsteinsson, skáld og myndlistarmaður, voru par sem nærðust á skapandi lífskrafti hvers annars. Þar til dauðinn aðskilur eru heit sem ná út fyrir tíma og rúm en Þorvaldur lést árið 2013. Helena leitar að styrk til að halda áfram með líf sitt og listsköpun samhliða því að koma arfleifð hans í örugga höfn.

@@ -11,7 +11,7 @@ sound_design: Peter Hošták
 length_in_min: 35
 Trailer: https://player.vimeo.com/video/378333422
 dagskra:
-  - 2020-08-01T12:20:00.000Z
+  - 2020-09-19T14:30:00.000Z
 honour_guest: false
 ---
 Skemmtiferðaskip kemur til hafnar á Seyðisfirði með sex sinnum fleiri farþega en búa í bænum og fjórum sinnum hærra en nokkurt mannvirki á staðnum.
