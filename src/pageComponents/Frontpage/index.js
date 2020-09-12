@@ -22,13 +22,13 @@ const Frontpage = ({ data: { imageSharp, video } }) => {
       <div className="btnWrap">
         <BigBtn
           externalLink
-          action="https://bioparadis.is/"
+          action="https://bioparadis.is/vidburdir/skjaldborg-2020/"
           text={icelandic ? "Miðasala í Bíó Paradís" : "Tickets in Bíó Paradís"}
           className="nopad"
         />
         <BigBtn
           externalLink
-          action="https://bioparadis.is/vidburdir/skjaldborg-2020/"
+          action="https://bioparadis.is/"
           text={icelandic ? "Dagskrá í Bíó Paradís" : "Schedule at Bíó Paradís"}
         />
       </div>
