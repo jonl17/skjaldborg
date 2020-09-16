@@ -10,6 +10,7 @@ import BigBtn from "../../reusableComponents/BigBtn"
 import { Container } from "./styled"
 import Postlist from "../../reusableComponents/Postlist"
 import PDF from "../../../static/assets/Forsala_armbanda.pdf"
+import DagskraImage from "../../../static/assets/dagskra-mynd.jpg"
 
 const Frontpage = ({ data: { imageSharp, video } }) => {
   const icelandic = useSelector((state) => state.reducer.icelandic)
@@ -28,7 +29,7 @@ const Frontpage = ({ data: { imageSharp, video } }) => {
         />
         <BigBtn
           externalLink
-          action="https://bioparadis.is/"
+          action={DagskraImage}
           text={icelandic ? "Dagskrá í Bíó Paradís" : "Schedule at Bíó Paradís"}
         />
       </div>
