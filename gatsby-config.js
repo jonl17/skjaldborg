@@ -39,7 +39,7 @@ const metadata = {
   logo:
     "https://res.cloudinary.com/dynkhs6v9/image/upload/v1586345013/images/skjaldborg_logo.jpg",
   year: 2020,
-  period: "29. maí - 1. júní",
+  period: "3.—6. júní 2022",
   location: `Reykjavík`,
   pages: pages,
   dropdownpages: dropdownPages,
