@@ -9,8 +9,9 @@ import TopVideo from "../../reusableComponents/TopImage/video"
 import BigBtn from "../../reusableComponents/BigBtn"
 import { Container } from "./styled"
 import Postlist from "../../reusableComponents/Postlist"
-import PDF from "../../../static/assets/Forsala_armbanda.pdf"
-import DagskraImage from "../../../static/assets/dagskra-mynd.jpg"
+import PDF from "../../../static/assets/nytt-dagskra.pdf"
+import { Popup, InnerPopupWrap } from "./Popup/Popup"
+import Content from "../../reusableComponents/Content"
 
 const Frontpage = ({ data: { imageSharp, video } }) => {
   const icelandic = useSelector((state) => state.reducer.icelandic)
@@ -20,22 +21,22 @@ const Frontpage = ({ data: { imageSharp, video } }) => {
 
       <TopVideo frontpage videoSource="videos/Forsida_skura_xcbhav"></TopVideo>
 
-      <div className="btnWrap">
+      <Popup>
+        <InnerPopupWrap>
+          <Content
+            html=" <h1>Skjaldborg verður haldin næst um hvítasunnuhelgi 2022.</h1>
+        <p>
+          Hér að neðan er dagskrá hátíðarinnar frá síðasta ári, sem sýnd verður
+          í Skjaldborgarbíói um helgina 14.-16. maí 2021.
+        </p>"
+          />
+        </InnerPopupWrap>
         <BigBtn
           externalLink
-          action="https://bioparadis.is/vidburdir/skjaldborg-2020/"
-          text={icelandic ? "Miðasala í Bíó Paradís" : "Tickets in Bíó Paradís"}
-          className="nopad"
+          action={PDF}
+          text={icelandic ? "Dagskrá" : "Schedule"}
         />
-        <BigBtn
-          externalLink
-          action={DagskraImage}
-          text={icelandic ? "Dagskrá í Bíó Paradís" : "Schedule at Bíó Paradís"}
-        />
-      </div>
-      <div className="postlistWrap">
-        <Postlist className="postlist" />
-      </div>
+      </Popup>
 
       <ExcerptBtns />
 
