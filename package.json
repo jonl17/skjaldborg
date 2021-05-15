@@ -75,5 +75,8 @@
     "eslint-plugin-react": "^7.19.0",
     "gatsby-plugin-alias-imports": "^1.0.5",
     "prettier": "2.0.4"
+  },
+  "engines": {
+    "node": ">=12"
   }
 }
