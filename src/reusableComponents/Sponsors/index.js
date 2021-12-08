@@ -40,7 +40,17 @@ const Sponsors = () => {
           <SponsorsQuery></SponsorsQuery>
         </div>
       </FadeInSection>
-      <FadeInSection intensity="10">{/* <BigLogo /> */}</FadeInSection>
+      <FadeInSection intensity="10">
+        {bigLogos.map((logo, key) => (
+          <BigLogo
+            key={key}
+            image={logo.frontmatter.logo.publicURL}
+            link={logo.frontmatter.url}
+          >
+            <p>{logo.frontmatter.title}</p>
+          </BigLogo>
+        ))}
+      </FadeInSection>
     </Container>
   )
 }
