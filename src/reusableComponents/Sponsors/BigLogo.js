@@ -40,12 +40,7 @@ const BigLogo = ({ image, link, children }) => {
       target="_blank"
     >
       <img src={image.url} alt="eyrarros-logo"></img>
-      <div className="detail-wrap">
-        {children}
-        {/* <p>Handhafi</p>
-        <p>Eyrarrósarinnar</p>
-        <p>2020</p> */}
-      </div>
+      <div className="detail-wrap">{children}</div>
     </Wrap>
   )
 }
