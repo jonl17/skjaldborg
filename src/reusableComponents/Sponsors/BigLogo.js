@@ -31,21 +31,23 @@ const Wrap = styled.a`
   }
 `
 
-const Eyrarros = () => {
+const BigLogo = ({ image, link, children }) => {
   return (
     <Wrap
       rel="noopener noreferrer"
-      href="https://listahatid.is/eyrarrosin/eyrarrosin"
+      href={link}
+      // href="https://listahatid.is/eyrarrosin/eyrarrosin"
       target="_blank"
     >
-      <img src={RosSvg} alt="eyrarros-logo"></img>
+      <img src={image.url} alt="eyrarros-logo"></img>
       <div className="detail-wrap">
-        <p>Handhafi</p>
+        {children}
+        {/* <p>Handhafi</p>
         <p>Eyrarrósarinnar</p>
-        <p>2020</p>
+        <p>2020</p> */}
       </div>
     </Wrap>
   )
 }
 
-export default Eyrarros
+export default BigLogo

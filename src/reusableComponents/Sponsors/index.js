@@ -1,13 +1,32 @@
 import React from "react"
 import { Container } from "./styled"
-import { StaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 import FadeInSection from "../../techComponents/FadeInSection"
 import SponsorsQuery from "./query"
 import { useSelector } from "react-redux"
-import Eyrarrosin from "./eyrarros"
+import BigLogo from "./BigLogo"
 
 const Sponsors = () => {
-  const icelandic = useSelector(state => state.reducer.icelandic)
+  const icelandic = useSelector((state) => state.reducer.icelandic)
+
+  const results = useStaticQuery(graphql`
+    {
+      allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/bigLogos/" } }) {
+        topfive: nodes {
+          frontmatter {
+            title
+            url
+            logo {
+              publicURL
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  const bigLogos = results.allMarkdownRemark.topfive
+
   return (
     <Container>
       <h1>{icelandic ? "Styrktaraðilar" : "Sponsors"}</h1>
@@ -21,32 +40,9 @@ const Sponsors = () => {
           <SponsorsQuery></SponsorsQuery>
         </div>
       </FadeInSection>
-      <FadeInSection intensity="10">
-        <Eyrarrosin></Eyrarrosin>
-      </FadeInSection>
+      <FadeInSection intensity="10">{/* <BigLogo /> */}</FadeInSection>
     </Container>
   )
 }
 
-export default props => (
-  <StaticQuery
-    query={graphql`
-      {
-        allMarkdownRemark(
-          filter: { fileAbsolutePath: { regex: "/styrktaradilar_top5/" } }
-        ) {
-          topfive: nodes {
-            frontmatter {
-              title
-              sponsor_url
-              logo {
-                publicURL
-              }
-            }
-          }
-        }
-      }
-    `}
-    render={data => <Sponsors data={data} {...props}></Sponsors>}
-  ></StaticQuery>
-)
+export default Sponsors

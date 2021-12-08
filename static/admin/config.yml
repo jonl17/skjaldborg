@@ -206,7 +206,12 @@ collections:
             dateFormat: "DD.MM.YYYY",
             timeFormat: "HH:mm",
           }
-      - { label: "Heiðursgestur", name: "honour_guest", widget: "boolean", default: false }
+      - {
+          label: "Heiðursgestur",
+          name: "honour_guest",
+          widget: "boolean",
+          default: false,
+        }
   # Styrktaraðilar | Top 5
   - name: "styrktaradilar_top5"
     label: "Styrktaraðilar Top 5"
@@ -229,6 +234,17 @@ collections:
       - { label: "Titill", name: "title", widget: "string" }
       - { label: "Lógó", name: "logo", widget: "image" }
       - { label: "Línkur", name: "sponsor_url", widget: "string" }
+  # Big Logos
+  - name: "bigLogos"
+    label: "Big Logos"
+    folder: "static/bigLogos"
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { label: "Titill", name: "title", widget: "string" }
+      - { label: "Lógó", name: "logo", widget: "image" }
+      - { label: "Línkur", name: "url", widget: "string" }
   # Hátíðin
   - name: "hatidin-undirsidur"
     label: "Hátíðin undirsíður"
