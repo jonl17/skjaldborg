@@ -1,5 +1,6 @@
 ---
-title: Test
-logo: assets/brio_logo.png
-url: visir.is
+title: Eyrarrósin
+logo: /assets/eyrarrosin.svg
+url: 'https://www.byggdastofnun.is/is/verkefni/eyrarrosin-1'
 ---
+
