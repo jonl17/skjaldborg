@@ -27,6 +27,8 @@ const Sponsors = () => {
 
   const bigLogos = results.allMarkdownRemark.topfive
 
+  console.log(bigLogos)
+
   return (
     <Container>
       <h1>{icelandic ? "Styrktaraðilar" : "Sponsors"}</h1>

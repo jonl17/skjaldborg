@@ -238,6 +238,8 @@ collections:
   - name: "bigLogos"
     label: "Big Logos"
     folder: "static/bigLogos"
+    media_folder: ""
+    public_folder: ""
     create: true
     editor:
       preview: false

@@ -115,6 +115,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `styrktaradilar_rest`,
+        path: `${__dirname}/static/bigLogos`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `adilar`,
         path: `${__dirname}/static/adilar`,
       },
