@@ -1,6 +1,6 @@
 ---
 title: Fyrirmyndarverkefni
-logo: /assets/soknaraaetlun_fyrirmyndarverkefni_logo.png
+logo: /assets/eyrarrosin.svg
 url: 'https://www.vestfirdir.is/is/verkefni/soknaraaetlun-vestfjarda'
 ---
 
