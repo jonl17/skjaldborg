@@ -1,9 +1,9 @@
-import React from "react"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
-import styled from "styled-components"
-import { redColor, breakpoints } from "@constants"
-import { useSelector } from "react-redux"
-import Arrow from "../../../reusableComponents/Arrow"
+import React from 'react'
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
+import styled from 'styled-components'
+import { redColor, breakpoints } from '@constants'
+import { useSelector } from 'react-redux'
+import Arrow from '../../../reusableComponents/Arrow'
 
 const Anchor = styled(AniLink)`
   width: 100%;
@@ -29,10 +29,10 @@ const Anchor = styled(AniLink)`
 `
 
 const Navigator = ({ next: { url, name, name_en } }) => {
-  const icelandic = useSelector(state => state.reducer.icelandic)
+  const icelandic = useSelector((state) => state.reducer.icelandic)
   return (
-    <Anchor direction="right" to={url} cover bg="#BCDCBA">
-      <h2 className="titlar">{icelandic ? name : name_en}</h2>
+    <Anchor direction='right' to={url} cover bg='#BCDCBA'>
+      <h3 className='titlar'>{icelandic ? name : name_en}</h3>
       <Arrow></Arrow>
     </Anchor>
   )

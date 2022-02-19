@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h3 {
+    @apply text-2xl;
+    @apply uppercase;
+  }
+}
+
+@layer utilities {
+  .clip {
+    transition: clip-path 0.2s;
+  }
+}

@@ -15,10 +15,11 @@
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
+    "dev": "gatsby clean && gatsby develop"
   },
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.7",
+    "classnames": "^2.3.1",
     "cloudinary-core": "^2.8.2",
     "cloudinary-react": "^1.4.0",
     "dotenv": "^8.2.0",
