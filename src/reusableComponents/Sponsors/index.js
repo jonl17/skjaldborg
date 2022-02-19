@@ -32,26 +32,15 @@ const Sponsors = () => {
   return (
     <Container>
       <h1>{icelandic ? "Styrktaraðilar" : "Sponsors"}</h1>
-      <FadeInSection intensity="10">
-        <div className="sponsor-grid-top5">
+      <FadeInSection intensity='10'>
+        <div className='sponsor-grid-top5'>
           <SponsorsQuery vip></SponsorsQuery>
         </div>
       </FadeInSection>
-      <FadeInSection intensity="10">
-        <div className="sponsor-grid-rest">
+      <FadeInSection intensity='10'>
+        <div className='sponsor-grid-rest'>
           <SponsorsQuery></SponsorsQuery>
         </div>
-      </FadeInSection>
-      <FadeInSection intensity="10">
-        {bigLogos.map((logo, key) => (
-          <BigLogo
-            key={key}
-            image={logo.frontmatter.logo.publicURL}
-            link={logo.frontmatter.url}
-          >
-            <p>{logo.frontmatter.title}</p>
-          </BigLogo>
-        ))}
       </FadeInSection>
     </Container>
   )
