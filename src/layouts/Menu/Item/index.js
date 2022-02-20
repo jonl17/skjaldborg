@@ -1,16 +1,16 @@
-import React, { useEffect, useState } from "react"
-import { Text, Anchor } from "./styled"
-import Dropdown from "./Dropdown"
-import { useDispatch, useSelector } from "react-redux"
-import { TRIGGER_MENU } from "../../../state/action"
-import { hyphenate } from "hyphen/is"
+import React, { useEffect, useState } from 'react'
+import { Text, Anchor } from './styled'
+import Dropdown from './Dropdown'
+import { useDispatch, useSelector } from 'react-redux'
+import { TRIGGER_MENU } from '../../../state/action'
+import { hyphenate } from 'hyphen/is'
 
 const Item = ({ item }) => {
-  const [name, setName] = useState("")
+  const [name, setName] = useState('')
   const dispatch = useDispatch()
-  const icelandic = useSelector(state => state.reducer.icelandic)
+  const icelandic = useSelector((state) => state.reducer.icelandic)
   useEffect(() => {
-    hyphenate(icelandic ? item.name : item.name_en).then(result =>
+    hyphenate(icelandic ? item.name : item.name_en).then((result) =>
       setName(result)
     )
   }, [item])
@@ -27,9 +27,9 @@ const Item = ({ item }) => {
           className='titlar'
           activeStyle={{ color: `rgb(188,220,186)` }}
           partiallyActive={
-            item.name === "Sarpur" ||
-            item.name === "Umsókn" ||
-            item.name === "Heimildamyndir"
+            item.name === 'Sarpur' ||
+            item.name === 'Umsókn' ||
+            item.name === 'Heimildamyndir'
           }
           onClick={() =>
             dispatch({
@@ -39,7 +39,7 @@ const Item = ({ item }) => {
           }
           to={item.slug}
         >
-          {name}
+          <h1>{name}</h1>
         </Anchor>
       )}
     </Text>

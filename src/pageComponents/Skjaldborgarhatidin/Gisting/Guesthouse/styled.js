@@ -1,6 +1,6 @@
-import styled from "styled-components"
-import Img from "gatsby-image"
-import { greenTextColor, redColor } from "@constants"
+import styled from 'styled-components'
+import Img from 'gatsby-image'
+import { greenTextColor, redColor } from '@constants'
 
 export const Box = styled.div`
   text-decoration: none;
@@ -33,7 +33,6 @@ export const Info = styled.div`
     p {
       margin: 0;
       color: ${redColor};
-      font-family: les;
     }
     .guesthouse-map-anchor {
       color: inherit;

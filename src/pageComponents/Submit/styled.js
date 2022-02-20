@@ -1,5 +1,5 @@
-import styled, { css } from "styled-components"
-import { redColor, breakpoints } from "@constants"
+import styled, { css } from 'styled-components'
+import { redColor, breakpoints } from '@constants'
 
 export const Container = styled.div`
   min-height: 100vh;
@@ -49,7 +49,6 @@ export const Container = styled.div`
     padding: 1rem;
     font-size: 1rem;
     margin-bottom: 1rem;
-    font-family: les;
   }
   .submit-btn {
     margin: 1rem auto;
@@ -66,14 +65,13 @@ export const Container = styled.div`
   }
 `
 export const InputBox = styled.input`
-  font-family: les;
   padding: 1rem;
   font-size: 1rem;
   margin: 1em 0 1rem;
-  ${props =>
+  ${(props) =>
     props.email &&
     css`
-      color: ${props => props.color};
+      color: ${(props) => props.color};
     `}
 `
 
@@ -107,8 +105,8 @@ export const FileBTN = styled.label`
       transform: scale(0.95);
     }
   }
-  ${props =>
-    props.status === "ok" &&
+  ${(props) =>
+    props.status === 'ok' &&
     css`
       background: green;
       color: white;
@@ -117,6 +115,5 @@ export const FileBTN = styled.label`
 
 export const Hint = styled.p`
   color: gray;
-  font-family: les;
   font-size: 0.9rem;
 `

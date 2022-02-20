@@ -1,4 +1,4 @@
-const { config } = require("dotenv")
+const { config } = require('dotenv')
 config({ path: `.env.development` })
 
 const pages = [
@@ -32,29 +32,29 @@ const dropdownPages = [
   },
 ]
 const metadata = {
-  title: "Skjaldborg",
-  subtitle: "Hátíð íslenskra heimildamynda",
-  url: "https://skjaldborg.is/",
-  favicon: "/assets/favicon.png",
+  title: 'Skjaldborg',
+  subtitle: 'Hátíð íslenskra heimildamynda',
+  url: 'https://skjaldborg.is/',
+  favicon: '/assets/favicon.png',
   logo:
-    "https://res.cloudinary.com/dynkhs6v9/image/upload/v1586345013/images/skjaldborg_logo.jpg",
+    'https://res.cloudinary.com/dynkhs6v9/image/upload/v1586345013/images/skjaldborg_logo.jpg',
   year: 2020,
-  period: "3.—6. júní 2022",
+  period: '3.—6. júní 2022',
   location: `Reykjavík`,
   pages: pages,
   dropdownpages: dropdownPages,
   contact: {
-    email: "skjaldborg@skjaldborg.is",
-    tel: "+354 866 6977",
+    email: 'skjaldborg@skjaldborg.is',
+    tel: '+354 866 6977',
     socialMedia: [
       {
-        name: "facebook",
-        url: "https://m.facebook.com/skjaldborg.hatid.islenskra.heimildamynda/",
+        name: 'facebook',
+        url: 'https://m.facebook.com/skjaldborg.hatid.islenskra.heimildamynda/',
       },
       {
-        name: "instagram",
+        name: 'instagram',
         url:
-          "https://instagram.com/skjaldborg_heimildamyndahatid?igshid=zqeiffioceg2",
+          'https://instagram.com/skjaldborg_heimildamyndahatid?igshid=zqeiffioceg2',
       },
     ],
   },
@@ -63,7 +63,7 @@ const metadata = {
 module.exports = {
   siteMetadata: metadata,
   plugins: [
-    "gatsby-plugin-postcss",
+    'gatsby-plugin-postcss',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -75,7 +75,7 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
-          "gatsby-remark-relative-images",
+          'gatsby-remark-relative-images',
           {
             resolve: `gatsby-remark-images`,
             options: {
@@ -149,7 +149,7 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-react-svg",
+      resolve: 'gatsby-plugin-react-svg',
       options: {
         rule: {
           include: `${__dirname}/static/assets/svg/**`,
@@ -164,25 +164,10 @@ module.exports = {
     `gatsby-plugin-layout`,
     `gatsby-plugin-transition-link`,
     {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `Skjaldborg 2020`,
-        short_name: `Skjaldborg`,
-        start_url: `/`,
-        background_color: `#ffffff`,
-        theme_color: `#C34545`,
-        display: `standalone`,
-        icon: `static/assets/mobile-icon.png`,
-        lang: `en`,
-        description: metadata.subtitle,
-      },
-    },
-    `gatsby-plugin-offline`,
-    {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         // The property ID; the tracking code won't be generated without it
-        trackingId: "UA-158316293-1",
+        trackingId: 'UA-158316293-1',
         // Defines where to place the tracking script - `true` in the head and `false` in the body
         head: false,
         // Setting this parameter is optional
@@ -195,13 +180,13 @@ module.exports = {
       resolve: `gatsby-plugin-alias-imports`,
       options: {
         alias: {
-          "@constants": "src/constants",
+          '@constants': 'src/constants',
         },
-        extensions: ["js"],
+        extensions: ['js'],
       },
     },
     {
-      resolve: "gatsby-plugin-firebase",
+      resolve: 'gatsby-plugin-firebase',
       options: {
         credentials: {
           apiKey: process.env.GATSBY_API_KEY,

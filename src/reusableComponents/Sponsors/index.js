@@ -1,10 +1,10 @@
-import React from "react"
-import { Container } from "./styled"
-import { useStaticQuery, graphql } from "gatsby"
-import FadeInSection from "../../techComponents/FadeInSection"
-import SponsorsQuery from "./query"
-import { useSelector } from "react-redux"
-import BigLogo from "./BigLogo"
+import React from 'react'
+import { Container } from './styled'
+import { useStaticQuery, graphql } from 'gatsby'
+import FadeInSection from '../../techComponents/FadeInSection'
+import SponsorsQuery from './query'
+import { useSelector } from 'react-redux'
+import BigLogo from './BigLogo'
 
 const Sponsors = () => {
   const icelandic = useSelector((state) => state.reducer.icelandic)
@@ -27,21 +27,17 @@ const Sponsors = () => {
 
   const bigLogos = results.allMarkdownRemark.topfive
 
-  console.log(bigLogos)
-
   return (
     <Container>
-      <h1>{icelandic ? "Styrktaraðilar" : "Sponsors"}</h1>
-      <FadeInSection intensity='10'>
-        <div className='sponsor-grid-top5'>
-          <SponsorsQuery vip></SponsorsQuery>
-        </div>
-      </FadeInSection>
-      <FadeInSection intensity='10'>
-        <div className='sponsor-grid-rest'>
-          <SponsorsQuery></SponsorsQuery>
-        </div>
-      </FadeInSection>
+      <h3 className='text-center text-white'>
+        {icelandic ? 'Styrktaraðilar' : 'Sponsors'}
+      </h3>
+      <div className='sponsor-grid-top5'>
+        <SponsorsQuery vip></SponsorsQuery>
+      </div>
+      <div className='sponsor-grid-rest'>
+        <SponsorsQuery></SponsorsQuery>
+      </div>
     </Container>
   )
 }
