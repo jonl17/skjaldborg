@@ -6,7 +6,7 @@ export default ({ footer, color }) => {
   return (
     <Container footer={footer ? 'true' : 'false'} to='/'>
       <Logo color={color}></Logo>
-      bob
+      bobsy
     </Container>
   )
 }
