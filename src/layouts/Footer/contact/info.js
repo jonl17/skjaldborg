@@ -19,7 +19,6 @@ const InfoWrap = styled.div`
     p {
       margin: 0;
       text-align: center;
-      color: white;
       padding-bottom: 5px;
       font-size: 14px;
     }

@@ -1,8 +1,8 @@
 import styled, { css } from "styled-components"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
+import { Link } from "gatsby"
 import { redColor, greenTextColor, greenColor } from "@constants"
 
-export const Container = styled(AniLink)`
+export const Container = styled(Link)`
   text-decoration: none;
   color: inherit;
   position: relative;

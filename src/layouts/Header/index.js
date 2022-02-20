@@ -1,34 +1,34 @@
-import React, { useEffect, useState } from "react"
-import { graphql, StaticQuery } from "gatsby"
-import { useSelector } from "react-redux"
+import React, { useEffect, useState } from 'react'
+import { graphql, StaticQuery } from 'gatsby'
+import { useSelector } from 'react-redux'
 
-import { Container, Wrap } from "./styled"
-import Logo from "../../reusableComponents/Logo"
-import Text from "./Text"
-import { redColor } from "../../constants"
+import { Container, Wrap } from './styled'
+import Logo from '../../reusableComponents/Logo'
+import Text from './Text'
+import { redColor } from '../../constants'
 
 const Header = ({
   data: {
     site: { siteMetadata },
   },
-  mode
+  mode,
 }) => {
-  const platform = useSelector(state => state.reducer.platform)
-  const pathname = useSelector(state => state.reducer.pathname)
-  const [color, setColor] = useState("white")
+  const platform = useSelector((state) => state.reducer.platform)
+  const pathname = useSelector((state) => state.reducer.pathname)
+  const [color, setColor] = useState('white')
   useEffect(() => {
-    if (mode === "red") {
+    if (mode === 'red') {
       setColor(`${redColor}`)
     } else {
-      setColor("white")
+      setColor('white')
     }
   }, [pathname, mode])
   return (
-    <Wrap>
+    <Wrap className='header'>
       <Container platform={platform}>
         <Logo color={color}></Logo>
-        {platform === "desktop" ? (
-          <div id="box">
+        {platform === 'desktop' ? (
+          <div id='box'>
             <Text color={color} meta={siteMetadata} info></Text>
           </div>
         ) : null}
@@ -37,7 +37,7 @@ const Header = ({
   )
 }
 
-export default props => (
+export default (props) => (
   <StaticQuery
     query={graphql`
       {
@@ -52,6 +52,6 @@ export default props => (
         }
       }
     `}
-    render={data => <Header data={data} {...props}></Header>}
+    render={(data) => <Header data={data} {...props}></Header>}
   ></StaticQuery>
 )

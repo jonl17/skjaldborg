@@ -20,10 +20,6 @@ const Item = ({ item }) => {
         <Dropdown>{icelandic ? item.name : item.name_en}</Dropdown>
       ) : (
         <Anchor
-          cover
-          bg='#be4545'
-          direction='left'
-          duration={1}
           className='titlar'
           activeStyle={{ color: `rgb(188,220,186)` }}
           partiallyActive={

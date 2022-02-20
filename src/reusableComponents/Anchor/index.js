@@ -6,9 +6,6 @@ const Anchor = ({ item, color }) => {
   const icelandic = useSelector((state) => state.reducer.icelandic)
   return (
     <Container
-      cover
-      bg='#be4545'
-      color={color}
       activeStyle={
         color === 'red'
           ? { color: `rgb(188,220,186)` }

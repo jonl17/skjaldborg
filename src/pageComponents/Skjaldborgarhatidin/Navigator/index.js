@@ -1,11 +1,11 @@
 import React from 'react'
-import AniLink from 'gatsby-plugin-transition-link/AniLink'
+import { Link } from 'gatsby'
 import styled from 'styled-components'
 import { redColor, breakpoints } from '@constants'
 import { useSelector } from 'react-redux'
 import Arrow from '../../../reusableComponents/Arrow'
 
-const Anchor = styled(AniLink)`
+const Anchor = styled(Link)`
   width: 100%;
   text-align: center;
   color: inherit;

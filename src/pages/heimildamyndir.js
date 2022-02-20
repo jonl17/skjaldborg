@@ -1,38 +1,36 @@
-import React from "react"
-import Header from "../layouts/Header"
-import Footer from "../layouts/Footer"
-import Template from "../reusableComponents/SarpurTemplate"
-import Documentaries from "../pageComponents/Documentaries"
-import { graphql } from "gatsby"
-import { useSelector } from "react-redux"
+import React from 'react'
+import Header from '../layouts/Header'
+import Footer from '../layouts/Footer'
+import Template from '../reusableComponents/SarpurTemplate'
+import Documentaries from '../pageComponents/Documentaries'
+import { graphql } from 'gatsby'
+import { useSelector } from 'react-redux'
 
 const TITLES = {
-  is: "Heimildamyndir 2020",
-  en: "Documentaries 2020",
+  is: 'Heimildamyndir 2020',
+  en: 'Documentaries 2020',
 }
 
 const Heimildamyndir = ({
   data: { frumsyningar: docs, verk_i_vinnslu: wips, honourGuest },
 }) => {
-  const icelandic = useSelector(state => state.reducer.icelandic)
+  const icelandic = useSelector((state) => state.reducer.icelandic)
   return (
     <>
-      <Header mode='red' />
       <Template title={TITLES}>
         <Documentaries
           docs={docs}
-          title={icelandic ? "Frumsýningar" : "Premieres"}
+          title={icelandic ? 'Frumsýningar' : 'Premieres'}
         />
         <Documentaries
           docs={honourGuest}
-          title={icelandic ? "Heiðursgestur" : "Honour guest"}
+          title={icelandic ? 'Heiðursgestur' : 'Honour guest'}
         />
         <Documentaries
           docs={wips}
-          title={icelandic ? "Verk í vinnslu" : "Work in progress"}
+          title={icelandic ? 'Verk í vinnslu' : 'Work in progress'}
         />
       </Template>
-      <Footer />
     </>
   )
 }

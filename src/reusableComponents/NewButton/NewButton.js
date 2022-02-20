@@ -5,7 +5,7 @@ const NewButton = ({ children, onClick, external = false }) => {
   const [active, setActive] = useState(false)
 
   const wrapperClassName =
-    'overflow-hidden relative px-14 py-2 bg-secondary text-primary lg:text-white lg:bg-transparent border-2 transition-colors'
+    'overflow-hidden relative px-14 py-2 bg-secondary text-tertiary lg:text-secondary lg:bg-transparent border-2 transition-colors'
 
   const Fill = ({ children }) => (
     <span
@@ -25,7 +25,7 @@ const NewButton = ({ children, onClick, external = false }) => {
   const Corner = () => (
     <div
       className={cn('absolute h-full w-5 grid -left-3 -top-[13px] bottom-0', {
-        'text-primary': active,
+        'text-tertiary': active,
         'text-white': !active,
       })}
     >
@@ -36,11 +36,9 @@ const NewButton = ({ children, onClick, external = false }) => {
 
   const Content = () => (
     <>
-      <Corner />
-      <h3 className='uppercase relative mt-1'>{children}</h3>
+      <h3 className='uppercase relative'>{children}</h3>
       <Fill>
-        <Corner />
-        <h3 className='uppercase relative text-primary mt-1'>{children}</h3>
+        <h3 className='uppercase relative text-tertiary'>{children}</h3>
       </Fill>
     </>
   )
@@ -51,8 +49,8 @@ const NewButton = ({ children, onClick, external = false }) => {
         onMouseEnter={() => setActive(true)}
         onMouseLeave={() => setActive(false)}
         className={cn(wrapperClassName, {
-          'lg:border-white border-primary': !active,
-          'border-primary': active,
+          'lg:border-secondary border-tertiary': !active,
+          'border-tertiary': active,
         })}
         href={onClick}
         target='_blank'

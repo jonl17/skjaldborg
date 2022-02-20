@@ -1,5 +1,5 @@
 import styled, { keyframes, css } from "styled-components"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
+import { Link } from "gatsby"
 import LogoSVG from "../../../static/assets/svg/logo.svg"
 
 const breath = keyframes`
@@ -31,7 +31,7 @@ const beamGrow = keyframes`
   }
 `
 
-export const Container = styled(AniLink)`
+export const Container = styled(Link)`
   height: 100%;
   padding-left: 2rem;
   box-sizing: border-box;

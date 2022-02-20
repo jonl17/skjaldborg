@@ -8,8 +8,11 @@ module.exports = {
     },
     extend: {
       colors: {
-        primary: 'rgb(190, 69, 69)',
-        secondary: 'rgb(188, 220, 186)',
+        primary: '#970400',
+        secondary: '#F9C100',
+        tertiary: '#DF2C1D',
+        black: '#380E09',
+        white: '#F1EFF1',
       },
       keyframes: {
         'roll-down-enter': {

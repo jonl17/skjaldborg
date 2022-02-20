@@ -1,5 +1,5 @@
-import styled from "styled-components"
-import { redColor, breakpoints } from "@constants"
+import styled from 'styled-components'
+import { redColor, breakpoints } from '@constants'
 
 export const Wrap = styled.div`
   background: ${redColor};
@@ -7,8 +7,7 @@ export const Wrap = styled.div`
   height: 22rem;
   @media (max-width: 600px) {
   }
-  position: absolute;
-  bottom: 0;
+
   z-index: 4;
 `
 export const Container = styled.div`
@@ -20,6 +19,6 @@ export const Container = styled.div`
   @media only screen and (min-width: ${breakpoints.desktop}) {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
-    grid-template-areas: "left center right";
+    grid-template-areas: 'left center right';
   }
 `

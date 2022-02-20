@@ -1,5 +1,6 @@
 const { config } = require('dotenv')
 config({ path: `.env.development` })
+const { gatsbySourcePrismic } = require('./src/cms/prismicConfig')
 
 const pages = [
   { name: `Heim`, name_en: `Home`, slug: `/` },
@@ -63,6 +64,7 @@ const metadata = {
 module.exports = {
   siteMetadata: metadata,
   plugins: [
+    gatsbySourcePrismic,
     'gatsby-plugin-postcss',
     {
       resolve: `gatsby-source-filesystem`,
@@ -162,7 +164,7 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-layout`,
-    `gatsby-plugin-transition-link`,
+    'gatsby-plugin-image',
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {

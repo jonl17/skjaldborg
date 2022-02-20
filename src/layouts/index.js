@@ -7,6 +7,8 @@ import PageContainer from './PageContainer'
 import SEO from './seo'
 import { useDispatch } from 'react-redux'
 import { SET_PATHNAME } from '../state/action'
+import Footer from './Footer'
+import Header from './Header'
 
 const Layout = ({ children, location }) => {
   useSetPlatform()
@@ -18,7 +20,9 @@ const Layout = ({ children, location }) => {
     <>
       <SEO></SEO>
       <GlobalStyle></GlobalStyle>
-      <PageContainer pathname={location.pathname}>{children}</PageContainer>
+      <Header />
+      <main className='relative h-full w-full'>{children}</main>
+      <Footer />
     </>
   )
 }

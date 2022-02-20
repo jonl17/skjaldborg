@@ -1,28 +1,27 @@
-import React, { useEffect, useState } from "react"
-import PageContainer from "../../layouts/PageContainer"
-import Header from "../../layouts/Header"
-import Footer from "../../layouts/Footer"
-import { graphql, Link } from "gatsby"
-import CoverImage from "./components/CoverImage"
-import Info from "./components/Info"
-import { Container } from "./styled"
-import Arrow from "../../reusableComponents/Arrow"
-import { Fade } from "react-reveal"
-import { useSelector } from "react-redux"
+import React, { useEffect, useState } from 'react'
+import PageContainer from '../../layouts/PageContainer'
+import Header from '../../layouts/Header'
+import Footer from '../../layouts/Footer'
+import { graphql, Link } from 'gatsby'
+import CoverImage from './components/CoverImage'
+import Info from './components/Info'
+import { Container } from './styled'
+import Arrow from '../../reusableComponents/Arrow'
+import { Fade } from 'react-reveal'
+import { useSelector } from 'react-redux'
 
 const Movie = ({ data: { movie }, pageContext, location }) => {
   const { html, frontmatter } = movie
-  const icelandic = useSelector(state => state.reducer.icelandic)
+  const icelandic = useSelector((state) => state.reducer.icelandic)
 
-  const [redirectUrl, setRedirectUrl] = useState("/heimildamyndir")
+  const [redirectUrl, setRedirectUrl] = useState('/heimildamyndir')
   useEffect(() => {
     if (location.state && location.state.fromSchedule) {
-      setRedirectUrl("/dagskra")
+      setRedirectUrl('/dagskra')
     }
   }, [location])
   return (
     <>
-      <Header />
       <PageContainer>
         <CoverImage image={frontmatter.image} />
         <Container>
@@ -46,7 +45,6 @@ const Movie = ({ data: { movie }, pageContext, location }) => {
           </div>
         </Container>
         <Info html={html} frontmatter={frontmatter} />
-        <Footer />
       </PageContainer>
     </>
   )
