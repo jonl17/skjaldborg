@@ -32,6 +32,7 @@ const dropdownPages = [
     image: `images/ferdalag_2`,
   },
 ]
+
 const metadata = {
   title: 'Skjaldborg',
   subtitle: 'Hátíð íslenskra heimildamynda',
@@ -85,13 +86,6 @@ module.exports = {
             },
           },
         ],
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `hatidin-undirstidur`,
-        path: `${__dirname}/static/hatidin-undirsidur`,
       },
     },
     {

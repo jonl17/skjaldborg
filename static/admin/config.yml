@@ -1,310 +1,296 @@
 backend:
   name: git-gateway
 
-media_folder: "static/assets"
-public_folder: "assets"
+media_folder: 'static/assets'
+public_folder: 'assets'
 
 collections:
-  - name: "dagskra"
-    label: "Dagskrá"
-    folder: "static/dagskra"
+  - name: 'dagskra'
+    label: 'Dagskrá'
+    folder: 'static/dagskra'
     create: true
-    path: "{{title}}/index"
-    media_folder: ""
-    public_folder: ""
+    path: '{{title}}/index'
+    media_folder: ''
+    public_folder: ''
     editor:
       preview: false
     fields:
-      - { label: "Titill", name: "title", widget: "string" }
+      - { label: 'Titill', name: 'title', widget: 'string' }
       - {
-          label: "Titill enska",
-          name: "title-en",
-          widget: "string",
+          label: 'Titill enska',
+          name: 'title-en',
+          widget: 'string',
           required: false,
         }
       - {
-          label: "Dagsetning",
-          name: "dagsetning",
-          widget: "datetime",
+          label: 'Dagsetning',
+          name: 'dagsetning',
+          widget: 'datetime',
           required: false,
-          dateFormat: "DD.MM.YYYY",
-          timeFormat: "HH:mm",
+          dateFormat: 'DD.MM.YYYY',
+          timeFormat: 'HH:mm',
         }
   # Verk í vinnslu 2020
-  - name: "verkivinnslu"
-    label: "Verk í vinnslu"
-    folder: "static/verk-i-vinnslu"
+  - name: 'verkivinnslu'
+    label: 'Verk í vinnslu'
+    folder: 'static/verk-i-vinnslu'
     create: true
-    path: "{{title}}/index"
-    media_folder: ""
-    public_folder: ""
+    path: '{{title}}/index'
+    media_folder: ''
+    public_folder: ''
     editor:
       preview: false
     fields:
-      - { label: "Titill", name: "title", widget: "string" }
+      - { label: 'Titill', name: 'title', widget: 'string' }
       - {
-          label: "Titill enska",
-          name: "title-en",
-          widget: "string",
+          label: 'Titill enska',
+          name: 'title-en',
+          widget: 'string',
           required: false,
         }
-      - { label: "Mynd", name: "image", widget: "image" }
+      - { label: 'Mynd', name: 'image', widget: 'image' }
       - {
-          label: "Stutt lýsing",
-          name: "body",
-          widget: "markdown",
-          hint: "Settu enska þýðingu undir --ENSKA-- í nýrri línu",
+          label: 'Stutt lýsing',
+          name: 'body',
+          widget: 'markdown',
+          hint: 'Settu enska þýðingu undir --ENSKA-- í nýrri línu',
         }
-      - { label: "Leikstjóri", name: "director", widget: "string" }
+      - { label: 'Leikstjóri', name: 'director', widget: 'string' }
       - {
-          label: "Framleiðandi",
-          name: "producer",
-          widget: "string",
-          required: false,
-        }
-      - {
-          label: "Framleiðslufyrirtæki",
-          name: "production_company",
-          widget: "string",
+          label: 'Framleiðandi',
+          name: 'producer',
+          widget: 'string',
           required: false,
         }
       - {
-          label: "Klipping",
-          name: "editing",
-          widget: "string",
+          label: 'Framleiðslufyrirtæki',
+          name: 'production_company',
+          widget: 'string',
           required: false,
         }
       - {
-          label: "Kvikmyndataka",
-          name: "filming",
-          widget: "string",
+          label: 'Klipping',
+          name: 'editing',
+          widget: 'string',
           required: false,
         }
       - {
-          label: "Tónskáld",
-          name: "composer",
-          widget: "string",
+          label: 'Kvikmyndataka',
+          name: 'filming',
+          widget: 'string',
           required: false,
         }
       - {
-          label: "Hljóðhönnun",
-          name: "sound_design",
-          widget: "string",
+          label: 'Tónskáld',
+          name: 'composer',
+          widget: 'string',
           required: false,
         }
       - {
-          label: "Lengd í mín.",
-          name: "length_in_min",
-          widget: "number",
+          label: 'Hljóðhönnun',
+          name: 'sound_design',
+          widget: 'string',
           required: false,
         }
       - {
-          label: "Stikla",
-          name: "Trailer",
-          widget: "string",
-          hint: "Slóð á stiklu",
+          label: 'Lengd í mín.',
+          name: 'length_in_min',
+          widget: 'number',
           required: false,
         }
-      - label: "Dagskrá"
-        name: "dagskra"
-        widget: "list"
+      - {
+          label: 'Stikla',
+          name: 'Trailer',
+          widget: 'string',
+          hint: 'Slóð á stiklu',
+          required: false,
+        }
+      - label: 'Dagskrá'
+        name: 'dagskra'
+        widget: 'list'
         collapsed: false
         field:
           {
-            label: "Dagsetning",
-            name: "dagsetning",
-            widget: "datetime",
+            label: 'Dagsetning',
+            name: 'dagsetning',
+            widget: 'datetime',
             required: false,
-            dateFormat: "DD.MM.YYYY",
-            timeFormat: "HH:mm",
+            dateFormat: 'DD.MM.YYYY',
+            timeFormat: 'HH:mm',
           }
   # Frumsýningar 2020
-  - name: "frumsyning"
-    label: "Frumsýningar"
-    folder: "static/frumsyningar"
+  - name: 'frumsyning'
+    label: 'Frumsýningar'
+    folder: 'static/frumsyningar'
     create: true
-    path: "{{title}}/index"
-    media_folder: ""
-    public_folder: ""
+    path: '{{title}}/index'
+    media_folder: ''
+    public_folder: ''
     editor:
       preview: false
     fields:
-      - { label: "Titill", name: "title", widget: "string" }
+      - { label: 'Titill', name: 'title', widget: 'string' }
       - {
-          label: "Titill enska",
-          name: "title-en",
-          widget: "string",
+          label: 'Titill enska',
+          name: 'title-en',
+          widget: 'string',
           required: false,
         }
-      - { label: "Mynd", name: "image", widget: "image" }
+      - { label: 'Mynd', name: 'image', widget: 'image' }
       - {
-          label: "Stutt lýsing",
-          name: "body",
-          widget: "markdown",
-          hint: "Settu enska þýðingu undir --ENSKA-- í nýrri línu",
+          label: 'Stutt lýsing',
+          name: 'body',
+          widget: 'markdown',
+          hint: 'Settu enska þýðingu undir --ENSKA-- í nýrri línu',
         }
-      - { label: "Leikstjóri", name: "director", widget: "string" }
+      - { label: 'Leikstjóri', name: 'director', widget: 'string' }
       - {
-          label: "Framleiðandi",
-          name: "producer",
-          widget: "string",
-          required: false,
-        }
-      - {
-          label: "Framleiðslufyrirtæki",
-          name: "production_company",
-          widget: "string",
+          label: 'Framleiðandi',
+          name: 'producer',
+          widget: 'string',
           required: false,
         }
       - {
-          label: "Klipping",
-          name: "editing",
-          widget: "string",
+          label: 'Framleiðslufyrirtæki',
+          name: 'production_company',
+          widget: 'string',
           required: false,
         }
       - {
-          label: "Kvikmyndataka",
-          name: "filming",
-          widget: "string",
+          label: 'Klipping',
+          name: 'editing',
+          widget: 'string',
           required: false,
         }
       - {
-          label: "Tónskáld",
-          name: "composer",
-          widget: "string",
+          label: 'Kvikmyndataka',
+          name: 'filming',
+          widget: 'string',
           required: false,
         }
       - {
-          label: "Hljóðhönnun",
-          name: "sound_design",
-          widget: "string",
+          label: 'Tónskáld',
+          name: 'composer',
+          widget: 'string',
           required: false,
         }
       - {
-          label: "Lengd í mín.",
-          name: "length_in_min",
-          widget: "number",
+          label: 'Hljóðhönnun',
+          name: 'sound_design',
+          widget: 'string',
           required: false,
         }
       - {
-          label: "Stikla",
-          name: "Trailer",
-          widget: "string",
-          hint: "Slóð á stiklu",
+          label: 'Lengd í mín.',
+          name: 'length_in_min',
+          widget: 'number',
           required: false,
         }
-      - label: "Dagskrá"
-        name: "dagskra"
-        widget: "list"
+      - {
+          label: 'Stikla',
+          name: 'Trailer',
+          widget: 'string',
+          hint: 'Slóð á stiklu',
+          required: false,
+        }
+      - label: 'Dagskrá'
+        name: 'dagskra'
+        widget: 'list'
         collapsed: false
         field:
           {
-            label: "Dagsetning",
-            name: "dagsetning",
-            widget: "datetime",
+            label: 'Dagsetning',
+            name: 'dagsetning',
+            widget: 'datetime',
             required: false,
-            dateFormat: "DD.MM.YYYY",
-            timeFormat: "HH:mm",
+            dateFormat: 'DD.MM.YYYY',
+            timeFormat: 'HH:mm',
           }
       - {
-          label: "Heiðursgestur",
-          name: "honour_guest",
-          widget: "boolean",
+          label: 'Heiðursgestur',
+          name: 'honour_guest',
+          widget: 'boolean',
           default: false,
         }
   # Styrktaraðilar | Top 5
-  - name: "styrktaradilar_top5"
-    label: "Styrktaraðilar Top 5"
-    folder: "static/styrktaradilar_top5"
+  - name: 'styrktaradilar_top5'
+    label: 'Styrktaraðilar Top 5'
+    folder: 'static/styrktaradilar_top5'
     create: true
     editor:
       preview: false
     fields:
-      - { label: "Titill", name: "title", widget: "string" }
-      - { label: "Lógó", name: "logo", widget: "image" }
-      - { label: "Línkur", name: "sponsor_url", widget: "string" }
+      - { label: 'Titill', name: 'title', widget: 'string' }
+      - { label: 'Lógó', name: 'logo', widget: 'image' }
+      - { label: 'Línkur', name: 'sponsor_url', widget: 'string' }
   # Styrktaraðilar | Rest
-  - name: "styrktaradilar_rest"
-    label: "Styrktaraðilar Rest"
-    folder: "static/styrktaradilar_rest"
+  - name: 'styrktaradilar_rest'
+    label: 'Styrktaraðilar Rest'
+    folder: 'static/styrktaradilar_rest'
     create: true
     editor:
       preview: false
     fields:
-      - { label: "Titill", name: "title", widget: "string" }
-      - { label: "Lógó", name: "logo", widget: "image" }
-      - { label: "Línkur", name: "sponsor_url", widget: "string" }
+      - { label: 'Titill', name: 'title', widget: 'string' }
+      - { label: 'Lógó', name: 'logo', widget: 'image' }
+      - { label: 'Línkur', name: 'sponsor_url', widget: 'string' }
   # Big Logos
-  - name: "bigLogos"
-    label: "Big Logos"
-    folder: "static/bigLogos"
-    media_folder: ""
-    public_folder: ""
+  - name: 'bigLogos'
+    label: 'Big Logos'
+    folder: 'static/bigLogos'
+    media_folder: ''
+    public_folder: ''
     create: true
     editor:
       preview: false
     fields:
-      - { label: "Titill", name: "title", widget: "string" }
-      - { label: "Lógó", name: "logo", widget: "image" }
-      - { label: "Línkur", name: "url", widget: "string" }
-  # Hátíðin
-  - name: "hatidin-undirsidur"
-    label: "Hátíðin undirsíður"
-    folder: "static/hatidin-undirsidur"
-    create: true
-    editor:
-      preview: false
-    fields:
-      - { label: "Titill", name: "title", widget: "string" }
-      - { label: "Titill Enska", name: "title-en", widget: "string" }
-      - { label: "Mynd", name: "mynd", widget: "image" }
-      - { label: "Video", name: "video", widget: "file", required: false }
-      - { label: "Texti", name: "body", widget: "markdown" }
-      - { label: "Order", name: "order", widget: "number" }
+      - { label: 'Titill', name: 'title', widget: 'string' }
+      - { label: 'Lógó', name: 'logo', widget: 'image' }
+      - { label: 'Línkur', name: 'url', widget: 'string' }
   # Aðilar
-  - name: "Adilar"
-    label: "Aðilar"
-    folder: "static/adilar"
+  - name: 'Adilar'
+    label: 'Aðilar'
+    folder: 'static/adilar'
     create: true
     editor:
       preview: false
     fields:
-      - { label: "Nafn", name: "title", widget: "string" }
-      - { label: "Nafn Enska", name: "title-en", widget: "string" }
-      - { label: "Mynd", name: "mynd", widget: "image" }
-      - { label: "Texti", name: "body", widget: "markdown" }
-      - { label: "Heimasíða", name: "heimasida", widget: "string" }
+      - { label: 'Nafn', name: 'title', widget: 'string' }
+      - { label: 'Nafn Enska', name: 'title-en', widget: 'string' }
+      - { label: 'Mynd', name: 'mynd', widget: 'image' }
+      - { label: 'Texti', name: 'body', widget: 'markdown' }
+      - { label: 'Heimasíða', name: 'heimasida', widget: 'string' }
   # Gisting
-  - name: "Gisting"
-    label: "Gisting"
-    folder: "static/gisting"
+  - name: 'Gisting'
+    label: 'Gisting'
+    folder: 'static/gisting'
     create: true
     editor:
       preview: false
     fields:
-      - { label: "Nafn", name: "title", widget: "string" }
-      - { label: "Mynd", name: "mynd", widget: "image" }
-      - { label: "Heimasíða", name: "heimasida", widget: "string" }
+      - { label: 'Nafn', name: 'title', widget: 'string' }
+      - { label: 'Mynd', name: 'mynd', widget: 'image' }
+      - { label: 'Heimasíða', name: 'heimasida', widget: 'string' }
       - {
-          label: "Google Maps url",
-          name: "google-maps-url",
-          widget: "string",
+          label: 'Google Maps url',
+          name: 'google-maps-url',
+          widget: 'string',
           required: false,
         }
-      - label: "Staðsetning"
-        name: "stadsetning"
-        widget: "object"
+      - label: 'Staðsetning'
+        name: 'stadsetning'
+        widget: 'object'
         fields:
           - {
-              label: "Bær",
-              name: "baer",
-              widget: "string",
-              hint: "T.d. Patreksfjörður",
+              label: 'Bær',
+              name: 'baer',
+              widget: 'string',
+              hint: 'T.d. Patreksfjörður',
             }
           - {
-              label: "Heimilisfang",
-              name: "heimilisfang",
-              widget: "string",
-              hint: "T.d. Aðalstræti 31",
+              label: 'Heimilisfang',
+              name: 'heimilisfang',
+              widget: 'string',
+              hint: 'T.d. Aðalstræti 31',
             }
-          - { label: "Sími", name: "simi", widget: "string" }
+          - { label: 'Sími', name: 'simi', widget: 'string' }
