@@ -1,42 +1,45 @@
-import { graphql, StaticQuery } from "gatsby"
-import React from "react"
-import { useSelector } from "react-redux"
-import Footer from "../../layouts/Footer"
-import Header from "../../layouts/Header"
-import ExcerptBtns from "../../reusableComponents/ExcerptBtns"
-import Sponsors from "../../reusableComponents/Sponsors"
-import TopVideo from "../../reusableComponents/TopImage/video"
-import BigBtn from "../../reusableComponents/BigBtn"
-import { Container } from "./styled"
-import Postlist from "../../reusableComponents/Postlist"
-import PDF from "../../../static/assets/nytt-dagskra.pdf"
-import { Popup, InnerPopupWrap } from "./Popup/Popup"
-import Content from "../../reusableComponents/Content"
+import { graphql, StaticQuery } from 'gatsby'
+import React from 'react'
+import { useSelector } from 'react-redux'
+import Footer from '../../layouts/Footer'
+import Header from '../../layouts/Header'
+import ExcerptBtns from '../../reusableComponents/ExcerptBtns'
+import Sponsors from '../../reusableComponents/Sponsors'
+import TopVideo from '../../reusableComponents/TopImage/video'
+import BigBtn from '../../reusableComponents/BigBtn'
+import { Container } from './styled'
+import Postlist from '../../reusableComponents/Postlist'
+import PDF from '../../../static/assets/nytt-dagskra.pdf'
+import { Popup, InnerPopupWrap } from './Popup/Popup'
+import Content from '../../reusableComponents/Content'
+import NewButton from '../../reusableComponents/NewButton/NewButton'
+import AlertBanner from '../../reusableComponents/AlertBanner'
 
 const Frontpage = ({ data: { imageSharp, video } }) => {
   const icelandic = useSelector((state) => state.reducer.icelandic)
+
+  console.dir(video)
   return (
     <Container>
       <Header />
 
-      <TopVideo frontpage videoSource="videos/Forsida_skura_xcbhav"></TopVideo>
+      <div className='h-screen w-full'>
+        <video
+          autoPlay
+          muted
+          playsInline
+          className='h-full w-full object-cover object-top'
+          src={video.publicURL}
+          loop
+        ></video>
+      </div>
 
-      <Popup>
-        <InnerPopupWrap>
-          <Content
-            html=" <h1>Skjaldborg verður haldin næst um hvítasunnuhelgi 2022.</h1>
-        <p>
-          Hér að neðan er dagskrá hátíðarinnar frá síðasta ári, sem sýnd verður
-          í Skjaldborgarbíói um helgina 14.-16. maí 2021.
-        </p>"
-          />
-        </InnerPopupWrap>
-        <BigBtn
-          externalLink
-          action={PDF}
-          text={icelandic ? "Dagskrá" : "Schedule"}
-        />
-      </Popup>
+      <div className='absolute top-24 lg:top-56 w-full grid place-items-center'>
+        <AlertBanner />
+        <NewButton external onClick={PDF}>
+          {icelandic ? 'Dagskrá' : 'Schedule'}
+        </NewButton>
+      </div>
 
       <ExcerptBtns />
 

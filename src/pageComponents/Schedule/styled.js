@@ -1,5 +1,5 @@
-import styled, { css } from "styled-components"
-import { redColor, greenColor } from "../../constants"
+import styled, { css } from 'styled-components'
+import { redColor, greenColor } from '../../constants'
 
 export const Container = styled.div`
   background: ${greenColor};
@@ -38,7 +38,6 @@ export const DayContainer = styled.div`
     text-transform: uppercase;
   }
   .date {
-    font-weight: bold;
     border-bottom: 1px solid ${redColor};
     padding-bottom: 1rem;
   }
@@ -95,7 +94,7 @@ export const InformationWrap = styled.div`
   padding-bottom: 0;
   height: 0;
 
-  ${props =>
+  ${(props) =>
     props.display &&
     css`
     height: auto;

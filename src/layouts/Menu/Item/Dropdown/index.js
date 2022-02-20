@@ -1,9 +1,9 @@
-import React, { useState } from "react"
-import { Button, List, Item, Title } from "./styled"
-import Anchor from "../../../../reusableComponents/Anchor"
-import { graphql, StaticQuery } from "gatsby"
-import { useDispatch } from "react-redux"
-import { TRIGGER_MENU } from "../../../../state/action"
+import React, { useState } from 'react'
+import { Button, List, Item, Title } from './styled'
+import Anchor from '../../../../reusableComponents/Anchor'
+import { graphql, StaticQuery } from 'gatsby'
+import { useDispatch } from 'react-redux'
+import { TRIGGER_MENU } from '../../../../state/action'
 
 const Dropdown = ({
   children,
@@ -17,18 +17,20 @@ const Dropdown = ({
   const dispatch = useDispatch()
   return (
     <Button>
-      <Title onClick={() => setOpen(!open)} className="titlar">
-        {children}
-        {open ? "-" : "+"}
+      <Title onClick={() => setOpen(!open)} className='titlar'>
+        <h1>
+          {children}
+          {open ? '-' : '+'}
+        </h1>
       </Title>
-      <List height={open ? 6.5 + "rem" : "0"} padTop={open ? "1.5rem" : 0}>
+      <List height={open ? 6.5 + 'rem' : '0'} padTop={open ? '1.5rem' : 0}>
         {dropdownpages.map((item, index) => (
           <Item
-            className="titlar"
+            className='titlar'
             key={index}
-            onClick={() => dispatch({ type: TRIGGER_MENU, trigger: "closed" })}
+            onClick={() => dispatch({ type: TRIGGER_MENU, trigger: 'closed' })}
           >
-            <Anchor color="red" item={item}></Anchor>
+            <Anchor color='red' item={item}></Anchor>
           </Item>
         ))}
       </List>
@@ -36,7 +38,7 @@ const Dropdown = ({
   )
 }
 
-export default props => (
+export default (props) => (
   <StaticQuery
     query={graphql`
       {
@@ -51,6 +53,6 @@ export default props => (
         }
       }
     `}
-    render={data => <Dropdown data={data} {...props}></Dropdown>}
+    render={(data) => <Dropdown data={data} {...props}></Dropdown>}
   ></StaticQuery>
 )

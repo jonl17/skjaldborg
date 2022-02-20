@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: ApfelGrotezk;
+    font-weight: 700;
+    font-style: normal;
+    src: url('./font/ApfelGrotezk-Fett.otf') format('opentype');
+  }
+  @font-face {
+    font-family: ApfelGrotezk;
+    font-weight: 400;
+    font-style: normal;
+    src: url('./font/ApfelGrotezk-Regular.otf') format('opentype');
+  }
+
+  html {
+    @apply font-apfel-grotezk;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold;
+    @apply uppercase;
+  }
+
+  p,
+  a,
+  span {
+    @apply font-normal;
+  }
+
+  h3 {
+    @apply text-2xl;
+    @apply uppercase;
+  }
+}
+
+@layer utilities {
+  .clip {
+    transition: clip-path 0.2s;
+  }
+}

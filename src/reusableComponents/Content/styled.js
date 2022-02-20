@@ -1,5 +1,5 @@
-import styled from "styled-components"
-import { redColor, breakpoints } from "@constants"
+import styled from 'styled-components'
+import { redColor, breakpoints } from '@constants'
 
 export const Container = styled.div`
   line-height: 138%;
@@ -12,9 +12,6 @@ export const Container = styled.div`
     margin-top: -15px;
   }
 
-  * {
-    font-family: les;
-  }
   p {
     color: ${redColor};
     margin: 0.8rem 0 0.8rem 0;

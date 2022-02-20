@@ -1,6 +1,6 @@
-import styled from "styled-components"
-import { redColor, breakpoints } from "@constants"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
+import styled from 'styled-components'
+import { redColor, breakpoints } from '@constants'
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
 
 export const Container = styled.div`
   display: grid;
@@ -36,11 +36,8 @@ export const Box = styled(AniLink)`
     width: 100%;
     object-fit: cover;
     opacity: 0.7;
-    transition: 0.5s ease-in-out;
   }
-  img:hover {
-    transform: scale(1.05);
-  }
+
   p {
     color: white;
     font-size: 1.5rem;
