@@ -3,6 +3,9 @@ const plugin = require('tailwindcss/plugin')
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
+    fontFamily: {
+      'apfel-grotezk': ['ApfelGrotezk', 'sans-serif'],
+    },
     extend: {
       colors: {
         primary: 'rgb(190, 69, 69)',

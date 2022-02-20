@@ -1,13 +1,10 @@
-import { createGlobalStyle } from "styled-components"
+import { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
     html, body {
         margin: 0;
     }
-    h1,h2,h3 {
-        font-weight: normal;
-        letter-spacing: -0.5px;
-    }
+  
     ::selection {
         color: #9DD79A;
         background-color: #E64746;

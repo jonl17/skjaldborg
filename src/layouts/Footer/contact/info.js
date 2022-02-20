@@ -1,7 +1,7 @@
-import React from "react"
-import { graphql, StaticQuery } from "gatsby"
-import styled from "styled-components"
-import SocialMediaIcons from "../../../reusableComponents/SocialMediaIcons"
+import React from 'react'
+import { graphql, StaticQuery } from 'gatsby'
+import styled from 'styled-components'
+import SocialMediaIcons from '../../../reusableComponents/SocialMediaIcons'
 
 const InfoWrap = styled.div`
   display: grid;
@@ -21,7 +21,6 @@ const InfoWrap = styled.div`
       text-align: center;
       color: white;
       padding-bottom: 5px;
-      font-family: les;
       font-size: 14px;
     }
   }
@@ -36,11 +35,11 @@ const Info = ({
 }) => {
   return (
     <InfoWrap>
-      <div id="sm-wrap">
-        <SocialMediaIcons color="white"></SocialMediaIcons>
+      <div id='sm-wrap'>
+        <SocialMediaIcons color='white'></SocialMediaIcons>
       </div>
-      <div id="contact-wrap">
-        <p style={{ textTransform: "uppercase" }}>Contact</p>
+      <div id='contact-wrap'>
+        <p style={{ textTransform: 'uppercase' }}>Contact</p>
         <p>{contact.email}</p>
         <p>{contact.tel}</p>
       </div>
@@ -48,7 +47,7 @@ const Info = ({
   )
 }
 
-export default props => (
+export default (props) => (
   <StaticQuery
     query={graphql`
       {
@@ -62,6 +61,6 @@ export default props => (
         }
       }
     `}
-    render={data => <Info data={data} {...props}></Info>}
+    render={(data) => <Info data={data} {...props}></Info>}
   ></StaticQuery>
 )

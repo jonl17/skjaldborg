@@ -1,5 +1,5 @@
-import styled from "styled-components"
-import { redColor, greenColor } from "@constants"
+import styled from 'styled-components'
+import { redColor, greenColor } from '@constants'
 
 export const Container = styled.div`
   box-sizing: border-box;
@@ -24,7 +24,6 @@ export const ContentWrap = styled.div`
       max-width: 40rem;
       .text {
         * {
-          font-family: les;
           color: ${redColor};
           line-height: 145%;
         }
@@ -47,12 +46,10 @@ export const ParticipantsWrap = styled.div`
     margin: 1rem 0;
     p {
       margin: 0;
-      font-family: les;
     }
     .role {
       color: ${greenColor};
       text-transform: uppercase;
-      font-family: titlar;
     }
     .name {
       color: ${redColor};

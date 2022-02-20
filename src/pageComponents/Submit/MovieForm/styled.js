@@ -1,8 +1,8 @@
-import styled from "styled-components"
-import { redColor } from "@constants"
+import styled from 'styled-components'
+import { redColor } from '@constants'
 
 export const Box = styled.div`
-  @import url("https://css.gg/check-o.css");
+  @import url('https://css.gg/check-o.css');
   max-width: 20rem;
   display: flex;
   flex-direction: column;
@@ -18,7 +18,6 @@ export const Box = styled.div`
   select,
   p,
   button {
-    font-family: les;
     font-size: 1rem;
   }
   select {

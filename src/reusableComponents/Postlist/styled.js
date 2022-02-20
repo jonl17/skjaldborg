@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components"
+import styled, { css } from 'styled-components'
 
 export const Form = styled.form`
   grid-area: right;
@@ -16,7 +16,6 @@ const InputStyle = css`
   margin-bottom: 1rem;
   padding: 5px;
   box-sizing: border-box;
-  font-family: les;
   text-align: center;
 `
 export const Input = styled.input`
