@@ -2,7 +2,6 @@ import { graphql, StaticQuery } from 'gatsby'
 import React from 'react'
 import { useSelector } from 'react-redux'
 import Footer from '../../layouts/Footer'
-import Sponsors from '../../reusableComponents/Sponsors'
 import TopVideo from '../../reusableComponents/TopImage/video'
 import BigBtn from '../../reusableComponents/BigBtn'
 import { Container } from './styled'
@@ -31,8 +30,6 @@ const Frontpage = ({ data: { imageSharp, video } }) => {
       <div className='absolute top-24 lg:top-56 w-full grid place-items-center'>
         <AlertBanner />
       </div>
-
-      <Sponsors />
     </Container>
   )
 }
