@@ -7,7 +7,6 @@ export const Form = styled.form`
   flex-direction: column;
   align-items: center;
   height: 100%;
-  padding-top: 3rem;
   box-sizing: border-box;
 `
 const InputStyle = css`

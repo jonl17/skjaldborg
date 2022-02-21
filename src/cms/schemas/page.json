@@ -111,6 +111,15 @@
             "display": "list",
             "non-repeat": {},
             "repeat": {}
+          },
+          "sponsors": {
+            "type": "Slice",
+            "fieldset": "sponsors",
+            "description": "displays all the sponsors added",
+            "icon": "monetization_on",
+            "display": "list",
+            "non-repeat": {},
+            "repeat": {}
           }
         }
       }

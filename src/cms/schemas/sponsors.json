@@ -1,0 +1,79 @@
+{
+  "Main": {
+    "first_row": {
+      "type": "Group",
+      "config": {
+        "fields": {
+          "logo": {
+            "type": "Image",
+            "config": {
+              "constraint": {},
+              "thumbnails": [],
+              "label": "logo"
+            }
+          },
+          "website": {
+            "type": "Link",
+            "config": {
+              "allowTargetBlank": true,
+              "label": "website"
+            }
+          }
+        },
+        "label": "first row"
+      }
+    },
+    "second_row": {
+      "type": "Group",
+      "config": {
+        "fields": {
+          "logo": {
+            "type": "Image",
+            "config": {
+              "constraint": {},
+              "thumbnails": [],
+              "label": "logo"
+            }
+          },
+          "website": {
+            "type": "Link",
+            "config": {
+              "allowTargetBlank": true,
+              "label": "website"
+            }
+          }
+        },
+        "label": "second row"
+      }
+    },
+    "honours": {
+      "type": "Group",
+      "config": {
+        "fields": {
+          "logo": {
+            "type": "Image",
+            "config": {
+              "constraint": {},
+              "thumbnails": [],
+              "label": "logo"
+            }
+          },
+          "website": {
+            "type": "Link",
+            "config": {
+              "allowTargetBlank": true,
+              "label": "website"
+            }
+          },
+          "text": {
+            "type": "Text",
+            "config": {
+              "label": "text"
+            }
+          }
+        },
+        "label": "honours"
+      }
+    }
+  }
+}

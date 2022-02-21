@@ -1,0 +1,18 @@
+{
+  "Main": {
+    "date": {
+      "type": "Text",
+      "config": {
+        "label": "date",
+        "placeholder": "29. maí — 1. júní"
+      }
+    },
+    "place": {
+      "type": "Text",
+      "config": {
+        "label": "place",
+        "placeholder": "Patreksfjörður"
+      }
+    }
+  }
+}

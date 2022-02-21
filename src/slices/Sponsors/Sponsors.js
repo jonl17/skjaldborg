@@ -1,0 +1,69 @@
+import React from 'react'
+import { useGetSponsors } from '../../hooks/useGetSponsors'
+import { Link } from 'gatsby'
+import { GatsbyImage } from 'gatsby-plugin-image'
+
+const Sponsors = () => {
+  const sponsors = useGetSponsors()
+  const { firstRow, secondRow, honours } = sponsors
+  return (
+    <section className='bg-primary p-4 lg:p-8'>
+      <h3 className='text-white text-center my-5'>Styrktaraðilar</h3>
+      <div className='flex justify-between mb-10'>
+        {firstRow.map((item, key) => (
+          <Link key={key} to={item.website.url}>
+            <GatsbyImage
+              objectFit='contain'
+              className='h-56 w-40 max-h-[150px]'
+              image={item.logo.gatsbyImageData}
+              alt={item.logo.alt}
+            />
+          </Link>
+        ))}
+      </div>
+      <div className='flex justify-between mb-10'>
+        {secondRow.map((item, key) => (
+          <Link key={key} to={item.website.url}>
+            <GatsbyImage
+              objectFit='contain'
+              className='h-56 w-40 max-h-[75px]'
+              image={item.logo.gatsbyImageData}
+              alt={item.logo.alt}
+            />
+          </Link>
+        ))}
+      </div>
+      <div className='grid place-content-center'>
+        {honours.map((item, key) => (
+          <Link to={item.website.url}>
+            <div className='h-56 flex justify-center text-white'>
+              <GatsbyImage
+                image={item.logo.gatsbyImageData}
+                alt={item.logo.alt}
+                objectFit='contain'
+                className='h-full w-72'
+              />
+              <svg
+                width='2'
+                className='h-full ml-5 mr-10'
+                viewBox='0 0 2 64'
+                fill='none'
+                xmlns='http://www.w3.org/2000/svg'
+              >
+                <path d='M1 0V64' stroke='white' stroke-width='2' />
+              </svg>
+
+              <div className='w-72'>
+                <p className='max-w-[100px] grid items-center h-full'>
+                  {item.text}
+                </p>
+              </div>
+            </div>
+          </Link>
+        ))}
+      </div>
+    </section>
+  )
+}
+
+export default Sponsors
