@@ -5,9 +5,10 @@ const BannerMedia = ({ image, video }) => {
   return (
     <section className='h-screen'>
       <GatsbyImage
-        className='h-full w-full'
+        className='h-full w-full brightness-85'
         image={image.gatsbyImageData}
         alt={image.alt}
+        objectPosition='top'
       />
     </section>
   )

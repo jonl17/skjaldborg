@@ -7,9 +7,8 @@ import { pageResolver } from '../../cms/resolvers'
 const Page = ({ data }) => {
   const page = pageResolver(data.prismicPage)
 
-  console.log(page)
   return (
-    <div className='page'>
+    <div className='page bg-white'>
       <article>
         {page.body.map((slice, key) => (
           <SliceMapper slice={slice} key={key} />

@@ -11,6 +11,8 @@ const gatsbySourcePrismic = {
     accessToken: PRISMIC_ACCESS_TOKEN,
     schemas: {
       page: require('./schemas/page.json'),
+      seo: require('./schemas/seo.json'),
+      footer: require('./schemas/footer.json'),
     },
     linkResolver: require('./linkResolver').linkResolver,
   },

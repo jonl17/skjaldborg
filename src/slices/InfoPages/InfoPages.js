@@ -17,7 +17,7 @@ const InfoPages = () => {
               alt={page.featuredImage.alt}
             />
             <div className='absolute h-full top-0 left-0 w-full text-center'>
-              <h3 className='text-primary mt-10'>{page.title}</h3>
+              <h3 className='text-white mt-10'>{page.title}</h3>
             </div>
           </Link>
         ))}
