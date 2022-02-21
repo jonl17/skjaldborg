@@ -2,11 +2,13 @@ import React from 'react'
 import BannerMedia from './slices/BannerMedia'
 import BannerFrontpage from './slices/BannerFrontpage'
 import InfoPages from './slices/InfoPages'
+import Sponsors from './slices/Sponsors'
 
 const Slices = {
   banner_media: BannerMedia,
   banner_frontpage: BannerFrontpage,
   info_pages: InfoPages,
+  sponsors: Sponsors,
 }
 
 const propResolver = (slice) => {
@@ -28,7 +30,7 @@ const propResolver = (slice) => {
     }
     // todo case 'info_pages'
     default: {
-      return null
+      return {}
     }
   }
 }

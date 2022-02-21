@@ -25,8 +25,16 @@ export const fragment = graphql`
         ... on PrismicPageDataBodyInfoPages {
           ...bannerInfoPages
         }
+        ... on PrismicPageDataBodySponsors {
+          ...sponsorsSlice
+        }
       }
     }
+  }
+
+  fragment sponsorsSlice on PrismicPageDataBodySponsors {
+    slice_type
+    id
   }
 
   fragment bannerInfoPages on PrismicPageDataBodyInfoPages {
