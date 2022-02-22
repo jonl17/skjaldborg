@@ -2,8 +2,8 @@ import create from 'zustand'
 
 export const useMenu = create((set) => ({
   open: false,
-  toggleMenu: (state) =>
+  toggleMenu: (b) =>
     set({
-      open: state,
+      open: b,
     }),
 }))

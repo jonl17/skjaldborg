@@ -28,6 +28,19 @@ export const fragment = graphql`
         ... on PrismicPageDataBodySponsors {
           ...sponsorsSlice
         }
+        ... on PrismicPageDataBodyRichText {
+          ...richTextSlice
+        }
+      }
+    }
+  }
+
+  fragment richTextSlice on PrismicPageDataBodyRichText {
+    id
+    slice_type
+    primary {
+      text {
+        html
       }
     }
   }
