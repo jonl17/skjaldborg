@@ -12,7 +12,7 @@ const InfoPages = () => {
         {pages.map((page, key) => (
           <Link className='h-96 relative' to={page.url}>
             <GatsbyImage
-              className='h-full w-full brightness-75'
+              className='h-full w-full brightness-75 hover:cursor-zoom-in'
               image={page.featuredImage.gatsbyImageData}
               alt={page.featuredImage.alt}
             />
