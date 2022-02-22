@@ -23,7 +23,7 @@ const NewMenu = () => {
         className='w-1/2 hidden md:block'
         onClick={() => toggleMenu(false)}
       ></button>
-      <div className='grid place-content-center relative h-full gap-10 w-full lg:w-1/2 bg-primary text-white'>
+      <div className='grid place-content-center relative h-full gap-10 w-full lg:w-1/2 bg-primary text-tertiary'>
         <Link
           className='absolute bottom-12 lg:top-12 left-12 hover:text-secondary'
           to={lang === 'is' ? '/en' : '/'}
