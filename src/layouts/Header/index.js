@@ -5,20 +5,22 @@ import { useGetSeo } from '../../hooks/useGetSeo'
 import cn from 'classnames'
 import { useLocation } from '@reach/router'
 import Burger from '../Burger'
+import { useLang } from '../../store'
 
 const Header = () => {
   const meta = useGetSeo()
   const { pathname } = useLocation()
+  const { lang } = useLang()
 
   return (
     <header
       className={cn('absolute top-0 z-30 p-4 lg:p-8 text-secondary', {
-        'text-secondary': pathname === '/',
-        'text-tertiary': pathname !== '/',
+        'text-secondary': pathname === '/' || pathname === '/en',
+        'text-tertiary': pathname !== '/' && pathname !== '/en',
       })}
     >
       <section className='grid gap-12 grid-flow-col'>
-        <Link to='/'>
+        <Link to={lang === 'is' ? '/' : '/en'}>
           <Logo />
         </Link>
         <div className='text-current'>

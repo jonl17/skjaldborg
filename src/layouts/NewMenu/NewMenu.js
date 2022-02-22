@@ -1,14 +1,14 @@
 import React from 'react'
 import { useGetMenu } from '../../hooks/useGetMenu'
-import { useMenu } from '../../store'
+import { useLang, useMenu } from '../../store'
 import cn from 'classnames'
 import { Link } from 'gatsby'
 
 const NewMenu = () => {
-  const menu = useGetMenu()
+  const { lang } = useLang()
+  const menu = useGetMenu(lang)
   const { open, toggleMenu } = useMenu()
 
-  console.log(open)
   return (
     <nav
       className={cn(
@@ -23,7 +23,14 @@ const NewMenu = () => {
         className='w-1/2 hidden md:block'
         onClick={() => toggleMenu(false)}
       ></button>
-      <div className='grid place-content-center h-full gap-10 w-full lg:w-1/2 bg-primary text-white'>
+      <div className='grid place-content-center relative h-full gap-10 w-full lg:w-1/2 bg-primary text-white'>
+        <Link
+          className='absolute bottom-12 lg:top-12 left-12 hover:text-secondary'
+          to={lang === 'is' ? '/en' : '/'}
+          onClick={() => toggleMenu(false)}
+        >
+          <h6>{lang === 'is' ? 'English' : 'Íslenska'}</h6>
+        </Link>
         {menu.map((page, key) => (
           <Link
             to={page.url}

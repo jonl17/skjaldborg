@@ -10,6 +10,9 @@ import { SET_PATHNAME } from '../state/action'
 import Footer from './Footer'
 import Header from './Header'
 import NewMenu from './NewMenu'
+import { useLang } from '../store'
+import { useEffect } from 'react'
+import { useLocation } from '@reach/router'
 
 const Layout = ({ children, location }) => {
   useSetPlatform()
@@ -17,6 +20,17 @@ const Layout = ({ children, location }) => {
   React.useEffect(() => {
     dispatch({ type: SET_PATHNAME, pathname: location.pathname })
   }, [location.pathname, dispatch])
+
+  const { toggleLang } = useLang()
+  const { pathname } = useLocation()
+
+  useEffect(() => {
+    if (pathname.includes('/en')) {
+      toggleLang('en')
+    } else {
+      toggleLang('is')
+    }
+  }, [pathname])
 
   return (
     <>

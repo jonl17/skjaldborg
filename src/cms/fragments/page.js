@@ -6,6 +6,7 @@ export const fragment = graphql`
     url
     id
     prismicId
+    lang
     data {
       title {
         text
