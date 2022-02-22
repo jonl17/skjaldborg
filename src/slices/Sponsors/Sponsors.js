@@ -9,7 +9,7 @@ const Sponsors = () => {
   return (
     <section className='bg-primary p-4 lg:p-8'>
       <h3 className='text-white text-center my-5'>Styrktaraðilar</h3>
-      <div className='flex justify-between mb-10'>
+      <div className='grid grid-cols-2 gap-5 lg:flex justify-between mb-10'>
         {firstRow.map((item, key) => (
           <Link key={key} to={item.website.url}>
             <GatsbyImage
@@ -21,7 +21,7 @@ const Sponsors = () => {
           </Link>
         ))}
       </div>
-      <div className='flex justify-between mb-10'>
+      <div className='grid grid-cols-2 gap-5 lg:flex justify-between mb-10'>
         {secondRow.map((item, key) => (
           <Link key={key} to={item.website.url}>
             <GatsbyImage
@@ -41,7 +41,7 @@ const Sponsors = () => {
                 image={item.logo.gatsbyImageData}
                 alt={item.logo.alt}
                 objectFit='contain'
-                className='h-full w-72'
+                className='h-full lg:w-72'
               />
               <svg
                 width='2'

@@ -62,7 +62,8 @@
     "rxjs": "^6.5.5",
     "slugify": "^1.4.4",
     "styled-components": "^4.4.1",
-    "styled-theming": "^2.2.0"
+    "styled-theming": "^2.2.0",
+    "zustand": "^3.7.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.2",

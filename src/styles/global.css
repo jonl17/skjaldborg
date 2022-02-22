@@ -46,4 +46,8 @@
   .clip {
     transition: clip-path 0.2s;
   }
+  .rich-text > p {
+    @apply mb-3;
+    font-size: 18px;
+  }
 }

@@ -14,6 +14,7 @@ const gatsbySourcePrismic = {
       seo: require('./schemas/seo.json'),
       footer: require('./schemas/footer.json'),
       sponsors: require('./schemas/sponsors.json'),
+      menu: require('./schemas/menu.json'),
     },
     linkResolver: require('./linkResolver').linkResolver,
   },

@@ -3,9 +3,12 @@ import { graphql, useStaticQuery } from 'gatsby'
 import { useGetPages } from '../../hooks/useGetPages'
 import { Link } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
+import { useLocation } from '@reach/router'
+import { useLang } from '../../store'
 
 const InfoPages = () => {
-  const pages = useGetPages()
+  const { lang } = useLang()
+  const pages = useGetPages(lang)
   return (
     <section className='excerpt-buttons px-5 py-10'>
       <div className='grid lg:grid-flow-col gap-5'>
