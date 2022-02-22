@@ -4,6 +4,7 @@ import Logo from '../../reusableComponents/Logo'
 import { useGetSeo } from '../../hooks/useGetSeo'
 import cn from 'classnames'
 import { useLocation } from '@reach/router'
+import Burger from '../Burger'
 
 const Header = () => {
   const meta = useGetSeo()
@@ -24,6 +25,7 @@ const Header = () => {
           <h6>{meta.date}</h6>
           <h6>{meta.place}</h6>
         </div>
+        <Burger />
       </section>
     </header>
   )
