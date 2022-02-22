@@ -1,0 +1,27 @@
+{
+  "Main": {
+    "sponsors": {
+      "type": "Group",
+      "config": {
+        "fields": {
+          "logo": {
+            "type": "Image",
+            "config": {
+              "constraint": {},
+              "thumbnails": [],
+              "label": "logo"
+            }
+          },
+          "website": {
+            "type": "Link",
+            "config": {
+              "allowTargetBlank": true,
+              "label": "website"
+            }
+          }
+        },
+        "label": "sponsors"
+      }
+    }
+  }
+}

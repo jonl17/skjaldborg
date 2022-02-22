@@ -6,6 +6,7 @@ export const fragment = graphql`
     url
     id
     prismicId
+    lang
     data {
       title {
         text
@@ -25,8 +26,29 @@ export const fragment = graphql`
         ... on PrismicPageDataBodyInfoPages {
           ...bannerInfoPages
         }
+        ... on PrismicPageDataBodySponsors {
+          ...sponsorsSlice
+        }
+        ... on PrismicPageDataBodyRichText {
+          ...richTextSlice
+        }
       }
     }
+  }
+
+  fragment richTextSlice on PrismicPageDataBodyRichText {
+    id
+    slice_type
+    primary {
+      text {
+        html
+      }
+    }
+  }
+
+  fragment sponsorsSlice on PrismicPageDataBodySponsors {
+    slice_type
+    id
   }
 
   fragment bannerInfoPages on PrismicPageDataBodyInfoPages {

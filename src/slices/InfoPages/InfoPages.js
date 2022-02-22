@@ -3,9 +3,12 @@ import { graphql, useStaticQuery } from 'gatsby'
 import { useGetPages } from '../../hooks/useGetPages'
 import { Link } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
+import { useLocation } from '@reach/router'
+import { useLang } from '../../store'
 
 const InfoPages = () => {
-  const pages = useGetPages()
+  const { lang } = useLang()
+  const pages = useGetPages(lang)
   return (
     <section className='excerpt-buttons px-5 py-10'>
       <div className='grid lg:grid-flow-col gap-5'>
@@ -17,7 +20,7 @@ const InfoPages = () => {
               alt={page.featuredImage.alt}
             />
             <div className='absolute h-full top-0 left-0 w-full text-center'>
-              <h3 className='text-primary mt-10'>{page.title}</h3>
+              <h3 className='text-white mt-10'>{page.title}</h3>
             </div>
           </Link>
         ))}

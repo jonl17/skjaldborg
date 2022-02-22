@@ -3,11 +3,12 @@ import { GatsbyImage } from 'gatsby-plugin-image'
 
 const BannerMedia = ({ image, video }) => {
   return (
-    <section className='h-screen'>
+    <section className='lg:h-[65vh]'>
       <GatsbyImage
-        className='h-full w-full'
+        className='lg:h-full w-full brightness-85'
         image={image.gatsbyImageData}
         alt={image.alt}
+        objectPosition='center'
       />
     </section>
   )

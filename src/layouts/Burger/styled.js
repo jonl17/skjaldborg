@@ -1,5 +1,5 @@
-import styled, { css } from "styled-components"
-import { redColor } from "@constants"
+import styled, { css } from 'styled-components'
+import { redColor } from '@constants'
 
 export const Container = styled.div`
   height: 30px;
@@ -19,21 +19,21 @@ export const Container = styled.div`
 export const Line = styled.span`
   height: 4px;
   width: 100%;
-  border-bottom: 0.2rem solid ${redColor};
+  border-bottom: 0.2rem solid;
   transition: 0.2s ease-in-out;
-  ${props =>
+  ${(props) =>
     props.ex &&
     css`
       border-color: white;
-      ${props =>
+      ${(props) =>
         props.one &&
         css`
           transform: translateY(7px) rotate(-135deg);
         `}
-      ${props =>
+      ${(props) =>
         props.three &&
         css`
-          transform: translateY(-12px) rotate(-45deg);
+          transform: translateY(-9px) rotate(-45deg);
         `}
     `}
 `

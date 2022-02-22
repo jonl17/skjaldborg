@@ -1,57 +1,36 @@
-import React, { useEffect, useState } from 'react'
-import { graphql, StaticQuery } from 'gatsby'
-import { useSelector } from 'react-redux'
-
-import { Container, Wrap } from './styled'
+import React from 'react'
+import { Link } from 'gatsby'
 import Logo from '../../reusableComponents/Logo'
-import Text from './Text'
-import { redColor } from '../../constants'
+import { useGetSeo } from '../../hooks/useGetSeo'
+import cn from 'classnames'
+import { useLocation } from '@reach/router'
+import Burger from '../Burger'
+import { useLang } from '../../store'
 
-const Header = ({
-  data: {
-    site: { siteMetadata },
-  },
-  mode,
-}) => {
-  const platform = useSelector((state) => state.reducer.platform)
-  const pathname = useSelector((state) => state.reducer.pathname)
-  const [color, setColor] = useState('white')
-  useEffect(() => {
-    if (mode === 'red') {
-      setColor(`${redColor}`)
-    } else {
-      setColor('white')
-    }
-  }, [pathname, mode])
+const Header = () => {
+  const meta = useGetSeo()
+  const { pathname } = useLocation()
+  const { lang } = useLang()
+
   return (
-    <Wrap className='header'>
-      <Container platform={platform}>
-        <Logo color={color}></Logo>
-        {platform === 'desktop' ? (
-          <div id='box'>
-            <Text color={color} meta={siteMetadata} info></Text>
-          </div>
-        ) : null}
-      </Container>
-    </Wrap>
+    <header
+      className={cn('absolute top-0 z-30 p-4 lg:p-8 text-secondary', {
+        'text-secondary': pathname === '/' || pathname === '/en',
+        'text-tertiary': pathname !== '/' && pathname !== '/en',
+      })}
+    >
+      <section className='grid gap-12 grid-flow-col'>
+        <Link to={lang === 'is' ? '/' : '/en'}>
+          <Logo />
+        </Link>
+        <div className='text-current'>
+          <h6>{meta.date}</h6>
+          <h6>{meta.place}</h6>
+        </div>
+        <Burger />
+      </section>
+    </header>
   )
 }
 
-export default (props) => (
-  <StaticQuery
-    query={graphql`
-      {
-        site {
-          siteMetadata {
-            title
-            subtitle
-            year
-            period
-            location
-          }
-        }
-      }
-    `}
-    render={(data) => <Header data={data} {...props}></Header>}
-  ></StaticQuery>
-)
+export default Header

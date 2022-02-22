@@ -2,15 +2,24 @@ import React from 'react'
 import BannerMedia from './slices/BannerMedia'
 import BannerFrontpage from './slices/BannerFrontpage'
 import InfoPages from './slices/InfoPages'
+import Sponsors from './slices/Sponsors'
+import RichText from './slices/RichText/RichText'
 
 const Slices = {
   banner_media: BannerMedia,
   banner_frontpage: BannerFrontpage,
   info_pages: InfoPages,
+  sponsors: Sponsors,
+  rich_text: RichText,
 }
 
 const propResolver = (slice) => {
   switch (slice.slice_type) {
+    case 'rich_text': {
+      return {
+        html: slice.primary.text.html,
+      }
+    }
     case 'banner_media': {
       return {
         image: slice.primary.image,
@@ -28,7 +37,7 @@ const propResolver = (slice) => {
     }
     // todo case 'info_pages'
     default: {
-      return null
+      return {}
     }
   }
 }
