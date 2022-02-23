@@ -21,6 +21,13 @@
         "label": "Featured image"
       }
     },
+    "link_a_page": {
+      "type": "Link",
+      "config": {
+        "select": "document",
+        "label": "link a page"
+      }
+    },
     "body": {
       "type": "Slices",
       "fieldset": "Slice zone",

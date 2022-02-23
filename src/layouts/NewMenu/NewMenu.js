@@ -42,6 +42,15 @@ const NewMenu = () => {
             <h1 className='text-4xl lg:text-6xl'>{page.label}</h1>
           </Link>
         ))}
+        <a
+          className='hover:text-secondary'
+          href='https://filmfreeway.com/Skjaldborg'
+          target='_blank'
+        >
+          <h1 className='text-4xl lg:text-6xl'>
+            {lang === 'is' ? 'Sækja um' : 'Apply here'}
+          </h1>
+        </a>
       </div>
     </nav>
   )

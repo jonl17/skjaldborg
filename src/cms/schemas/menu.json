@@ -8,7 +8,6 @@
             "type": "Link",
             "config": {
               "select": "document",
-              "customtypes": ["page"],
               "label": "page"
             }
           },

@@ -19,11 +19,11 @@ const Header = () => {
         'text-tertiary': pathname !== '/' && pathname !== '/en',
       })}
     >
-      <section className='grid gap-12 grid-flow-col'>
+      <section className='lg:grid gap-12 grid-flow-col'>
         <Link to={lang === 'is' ? '/' : '/en'}>
           <Logo />
         </Link>
-        <div className='text-current'>
+        <div className='text-current mt-7 lg:mt-0'>
           <h6>{meta.date}</h6>
           <h6>{meta.place}</h6>
         </div>

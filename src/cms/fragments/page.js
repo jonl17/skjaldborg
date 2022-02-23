@@ -16,6 +16,9 @@ export const fragment = graphql`
         url
         gatsbyImageData
       }
+      link_a_page {
+        url
+      }
       body {
         ... on PrismicPageDataBodyBannerMedia {
           ...bannerMediaSlice
