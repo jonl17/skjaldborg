@@ -1,11 +1,6 @@
-const { fmImagesToRelative } = require('gatsby-remark-relative-images')
 const path = require('path')
 const slugify = require('slugify')
 const { url } = require('inspector')
-
-exports.onCreateNode = ({ node }) => {
-  fmImagesToRelative(node)
-}
 
 exports.onCreatePage = async ({ page, actions }) => {
   const { createPage } = actions
