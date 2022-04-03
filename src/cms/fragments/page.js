@@ -35,8 +35,16 @@ export const fragment = graphql`
         ... on PrismicPageDataBodyRichText {
           ...richTextSlice
         }
+        ... on PrismicPageDataBodySarpur {
+          ...sarpurSlice
+        }
       }
     }
+  }
+
+  fragment sarpurSlice on PrismicPageDataBodySarpur {
+    id
+    slice_type
   }
 
   fragment richTextSlice on PrismicPageDataBodyRichText {

@@ -127,6 +127,15 @@
             "display": "list",
             "non-repeat": {},
             "repeat": {}
+          },
+          "sarpur": {
+            "type": "Slice",
+            "fieldset": "Sarpur",
+            "description": "Sækir sarpinn",
+            "icon": "blur_circular",
+            "display": "list",
+            "non-repeat": {},
+            "repeat": {}
           }
         }
       }

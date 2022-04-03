@@ -10,7 +10,5 @@ export const useGetSeo = () => {
     }
   `)
 
-  console.log(result)
-
   return result.prismicSeo.data
 }
