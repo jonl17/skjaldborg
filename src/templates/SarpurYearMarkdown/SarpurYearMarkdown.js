@@ -9,7 +9,7 @@ const SarpurYearMarkdown = ({ data }) => {
   return (
     <section className='h-full relative p-4 lg:p-8'>
       <BlockGrid
-        title='Sarpur'
+        title='Sarpur 2020'
         items={movieArr.map((movie) => ({
           image: movie.frontmatter.image.publicURL,
           title: movie.frontmatter.title,

@@ -19,7 +19,7 @@ const SarpurYear = ({ data, pageContext }) => {
   return (
     <section className='h-full relative p-4 lg:p-8'>
       <BlockGrid
-        title='Sarpur'
+        title={`Sarpur ${pageContext.node.year}`}
         items={items.map((item) => ({
           ...item,
           slug: `/sarpur/${pageContext.node.year}/${slugify(item.title, {
