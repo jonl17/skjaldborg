@@ -21,7 +21,7 @@ const Sponsors = () => {
           </Link>
         ))}
       </div>
-      <div className='grid grid-cols-2 gap-5 lg:flex justify-between mb-10'>
+      <div className='grid gap-5 grid-cols-2 lg:grid-cols-5 justify-between mb-10'>
         {secondRow.map((item, key) => (
           <Link key={key} to={item.website.url}>
             <GatsbyImage

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import PageContainer from '../../layouts/PageContainer'
 import Header from '../../layouts/Header'
 import Footer from '../../layouts/Footer'
-import { graphql, Link } from 'gatsby'
+import { graphql, Link, navigate } from 'gatsby'
 import CoverImage from './components/CoverImage'
 import Info from './components/Info'
 import { Container } from './styled'
@@ -14,12 +14,6 @@ const Movie = ({ data: { movie }, pageContext, location }) => {
   const { html, frontmatter } = movie
   const icelandic = useSelector((state) => state.reducer.icelandic)
 
-  const [redirectUrl, setRedirectUrl] = useState('/heimildamyndir')
-  useEffect(() => {
-    if (location.state && location.state.fromSchedule) {
-      setRedirectUrl('/dagskra')
-    }
-  }, [location])
   return (
     <>
       <PageContainer>
@@ -34,12 +28,12 @@ const Movie = ({ data: { movie }, pageContext, location }) => {
                 <h2>{frontmatter.director}</h2>
               </Fade>
               <Fade right distance='10px' delay={250}>
-                <Link to={redirectUrl}>
+                <button onClick={() => navigate(-1)}>
                   <div className='back-btn-wrap'>
                     <Arrow rotation='-180deg' />
                     <h3>Tilbaka</h3>
                   </div>
-                </Link>
+                </button>
               </Fade>
             </div>
           </div>

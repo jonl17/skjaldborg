@@ -78,6 +78,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const sarpurYearMarkdownTemplate = path.resolve(
     'src/templates/SarpurYearMarkdown/SarpurYearMarkdown.js'
   )
+  const markdownMovieDetailsTemplate = path.resolve(
+    'src/templates/heimildamynd/index.js'
+  )
 
   const prismicResults = await graphql(`
     {
@@ -99,6 +102,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       ) {
         nodes {
           id
+          frontmatter {
+            title
+          }
         }
       }
       wips: allMarkdownRemark(
@@ -106,6 +112,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       ) {
         nodes {
           id
+          frontmatter {
+            title
+          }
         }
       }
       allSarpurYear(sort: { fields: year, order: DESC }) {
@@ -136,6 +145,17 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       component: sarpurYearTemplate,
       context: {
         node,
+      },
+    })
+  })
+
+  // markdown files to pages
+  sarpurYearsResults.data.premiers.nodes.map((node) => {
+    createPage({
+      path: `/sarpur/2020/${slugify(node.frontmatter.title, { lower: true })}`,
+      component: markdownMovieDetailsTemplate,
+      context: {
+        ...node,
       },
     })
   })
