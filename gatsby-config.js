@@ -65,6 +65,7 @@ const metadata = {
 module.exports = {
   siteMetadata: metadata,
   plugins: [
+   'gatsby-plugin-remove-serviceworker',
     gatsbySourcePrismic,
     'gatsby-plugin-postcss',
     {

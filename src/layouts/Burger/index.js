@@ -15,8 +15,6 @@ const Burger = () => {
 
   const { open, toggleMenu } = useMenu()
 
-  console.log(open)
-
   return !open ? (
     <Container className='border-current' onClick={() => toggleMenu(true)}>
       <Line one></Line>

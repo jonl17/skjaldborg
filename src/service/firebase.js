@@ -1,4 +1,4 @@
-const config = {
+export const config = {
   apiKey: process.env.GATSBY_API_KEY,
   authDomain: process.env.GATSBY_AUTH_DOMAIN,
   projectId: process.env.GATSBY_PROJECT_ID,
@@ -8,7 +8,7 @@ const config = {
 
 let firebaseCache
 
-export const getFirebase = firebase => {
+export const getFirebase = (firebase) => {
   if (firebaseCache) {
     return firebaseCache
   }

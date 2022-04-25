@@ -21,6 +21,13 @@
         "label": "Featured image"
       }
     },
+    "link_a_page": {
+      "type": "Link",
+      "config": {
+        "select": "document",
+        "label": "link a page"
+      }
+    },
     "body": {
       "type": "Slices",
       "fieldset": "Slice zone",
@@ -117,6 +124,15 @@
             "fieldset": "sponsors",
             "description": "displays all the sponsors added",
             "icon": "monetization_on",
+            "display": "list",
+            "non-repeat": {},
+            "repeat": {}
+          },
+          "sarpur": {
+            "type": "Slice",
+            "fieldset": "Sarpur",
+            "description": "Sækir sarpinn",
+            "icon": "blur_circular",
             "display": "list",
             "non-repeat": {},
             "repeat": {}

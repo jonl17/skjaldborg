@@ -4,6 +4,7 @@ import BannerFrontpage from './slices/BannerFrontpage'
 import InfoPages from './slices/InfoPages'
 import Sponsors from './slices/Sponsors'
 import RichText from './slices/RichText/RichText'
+import Sarpur from './slices/NewSarpur'
 
 const Slices = {
   banner_media: BannerMedia,
@@ -11,6 +12,7 @@ const Slices = {
   info_pages: InfoPages,
   sponsors: Sponsors,
   rich_text: RichText,
+  sarpur: Sarpur,
 }
 
 const propResolver = (slice) => {
@@ -45,8 +47,6 @@ const propResolver = (slice) => {
 const SliceMapper = ({ slice }) => {
   const Cmp = Slices[slice.slice_type]
   const props = propResolver(slice)
-
-  console.log(slice)
 
   if (!Cmp) {
     console.error(slice.slice_type, ' not found')

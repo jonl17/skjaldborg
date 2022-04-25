@@ -1,10 +1,51 @@
-const { fmImagesToRelative } = require('gatsby-remark-relative-images')
 const path = require('path')
 const slugify = require('slugify')
 const { url } = require('inspector')
+const firebase = require('firebase')
+const { docData } = require('rxfire/firestore')
 
-exports.onCreateNode = ({ node }) => {
-  fmImagesToRelative(node)
+const config = {
+  apiKey: process.env.GATSBY_API_KEY,
+  authDomain: process.env.GATSBY_AUTH_DOMAIN,
+  projectId: process.env.GATSBY_PROJECT_ID,
+  storageBucket: process.env.GATSBY_STORAGE_BUCKET,
+  appId: process.env.GATSBY_APP_ID,
+}
+
+exports.sourceNodes = async ({
+  actions: { createNode },
+  createContentDigest,
+}) => {
+  const firestore = firebase.initializeApp(config).firestore()
+
+  const movies = await firestore.collection('sarpurMovies').get()
+  const years = await firestore.collection('sarpur').get()
+
+  movies.forEach((movie) => {
+    const data = movie.data()
+    createNode({
+      ...data,
+      id: data.id.toString(),
+      slug: `/sarpur/${slugify(data.title, { lower: true })}`,
+      internal: {
+        type: 'SarpurMovie',
+        contentDigest: createContentDigest(data),
+      },
+    })
+  })
+
+  years.forEach((year) => {
+    const data = year.data()
+    createNode({
+      ...data,
+      id: data.year,
+      slug: `/sarpur/${data.year}`,
+      internal: {
+        type: 'SarpurYear',
+        contentDigest: createContentDigest(data),
+      },
+    })
+  })
 }
 
 exports.onCreatePage = async ({ page, actions }) => {
@@ -14,10 +55,6 @@ exports.onCreatePage = async ({ page, actions }) => {
   // only on the client.
   if (page.path.match(/^\/umsokn/)) {
     page.matchPath = '/umsokn/*'
-    createPage(page)
-  }
-  if (page.path.match(/^\/sarpur/)) {
-    page.matchPath = '/sarpur/*'
     createPage(page)
   }
 }
@@ -33,35 +70,17 @@ exports.onCreateWebpackConfig = ({ actions }) => {
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
-  const movieTemplate = path.resolve(`src/templates/heimildamynd/index.js`)
-  const pageTemplate = path.resolve('src/templates/Page/Page.js')
 
-  const result = await graphql(`
-    {
-      frumsyningar: allMarkdownRemark(
-        sort: { fields: frontmatter___title }
-        filter: { fileAbsolutePath: { regex: "/frumsyning/" } }
-      ) {
-        nodes {
-          id
-          frontmatter {
-            title
-          }
-        }
-      }
-      verk_i_vinnslu: allMarkdownRemark(
-        sort: { fields: frontmatter___title }
-        filter: { fileAbsolutePath: { regex: "/verk-i-vinnslu/" } }
-      ) {
-        nodes {
-          id
-          frontmatter {
-            title
-          }
-        }
-      }
-    }
-  `)
+  const pageTemplate = path.resolve('src/templates/Page/Page.js')
+  const sarpurYearTemplate = path.resolve(
+    'src/templates/SarpurYear/SarpurYear.js'
+  )
+  const sarpurYearMarkdownTemplate = path.resolve(
+    'src/templates/SarpurYearMarkdown/SarpurYearMarkdown.js'
+  )
+  const markdownMovieDetailsTemplate = path.resolve(
+    'src/templates/heimildamynd/index.js'
+  )
 
   const prismicResults = await graphql(`
     {
@@ -76,21 +95,67 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     }
   `)
 
-  if (result.errors || prismicResults.errors) {
+  const sarpurYearsResults = await graphql(`
+    {
+      premiers: allMarkdownRemark(
+        filter: { fileAbsolutePath: { regex: "/frumsyningar/" } }
+      ) {
+        nodes {
+          id
+          frontmatter {
+            title
+          }
+        }
+      }
+      wips: allMarkdownRemark(
+        filter: { fileAbsolutePath: { regex: "/verk-i-vinnslu/" } }
+      ) {
+        nodes {
+          id
+          frontmatter {
+            title
+          }
+        }
+      }
+      allSarpurYear(sort: { fields: year, order: DESC }) {
+        nodes {
+          id
+          year
+        }
+      }
+    }
+  `)
+
+  if (sarpurYearsResults.errors || prismicResults.errors) {
     reporter.panicOnBuild('Error while running graphql query!')
     return
   }
-  const joinedArrays = result.data.frumsyningar.nodes.concat(
-    result.data.verk_i_vinnslu.nodes
-  )
-  joinedArrays.forEach((item) => {
-    const prefix = '/heimildamyndir/'
-    const url = prefix + slugify(item.frontmatter.title, { lower: true })
+
+  createPage({
+    path: '/sarpur/2020',
+    component: sarpurYearMarkdownTemplate,
+    context: {
+      year: '2020',
+    },
+  })
+
+  sarpurYearsResults.data.allSarpurYear.nodes.map((node) => {
     createPage({
-      path: url,
-      component: movieTemplate,
+      path: `/sarpur/${node.year}`,
+      component: sarpurYearTemplate,
       context: {
-        id: item.id,
+        node,
+      },
+    })
+  })
+
+  // markdown files to pages
+  sarpurYearsResults.data.premiers.nodes.map((node) => {
+    createPage({
+      path: `/sarpur/2020/${slugify(node.frontmatter.title, { lower: true })}`,
+      component: markdownMovieDetailsTemplate,
+      context: {
+        ...node,
       },
     })
   })

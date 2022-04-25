@@ -48,7 +48,16 @@
     transition: clip-path 0.2s;
   }
   .rich-text > p {
+    @apply mb-6;
+    font-size: 24px;
+  }
+
+  .rich-text a {
+    @apply underline;
+    @apply hover:opacity-75;
+  }
+
+  .rich-text > h3 {
     @apply mb-3;
-    font-size: 18px;
   }
 }
