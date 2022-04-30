@@ -26,7 +26,7 @@ exports.sourceNodes = async ({
     createNode({
       ...data,
       id: data.id.toString(),
-      slug: `/sarpur/${slugify(data.title, { lower: true })}`,
+      slug: `/sarpur/${slugify(data.title, { lower: true, remove: /[*+~.()'"!:@]/g })}`,
       internal: {
         type: 'SarpurMovie',
         contentDigest: createContentDigest(data),
@@ -79,7 +79,10 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     'src/templates/SarpurYearMarkdown/SarpurYearMarkdown.js'
   )
   const markdownMovieDetailsTemplate = path.resolve(
-    'src/templates/heimildamynd/index.js'
+    'src/templates/heimildamynd/markdown.js'
+  )
+  const firebaseMovieDetailsTemplate = path.resolve(
+    'src/templates/heimildamynd/firebase.js'
   )
 
   const prismicResults = await graphql(`
@@ -121,6 +124,10 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         nodes {
           id
           year
+          movies {
+            id
+            title
+          }
         }
       }
     }
@@ -149,10 +156,33 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     })
   })
 
+  // firestore files to pages
+  sarpurYearsResults.data.allSarpurYear.nodes.forEach((node) => {
+    node.movies.map(movie => {
+      createPage({
+        path: `/sarpur/${slugify(movie.title, { lower: true, remove: /[*+~.()'"!:@]/g })}`,
+        component: firebaseMovieDetailsTemplate,
+        context: {
+          year: node.year,
+          id: movie.id.toString()
+        }
+      })
+    })
+  })
+
   // markdown files to pages
   sarpurYearsResults.data.premiers.nodes.map((node) => {
     createPage({
-      path: `/sarpur/2020/${slugify(node.frontmatter.title, { lower: true })}`,
+      path: `/sarpur/${slugify(node.frontmatter.title, { lower: true, remove: /[*+~.()'"!:@]/g })}`,
+      component: markdownMovieDetailsTemplate,
+      context: {
+        ...node,
+      },
+    })
+  })
+  sarpurYearsResults.data.wips.nodes.map((node) => {
+    createPage({
+      path: `/sarpur/${slugify(node.frontmatter.title, { lower: true, remove: /[*+~.()'"!:@]/g })}`,
       component: markdownMovieDetailsTemplate,
       context: {
         ...node,
@@ -169,4 +199,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       },
     })
   })
+
+
 }

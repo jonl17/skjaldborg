@@ -1,21 +1,26 @@
 import React from "react"
-import { InfoContainer } from "../styled"
 import Content from "../../../reusableComponents/Content"
 import Video from "../../../reusableComponents/Video"
-import Participants from "./Participants"
+import { InfoContainer } from "../styled"
 import Dates from "./Dates"
+import Participants from "./Participants"
 
-const Info = ({ html, frontmatter }) => {
+const Info = ({ html, dates, videoSrc, participants = [], otherCredits = [] }) => {
+
   return (
     <InfoContainer>
-      {frontmatter.dagskra && (
-        <Dates dates={frontmatter.dagskra} className='datesWrap' />
-      )}
+      <div className="lg:pr-24">
+        {dates.length > 0 && (
+          <div className="mb-5">
+            <Dates dates={dates} className='datesWrap' />
+          </div>
+        )}
+        <Participants participants={participants} otherCredits={otherCredits} className='participantsWrap' />
+      </div>
       <Content html={html} className='textiWrap' />
-      {frontmatter.Trailer && (
-        <Video src={frontmatter.Trailer} className='videoWrap' />
+      {videoSrc && (
+        <Video src={videoSrc} className='videoWrap' />
       )}
-      <Participants frontmatter={frontmatter} className='participantsWrap' />
     </InfoContainer>
   )
 }

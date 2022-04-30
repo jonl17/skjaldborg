@@ -1,5 +1,5 @@
-import React from 'react'
 import { graphql } from 'gatsby'
+import React from 'react'
 import slugify from 'slugify'
 import BlockGrid from '../../reusableComponents/BlockGrid/BlockGrid'
 
@@ -28,9 +28,11 @@ const SarpurYearMarkdown = ({ data }) => {
           .map((movie) => ({
             image: movie.frontmatter.image.publicURL,
             title: movie.frontmatter.title,
-            slug: `/sarpur/2020/${slugify(movie.frontmatter.title, {
+            slug: `/sarpur/${slugify(movie.frontmatter.title, {
               lower: true,
-            })}`,
+              remove: /[*+~.()'"!:@]/g
+            }
+            )}`,
             ...movie,
           }))}
       />

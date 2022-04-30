@@ -1,7 +1,7 @@
-import React, { useState } from "react"
-import { GridBox, BackupBox, GridItemWrap } from "../Sarpur/styled"
+import React from "react"
 import { useSelector } from "react-redux"
 import slugify from "slugify"
+import { BackupBox, GridBox, GridItemWrap } from "../Sarpur/styled"
 
 const Movie = ({ movie, pathname }) => {
   const icelandic = useSelector(state => state.reducer.icelandic)
@@ -11,7 +11,7 @@ const Movie = ({ movie, pathname }) => {
         <BackupBox></BackupBox>
         <GridBox
           to={
-            pathname + "/" + slugify(movie.frontmatter.title, { lower: true })
+            pathname + "/" + slugify(movie.frontmatter.title, { lower: true, remove: /[*+~.()'"!:@]/g })
           }
           style={{
             backgroundImage: `url(${movie.frontmatter.image.childImageSharp.fluid.src})`,
@@ -28,7 +28,7 @@ const Movie = ({ movie, pathname }) => {
             ></h1>
           )}
         </GridBox>
-      </GridItemWrap>
+      </GridItemWrap >
     )
   } else return null
 }

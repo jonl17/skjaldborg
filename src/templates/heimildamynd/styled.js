@@ -44,12 +44,7 @@ export const InfoContainer = styled.div`
   z-index: 4;
   padding: 4rem 6rem;
   box-sizing: border-box;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-template-rows: auto 1fr;
-  grid-template-areas:
-    "dagskra texti"
-    "hlutverk stikla";
+  display: flex;
   grid-gap: 1rem;
   .textiWrap {
     grid-area: texti;
@@ -66,6 +61,7 @@ export const InfoContainer = styled.div`
   }
   @media (max-width: 850px) {
     padding: 2rem 15px;
+    display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     grid-template-areas:

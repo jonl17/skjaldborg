@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react"
-import { Container } from "./styled"
+import cn from 'classnames'
+import React, { useEffect, useState } from "react"
 import { useSelector } from "react-redux"
 import useSetTargetBlank from "../../hooks/useSetTargetBlank"
+import { Container } from "./styled"
 
 const splitLang = html => {
   return html.split("<p>--ENSKA--</p>")
@@ -24,7 +25,7 @@ const Content = ({ html, className = "" }) => {
 
   return (
     <Container
-      className={className}
+      className={cn(className, 'text-lg')}
       id='content-wrap'
       dangerouslySetInnerHTML={{ __html: lang }}
     ></Container>

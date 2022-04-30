@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import { useSelector } from "react-redux"
-import { ContentWrap } from "./styled"
 import Participants from "./participants"
+import { ContentWrap } from "./styled"
 
 const Content = ({ movie }) => {
   let pathname = useSelector(state => state.reducer.pathname)

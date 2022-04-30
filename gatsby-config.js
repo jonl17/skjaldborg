@@ -1,5 +1,5 @@
 const { config } = require('dotenv')
-config({ path: `.env.development` })
+config()
 const { gatsbySourcePrismic } = require('./src/cms/prismicConfig')
 
 const pages = [
@@ -65,7 +65,7 @@ const metadata = {
 module.exports = {
   siteMetadata: metadata,
   plugins: [
-   'gatsby-plugin-remove-serviceworker',
+    'gatsby-plugin-remove-serviceworker',
     gatsbySourcePrismic,
     'gatsby-plugin-postcss',
     {
