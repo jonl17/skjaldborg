@@ -1,7 +1,7 @@
 import { graphql } from 'gatsby'
 import React from 'react'
-import slugify from 'slugify'
 import BlockGrid from '../../reusableComponents/BlockGrid/BlockGrid'
+import { cleanUpSlug } from '../../utils'
 
 const SarpurYearMarkdown = ({ data }) => {
   const movieArr = [
@@ -28,11 +28,7 @@ const SarpurYearMarkdown = ({ data }) => {
           .map((movie) => ({
             image: movie.frontmatter.image.publicURL,
             title: movie.frontmatter.title,
-            slug: `/sarpur/${slugify(movie.frontmatter.title, {
-              lower: true,
-              remove: /[*+~.()'"!:@]/g
-            }
-            )}`,
+            slug: cleanUpSlug(movie.frontmatter.title, '/sarpur/'),
             ...movie,
           }))}
       />

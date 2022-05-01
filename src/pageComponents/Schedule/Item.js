@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react"
 import { useSelector } from "react-redux"
-import slugify from "slugify"
 import { formatTime } from "../../methods"
 import BigBtn from "../../reusableComponents/BigBtn"
 import Content from "../../reusableComponents/Content"
+import { cleanUpSlug } from "../../utils"
 import { InformationWrap, ItemContainer } from "./styled"
 
 const Information = ({ html, title, display }) => {
@@ -13,7 +13,7 @@ const Information = ({ html, title, display }) => {
       <Content html={html} className='inner-wrap' />
       <BigBtn
         state={{ fromSchedule: true }}
-        action={"/heimildamyndir/" + slugify(title, { lower: true, remove: /[*+~.()'"!:@]/g })}
+        action={cleanUpSlug(title, '/heimildamyndir/')}
         text={icelandic ? "Lesa meira" : "Read more"}
         className='btn'
       ></BigBtn>

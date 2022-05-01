@@ -1,6 +1,6 @@
 import React from "react"
 import { useSelector } from "react-redux"
-import slugify from "slugify"
+import { cleanUpSlug } from "../../utils"
 import { BackupBox, GridBox, GridItemWrap } from "../Sarpur/styled"
 
 const Movie = ({ movie, pathname }) => {
@@ -11,7 +11,7 @@ const Movie = ({ movie, pathname }) => {
         <BackupBox></BackupBox>
         <GridBox
           to={
-            pathname + "/" + slugify(movie.frontmatter.title, { lower: true, remove: /[*+~.()'"!:@]/g })
+            pathname + cleanUpSlug(movie.frontmatter.title)
           }
           style={{
             backgroundImage: `url(${movie.frontmatter.image.childImageSharp.fluid.src})`,

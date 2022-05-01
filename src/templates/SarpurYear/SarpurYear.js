@@ -1,8 +1,7 @@
 import React from 'react'
-import slugify from 'slugify'
 import { useGetSarpurYears } from '../../hooks/useGetSarpurYears'
 import BlockGrid from '../../reusableComponents/BlockGrid/BlockGrid'
-import { handleCloudinaryImage } from '../../utils'
+import { cleanUpSlug, handleCloudinaryImage } from '../../utils'
 
 const SarpurYear = ({ data, pageContext }) => {
   const year = useGetSarpurYears().find(
@@ -20,11 +19,7 @@ const SarpurYear = ({ data, pageContext }) => {
         title={`Sarpur ${pageContext.node.year}`}
         items={items.map((item) => ({
           ...item,
-          slug: `/sarpur/${slugify(item.title, {
-            lower: true,
-            remove: /[*+~.()'"!:@]/g
-          }
-          )}`,
+          slug: cleanUpSlug(item.title, '/sarpur/'),
         }))}
       />
     </section>

@@ -1,8 +1,6 @@
 const path = require('path')
-const slugify = require('slugify')
-const { url } = require('inspector')
 const firebase = require('firebase')
-const { docData } = require('rxfire/firestore')
+const { cleanUpSlug } = require('./src/utils')
 
 const config = {
   apiKey: process.env.GATSBY_API_KEY,
@@ -26,7 +24,7 @@ exports.sourceNodes = async ({
     createNode({
       ...data,
       id: data.id.toString(),
-      slug: `/sarpur/${slugify(data.title, { lower: true, remove: /[*+~.()'"!:@]/g })}`,
+      slug: cleanUpSlug(data.title, '/sarpur/'),
       internal: {
         type: 'SarpurMovie',
         contentDigest: createContentDigest(data),
@@ -159,8 +157,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   // firestore files to pages
   sarpurYearsResults.data.allSarpurYear.nodes.forEach((node) => {
     node.movies.map(movie => {
+      const path = cleanUpSlug(movie.title, '/sarpur/')
       createPage({
-        path: `/sarpur/${slugify(movie.title, { lower: true, remove: /[*+~.()'"!:@]/g })}`,
+        path,
         component: firebaseMovieDetailsTemplate,
         context: {
           year: node.year,
@@ -173,7 +172,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   // markdown files to pages
   sarpurYearsResults.data.premiers.nodes.map((node) => {
     createPage({
-      path: `/sarpur/${slugify(node.frontmatter.title, { lower: true, remove: /[*+~.()'"!:@]/g })}`,
+      path: cleanUpSlug(node.frontmatter.title, '/sarpur/'),
       component: markdownMovieDetailsTemplate,
       context: {
         ...node,
@@ -182,7 +181,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   })
   sarpurYearsResults.data.wips.nodes.map((node) => {
     createPage({
-      path: `/sarpur/${slugify(node.frontmatter.title, { lower: true, remove: /[*+~.()'"!:@]/g })}`,
+      path: cleanUpSlug(node.frontmatter.title, '/sarpur/'),
       component: markdownMovieDetailsTemplate,
       context: {
         ...node,
