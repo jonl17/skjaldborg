@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react"
-import { Popup, Text, Consent } from "./styled"
-import { useSelector } from "react-redux"
+import React, { useState, useEffect } from 'react'
+import { Popup, Text, Consent } from './styled'
+import { useSelector } from 'react-redux'
 
-const LOCALSTORAGEKEY = "cookieConsentSkjaldborg2020.iss"
+const LOCALSTORAGEKEY = 'cookieConsentSkjaldborg2020.iss'
 
 const Cookies = () => {
-  const icelandic = useSelector(state => state.reducer.icelandic)
+  const icelandic = useSelector((state) => state.reducer.icelandic)
   const [hidden, setHidden] = useState(true)
 
   useEffect(() => {
@@ -23,7 +23,9 @@ const Cookies = () => {
 
   return !hidden ? (
     <Popup>
-      <Text>{icelandic ? "Kökur!" : "Cookies!"}</Text>
+      <Text className='bg-secondary text-primary'>
+        {icelandic ? 'Kökur!' : 'Cookies!'}
+      </Text>
       <Consent onClick={() => userConsent()}>OK</Consent>
     </Popup>
   ) : null

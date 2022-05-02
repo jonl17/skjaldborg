@@ -24,7 +24,7 @@ const LinkBlock = ({ item }) => {
   return (
     <Link
       to={item.slug}
-      className='relative block'
+      className='relative block overflow-hidden'
       onMouseEnter={() => toggleActive(true)}
       onMouseLeave={() => toggleActive(false)}
     >
@@ -34,8 +34,17 @@ const LinkBlock = ({ item }) => {
           src={item.image}
         />
       </div>
-      <div className='absolute top-0 text-secondary p-4 grid place-content-center h-full w-full'>
-        <h2 className='text-3xl text-center py-3'>{cleanUpTitle(item.title)}</h2>
+      <div
+        className={cn(
+          'absolute top-0 text-secondary p-4 grid place-content-center h-full w-full transition-colors',
+          {
+            'bg-primary/40': active,
+          }
+        )}
+      >
+        <h2 className='text-3xl text-center py-3'>
+          {cleanUpTitle(item.title)}
+        </h2>
         {item.type && (
           <h6 className='text-center absolute bottom-10 w-full'>
             {handleType(item.type)}

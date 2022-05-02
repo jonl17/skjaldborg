@@ -1,8 +1,8 @@
 import cn from 'classnames'
-import React from "react"
-import { useSelector } from "react-redux"
-import styled from "styled-components"
-import { greenColor, redColor } from "../../../constants"
+import React from 'react'
+import { useSelector } from 'react-redux'
+import styled from 'styled-components'
+import { greenColor, redColor } from '../../../constants'
 
 const ParticipantWrap = styled.div`
   padding-bottom: 1rem;
@@ -11,7 +11,6 @@ const ParticipantWrap = styled.div`
   }
   .title {
     text-transform: uppercase;
-    color: ${greenColor};
     padding-bottom: 5px;
   }
   .name {
@@ -20,38 +19,43 @@ const ParticipantWrap = styled.div`
 `
 
 const Participant = ({ title, name }) => {
-  const icelandic = useSelector(state => state.reducer.icelandic)
+  const icelandic = useSelector((state) => state.reducer.icelandic)
   const { is, en } = title
   if (!name) {
     return null
   }
   return (
     <ParticipantWrap>
-      <p className='title'>{icelandic ? is : en}</p>
-      <p className='name'>{name}</p>
+      <h6 className='text-primary uppercase'>{icelandic ? is : en}</h6>
+      <p className='text-tertiary'>{name}</p>
     </ParticipantWrap>
   )
 }
 
 const lib = {
-  'director': { title: { is: "Leikstjóri", en: "Director" } },
-  'producer': { title: { is: "Framleiðandi", en: "Producer" } },
-  'production_company': { title: { is: "Framleiðslufyrirtæki", en: "Production company" } },
-  'editing': { title: { is: "Framleiðslufyrirtæki", en: "Production company" } },
-  'composer': { title: { is: "Tónskáld", en: "Composer" } },
-  'filming': { title: { is: "Kvikmyndataka", en: "Filming" } },
-  'sound_desing': { title: { is: "Hljóðhönnun", en: "Sound design" } }
+  director: { title: { is: 'Leikstjóri', en: 'Director' } },
+  producer: { title: { is: 'Framleiðandi', en: 'Producer' } },
+  production_company: {
+    title: { is: 'Framleiðslufyrirtæki', en: 'Production company' },
+  },
+  editing: { title: { is: 'Framleiðslufyrirtæki', en: 'Production company' } },
+  composer: { title: { is: 'Tónskáld', en: 'Composer' } },
+  filming: { title: { is: 'Kvikmyndataka', en: 'Filming' } },
+  sound_desing: { title: { is: 'Hljóðhönnun', en: 'Sound design' } },
 }
-
 
 const Participants = ({ participants, className, otherCredits = [] }) => {
   return (
-    <div className={cn(className)}>
+    <div className={cn(className, 'lg:w-[250px]')}>
       {participants.map((item, key) => (
         <Participant key={key} title={lib[item.key].title} name={item.name} />
       ))}
       {otherCredits.map((item, key) => (
-        <Participant key={key} title={{ is: item.role, en: item.role }} name={item.name} />
+        <Participant
+          key={key}
+          title={{ is: item.role, en: item.role }}
+          name={item.name}
+        />
       ))}
     </div>
   )

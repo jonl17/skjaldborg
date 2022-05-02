@@ -5,6 +5,7 @@ import { Link } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import { useLocation } from '@reach/router'
 import { useLang } from '../../store'
+import cn from 'classnames'
 
 const InfoPages = () => {
   const { lang } = useLang()
@@ -19,8 +20,10 @@ const InfoPages = () => {
               image={page.featuredImage.gatsbyImageData}
               alt={page.featuredImage.alt}
             />
-            <div className='absolute h-full top-0 left-0 w-full text-center'>
-              <h3 className='text-white mt-10'>{page.title}</h3>
+            <div className='absolute h-full top-0 left-0 w-full text-center grid place-items-center hover:bg-primary/40'>
+              <h3 className='text-secondary text-3xl drop-shadow-lg'>
+                {page.title}
+              </h3>
             </div>
           </Link>
         ))}

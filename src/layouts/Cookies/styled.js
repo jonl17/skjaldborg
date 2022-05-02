@@ -1,5 +1,5 @@
-import styled, { keyframes } from "styled-components"
-import { greenColor } from "@constants"
+import styled, { keyframes } from 'styled-components'
+import { greenColor } from '@constants'
 
 const appear = keyframes`
   from {
@@ -17,7 +17,6 @@ export const Popup = styled.div`
   top: 50%;
   left: 0;
   z-index: 100;
-  background: ${greenColor};
   color: white;
   display: flex;
   flex-direction: column;

@@ -12,18 +12,22 @@ export default function Banner({ title, title_en, director, year }) {
   return (
     <Container>
       <div className='title-container'>
-        <div>
+        <div className='max-w-lg'>
           <Fade right distance='15px'>
-            <h1 className='text-xl'>{icelandic ? cleanUpTitle(title) : cleanUpTitle(title_en) ?? cleanUpTitle(title)}</h1>
+            <h1 className='text-6xl drop-shadow-lg'>
+              {icelandic
+                ? cleanUpTitle(title)
+                : cleanUpTitle(title_en) ?? cleanUpTitle(title)}
+            </h1>
           </Fade>
           <Fade right distance='12.5px' delay={150}>
-            <h2>{director}</h2>
+            <h2 className='text-xl drop-shadow'>{director}</h2>
           </Fade>
           <Fade right distance='10px' delay={250}>
             <Link to={`/sarpur/${year}`}>
               <div className='back-btn-wrap'>
                 <Arrow rotation='-180deg' />
-                <h3>Tilbaka</h3>
+                <h3 className='text-lg drop-shadow'>Tilbaka</h3>
               </div>
             </Link>
           </Fade>

@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
 export const Container = styled.div`
   .title-container {
@@ -65,9 +65,9 @@ export const InfoContainer = styled.div`
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     grid-template-areas:
-      "texti"
-      "hlutverk"
-      "stikla"
-      "dagskra";
+      'texti'
+      'hlutverk'
+      'stikla'
+      'dagskra';
   }
 `
