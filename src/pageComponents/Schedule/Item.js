@@ -1,11 +1,10 @@
-import React, { useState } from "react"
-import { formatTime } from "../../methods"
-import Content from "../../reusableComponents/Content"
-import { ItemContainer, InformationWrap } from "./styled"
-import slugify from "slugify"
+import React, { useEffect, useState } from "react"
 import { useSelector } from "react-redux"
+import { formatTime } from "../../methods"
 import BigBtn from "../../reusableComponents/BigBtn"
-import { useEffect } from "react"
+import Content from "../../reusableComponents/Content"
+import { cleanUpSlug } from "../../utils"
+import { InformationWrap, ItemContainer } from "./styled"
 
 const Information = ({ html, title, display }) => {
   const icelandic = useSelector(state => state.reducer.icelandic)
@@ -14,11 +13,11 @@ const Information = ({ html, title, display }) => {
       <Content html={html} className='inner-wrap' />
       <BigBtn
         state={{ fromSchedule: true }}
-        action={"/heimildamyndir/" + slugify(title, { lower: true })}
+        action={cleanUpSlug(title, '/heimildamyndir/')}
         text={icelandic ? "Lesa meira" : "Read more"}
         className='btn'
       ></BigBtn>
-    </InformationWrap>
+    </InformationWrap >
   )
 }
 

@@ -1,10 +1,7 @@
-import React, { useEffect } from 'react'
-import { graphql } from 'gatsby'
-import BlockGrid from '../../reusableComponents/BlockGrid/BlockGrid'
-import { useLocation } from '@reach/router'
+import React from 'react'
 import { useGetSarpurYears } from '../../hooks/useGetSarpurYears'
-import { handleCloudinaryImage } from '../../utils'
-import slugify from 'slugify'
+import BlockGrid from '../../reusableComponents/BlockGrid/BlockGrid'
+import { cleanUpSlug, handleCloudinaryImage } from '../../utils'
 
 const SarpurYear = ({ data, pageContext }) => {
   const year = useGetSarpurYears().find(
@@ -22,9 +19,7 @@ const SarpurYear = ({ data, pageContext }) => {
         title={`Sarpur ${pageContext.node.year}`}
         items={items.map((item) => ({
           ...item,
-          slug: `/sarpur/${pageContext.node.year}/${slugify(item.title, {
-            lower: true,
-          })}`,
+          slug: cleanUpSlug(item.title, '/sarpur/'),
         }))}
       />
     </section>

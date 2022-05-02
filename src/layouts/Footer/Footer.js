@@ -1,15 +1,15 @@
-import React from 'react'
-import Logo from '../../reusableComponents/Logo'
 import { Link } from 'gatsby'
-import PostList from '../../reusableComponents/Postlist'
-import { useGetFooter } from '../../hooks/useGetFooter'
 import { GatsbyImage } from 'gatsby-plugin-image'
+import React from 'react'
+import { useGetFooter } from '../../hooks/useGetFooter'
+import Logo from '../../reusableComponents/Logo'
+import PostList from '../../reusableComponents/Postlist'
 
 const Footer = () => {
   const data = useGetFooter()
 
   return (
-    <footer className='lg:h-96 bg-black text-secondary p-4 pb-10 lg:p-8'>
+    <footer className='lg:h-96 bg-black text-secondary p-4 pb-10 lg:p-8 relative' >
       <section className='grid gap-7 justify-center lg:flex lg:gap-0 lg:justify-between mt-20'>
         <div>
           <Link className='grid place-content-center' to='/'>

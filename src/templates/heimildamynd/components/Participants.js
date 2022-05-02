@@ -1,3 +1,4 @@
+import cn from 'classnames'
 import React from "react"
 import { useSelector } from "react-redux"
 import styled from "styled-components"
@@ -32,37 +33,26 @@ const Participant = ({ title, name }) => {
   )
 }
 
-const Participants = ({ frontmatter, className }) => {
+const lib = {
+  'director': { title: { is: "Leikstjóri", en: "Director" } },
+  'producer': { title: { is: "Framleiðandi", en: "Producer" } },
+  'production_company': { title: { is: "Framleiðslufyrirtæki", en: "Production company" } },
+  'editing': { title: { is: "Framleiðslufyrirtæki", en: "Production company" } },
+  'composer': { title: { is: "Tónskáld", en: "Composer" } },
+  'filming': { title: { is: "Kvikmyndataka", en: "Filming" } },
+  'sound_desing': { title: { is: "Hljóðhönnun", en: "Sound design" } }
+}
+
+
+const Participants = ({ participants, className, otherCredits = [] }) => {
   return (
-    <div className={className}>
-      <Participant
-        title={{ is: "Leikstjóri", en: "Director" }}
-        name={frontmatter.director}
-      />
-      <Participant
-        title={{ is: "Framleiðandi", en: "Producer" }}
-        name={frontmatter.producer}
-      />
-      <Participant
-        title={{ is: "Framleiðslufyrirtæki", en: "Production company" }}
-        name={frontmatter.production_company}
-      />
-      <Participant
-        title={{ is: "Klipping", en: "Editing" }}
-        name={frontmatter.editing}
-      />
-      <Participant
-        title={{ is: "Tónskáld", en: "Composer" }}
-        name={frontmatter.composer}
-      />
-      <Participant
-        title={{ is: "Kvikmyndataka", en: "Filming" }}
-        name={frontmatter.filming}
-      />
-      <Participant
-        title={{ is: "Hljóðhönnun", en: "Sound design" }}
-        name={frontmatter.sound_design}
-      />
+    <div className={cn(className)}>
+      {participants.map((item, key) => (
+        <Participant key={key} title={lib[item.key].title} name={item.name} />
+      ))}
+      {otherCredits.map((item, key) => (
+        <Participant key={key} title={{ is: item.role, en: item.role }} name={item.name} />
+      ))}
     </div>
   )
 }

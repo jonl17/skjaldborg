@@ -1,8 +1,8 @@
+import cn from 'classnames'
+import { Link } from 'gatsby'
 import React from 'react'
 import { useGetMenu } from '../../hooks/useGetMenu'
 import { useLang, useMenu } from '../../store'
-import cn from 'classnames'
-import { Link } from 'gatsby'
 
 const NewMenu = () => {
   const { lang } = useLang()
@@ -12,7 +12,7 @@ const NewMenu = () => {
   return (
     <nav
       className={cn(
-        '  h-full fixed right-0 top-0 overflow-hidden transition-all w-full flex',
+        '  h-full fixed right-0 top-0 overflow-hidden transition-all w-full flex z-20',
         {
           'translate-x-full': !open,
           'translate-x-0': open,

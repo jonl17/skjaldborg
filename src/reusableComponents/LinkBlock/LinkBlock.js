@@ -1,7 +1,8 @@
-import React from 'react'
-import { Link } from 'gatsby'
 import cn from 'classnames'
+import { Link } from 'gatsby'
+import React from 'react'
 import { useLang } from '../../store'
+import { cleanUpTitle } from '../../utils'
 
 const LinkBlock = ({ item }) => {
   const [active, setActive] = React.useState(false)
@@ -34,7 +35,7 @@ const LinkBlock = ({ item }) => {
         />
       </div>
       <div className='absolute top-0 text-secondary p-4 grid place-content-center h-full w-full'>
-        <h2 className='text-3xl text-center py-3'>{item.title}</h2>
+        <h2 className='text-3xl text-center py-3'>{cleanUpTitle(item.title)}</h2>
         {item.type && (
           <h6 className='text-center absolute bottom-10 w-full'>
             {handleType(item.type)}
