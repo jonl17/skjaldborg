@@ -1,6 +1,6 @@
-import React from "react"
-import { Helmet } from "react-helmet"
-import { StaticQuery, graphql } from "gatsby"
+import React from 'react'
+import { Helmet } from 'react-helmet'
+import { StaticQuery, graphql } from 'gatsby'
 
 const SEO = ({
   data: {
@@ -8,31 +8,33 @@ const SEO = ({
   },
 }) => {
   return (
-    <Helmet title={meta.title + " 2020"}>
-      <meta name="description" content={meta.subtitle} />
+    <Helmet title={meta.title + ' 2020'}>
+      <meta name='description' content={meta.subtitle} />
 
-      <meta name="image" content={meta.logo} />
+      <title>Skjaldborg</title>
 
-      {meta.url && <meta property="og:url" content={meta.url} />}
+      <meta name='image' content={meta.logo} />
 
-      {meta.title && <meta property="og:title" content={meta.title} />}
+      {meta.url && <meta property='og:url' content={meta.url} />}
+
+      {meta.title && <meta property='og:title' content={meta.title} />}
 
       {meta.subtitle && (
-        <meta property="og:description" content={meta.subtitle} />
+        <meta property='og:description' content={meta.subtitle} />
       )}
-      {meta.logo && <meta property="og:image" content={meta.logo} />}
+      {meta.logo && <meta property='og:image' content={meta.logo} />}
 
       <link
-        sizes="20x20"
+        sizes='20x20'
         href={meta.favicon}
-        rel="icon"
-        type="image/png"
+        rel='icon'
+        type='image/png'
       ></link>
     </Helmet>
   )
 }
 
-export default props => (
+export default (props) => (
   <StaticQuery
     query={graphql`
       {
@@ -47,6 +49,6 @@ export default props => (
         }
       }
     `}
-    render={data => <SEO data={data} {...props}></SEO>}
+    render={(data) => <SEO data={data} {...props}></SEO>}
   ></StaticQuery>
 )
