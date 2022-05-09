@@ -14,6 +14,7 @@ const NewSarpur = () => {
           ...year,
           title: year.year,
         }))}
+        showBackBtn={false}
       />
     </section>
   )

@@ -5,6 +5,7 @@ import InfoPages from './slices/InfoPages'
 import Sponsors from './slices/Sponsors'
 import RichText from './slices/RichText/RichText'
 import Sarpur from './slices/NewSarpur'
+import Documentaries from './slices/Documentaries'
 
 const Slices = {
   banner_media: BannerMedia,
@@ -13,6 +14,7 @@ const Slices = {
   sponsors: Sponsors,
   rich_text: RichText,
   sarpur: Sarpur,
+  documentaries: Documentaries,
 }
 
 const propResolver = (slice) => {
@@ -37,7 +39,6 @@ const propResolver = (slice) => {
         },
       }
     }
-    // todo case 'info_pages'
     default: {
       return {}
     }

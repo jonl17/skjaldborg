@@ -6,14 +6,13 @@ import Arrow from '../Arrow'
 import { useLang } from '../../store'
 import { useLocation } from '@reach/router'
 
-const BlockGrid = ({ items, title }) => {
+const BlockGrid = ({ items, title, showBackBtn = true }) => {
   const { lang } = useLang()
   const { pathname } = useLocation()
-  const mainOverviewPage = pathname === '/sarpur' || pathname === '/sarpur/'
   return (
     <div className='mt-36'>
       <div className='text-center'>
-        {!mainOverviewPage && (
+        {showBackBtn && (
           <Link className='inline-flex' to='/sarpur'>
             <Arrow rotation='-180deg' />
             <h2 className='ml-4 text-xl text-tertiary'>
