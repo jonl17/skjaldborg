@@ -60,4 +60,8 @@
   .rich-text > h3 {
     @apply mb-3;
   }
+
+  .content-rich-text iframe {
+    @apply w-full;
+  }
 }

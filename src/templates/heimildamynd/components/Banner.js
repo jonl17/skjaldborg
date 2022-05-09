@@ -6,7 +6,7 @@ import Arrow from '../../../reusableComponents/Arrow'
 import { cleanUpTitle } from '../../../utils'
 import { Container } from '../styled'
 
-export default function Banner({ title, title_en, director, year }) {
+export default function Banner({ title, title_en, director, year, backLink }) {
   const icelandic = useSelector((state) => state.reducer.icelandic)
 
   return (
@@ -24,7 +24,7 @@ export default function Banner({ title, title_en, director, year }) {
             <h2 className='text-xl drop-shadow'>{director}</h2>
           </Fade>
           <Fade right distance='10px' delay={250}>
-            <Link to={`/sarpur/${year}`}>
+            <Link to={backLink}>
               <div className='back-btn-wrap'>
                 <Arrow rotation='-180deg' />
                 <h3 className='text-lg drop-shadow'>Tilbaka</h3>

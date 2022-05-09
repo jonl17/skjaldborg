@@ -3,6 +3,7 @@ import Content from '../../../reusableComponents/Content'
 import Video from '../../../reusableComponents/Video'
 import { InfoContainer } from '../styled'
 import Participants from './Participants'
+import Dates from './Dates'
 
 const Info = ({
   html,
@@ -10,15 +11,16 @@ const Info = ({
   videoSrc,
   participants = [],
   otherCredits = [],
+  showDates = false,
 }) => {
   return (
     <InfoContainer>
       <div className='lg:pr-24'>
-        {/* {dates.length > 0 && (
-          <div className="mb-5">
+        {showDates && (
+          <div className='mb-5'>
             <Dates dates={dates} className='datesWrap' />
           </div>
-        )} */}
+        )}
         <Participants
           participants={participants}
           otherCredits={otherCredits}

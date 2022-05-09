@@ -3,6 +3,7 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import styled from 'styled-components'
 import { greenColor, redColor } from '../../../constants'
+import { useLang } from '../../../store'
 
 const ParticipantWrap = styled.div`
   padding-bottom: 1rem;
@@ -19,14 +20,14 @@ const ParticipantWrap = styled.div`
 `
 
 const Participant = ({ title, name }) => {
-  const icelandic = useSelector((state) => state.reducer.icelandic)
+  const { lang } = useLang()
   const { is, en } = title
   if (!name) {
     return null
   }
   return (
     <ParticipantWrap>
-      <h6 className='text-primary uppercase'>{icelandic ? is : en}</h6>
+      <h6 className='text-primary uppercase'>{lang === 'is' ? is : en}</h6>
       <p className='text-tertiary'>{name}</p>
     </ParticipantWrap>
   )
@@ -53,7 +54,7 @@ const Participants = ({ participants, className, otherCredits = [] }) => {
       {otherCredits.map((item, key) => (
         <Participant
           key={key}
-          title={{ is: item.role, en: item.role }}
+          title={{ is: item.role, en: item.roleEn ?? item.role }}
           name={item.name}
         />
       ))}

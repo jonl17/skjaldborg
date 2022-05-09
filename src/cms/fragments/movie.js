@@ -4,6 +4,7 @@ export const fragment = graphql`
   fragment movieFragmentFull on PrismicMovie {
     url
     uid
+    lang
     prismicId
     data {
       title {
@@ -24,6 +25,9 @@ export const fragment = graphql`
       }
       type
       scheduled
+      trailer {
+        url
+      }
     }
   }
 `

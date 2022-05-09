@@ -83,12 +83,26 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     'src/templates/heimildamynd/firebase.js'
   )
 
+  const prismicMovieDetailsTemplate = path.resolve(
+    'src/templates/heimildamynd/prismic.js'
+  )
+
   const prismicResults = await graphql(`
     {
       allPrismicPage {
         nodes {
           uid
           url
+          lang
+          id
+          prismicId
+        }
+      }
+      allPrismicMovie {
+        nodes {
+          uid
+          url
+          lang
           id
           prismicId
         }
@@ -156,15 +170,15 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   // firestore files to pages
   sarpurYearsResults.data.allSarpurYear.nodes.forEach((node) => {
-    node.movies.map(movie => {
+    node.movies.map((movie) => {
       const path = cleanUpSlug(movie.title, '/sarpur/')
       createPage({
         path,
         component: firebaseMovieDetailsTemplate,
         context: {
           year: node.year,
-          id: movie.id.toString()
-        }
+          id: movie.id.toString(),
+        },
       })
     })
   })
@@ -199,5 +213,13 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     })
   })
 
-
+  prismicResults.data.allPrismicMovie.nodes.map((node) => {
+    createPage({
+      path: node.url,
+      component: prismicMovieDetailsTemplate,
+      context: {
+        ...node,
+      },
+    })
+  })
 }
