@@ -1,11 +1,12 @@
 import React from 'react'
+import { useGetMovies } from '../../hooks/useGetMovies'
 import BlockGrid from '../../reusableComponents/BlockGrid/BlockGrid'
 import { useLang } from '../../store'
 
 const Documentaries = () => {
   const { lang } = useLang()
 
-  const movies = []
+  const movies = useGetMovies(lang)
 
   return (
     <section className='h-full relative p-4 lg:p-8'>
