@@ -35,10 +35,11 @@ const Footer = () => {
       <section className='grid grid-cols-2 gap-10 lg:grid-flow-col lg:h-20 max-w-2xl m-auto mt-10'>
         {data.sponsors.map((sponsor, key) => (
           <GatsbyImage
+            key={key}
             className='h-24 w-32'
             objectFit='contain'
             image={sponsor.logo.gatsbyImageData}
-            alt={sponsor.logo.alt}
+            alt={sponsor.logo.alt ?? ''}
           />
         ))}
       </section>

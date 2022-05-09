@@ -36,6 +36,7 @@ const NewMenu = () => {
             to={page.url}
             key={key}
             activeClassName='text-secondary'
+            partiallyActive
             className='hover:text-secondary'
             onClick={() => toggleMenu(false)}
           >

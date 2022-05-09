@@ -24,12 +24,7 @@ const SEO = ({
       )}
       {meta.logo && <meta property='og:image' content={meta.logo} />}
 
-      <link
-        sizes='20x20'
-        href={meta.favicon}
-        rel='icon'
-        type='image/png'
-      ></link>
+      <link sizes='20x20' href='/favicon.ico' rel='icon'></link>
     </Helmet>
   )
 }
