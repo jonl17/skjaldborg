@@ -25,9 +25,6 @@ export const fragment = graphql`
       }
       type
       scheduled
-      trailer {
-        url
-      }
     }
   }
 `

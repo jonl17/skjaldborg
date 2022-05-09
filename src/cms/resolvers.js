@@ -19,5 +19,4 @@ export const movieResolver = (node) => ({
   type: node.data.type,
   scheduled: node.data.scheduled,
   otherRoles: node.data.other_roles,
-  trailer: node.data.trailer.url,
 })
