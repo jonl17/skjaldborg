@@ -61,7 +61,11 @@
     @apply mb-3;
   }
 
-  .content-rich-text iframe {
+  .content-rich-text {
     @apply w-full;
+  }
+
+  .content-rich-text iframe {
+    @apply w-full md:w-[450px] lg:w-[650px] lg:h-[500px];
   }
 }
