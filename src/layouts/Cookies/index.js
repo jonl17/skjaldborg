@@ -22,7 +22,7 @@ const Cookies = () => {
   }
 
   return !hidden ? (
-    <Popup>
+    <Popup className='bg-secondary'>
       <Text className='bg-secondary text-primary'>
         {icelandic ? 'Kökur!' : 'Cookies!'}
       </Text>

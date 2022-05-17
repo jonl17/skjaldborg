@@ -10,7 +10,6 @@ import { movieResolver } from '../../cms/resolvers'
 
 const PrismicMovie = ({ data, pageContext }) => {
   const movie = movieResolver(data.prismicMovie)
-  console.log(movie)
 
   return (
     <>

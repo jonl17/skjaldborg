@@ -1,34 +1,34 @@
 // Months array
 export const months_arr = [
-  "Jan",
-  "Feb",
-  "Mar",
-  "Apr",
-  "May",
-  "Jun",
-  "Jul",
-  "Aug",
-  "Sep",
-  "Oct",
-  "Nov",
-  "Dec",
+  'Jan',
+  'Feb',
+  'Mar',
+  'Apr',
+  'May',
+  'Jun',
+  'Jul',
+  'Aug',
+  'Sep',
+  'Oct',
+  'Nov',
+  'Dec',
 ]
 export const months_arr_is = [
-  "Janúar",
-  "Febrúar",
-  "Mars",
-  "Apríl",
-  "Maí",
-  "Júní",
-  "Júlí",
-  "Ágúst",
-  "September",
-  "Október",
-  "Nóvember",
-  "Desember",
+  'Janúar',
+  'Febrúar',
+  'Mars',
+  'Apríl',
+  'Maí',
+  'Júní',
+  'Júlí',
+  'Ágúst',
+  'September',
+  'Október',
+  'Nóvember',
+  'Desember',
 ]
 
-export const convert = timestampSeconds => {
+export const convert = (timestampSeconds) => {
   // Convert timestamp to milliseconds
   var date = new Date(timestampSeconds * 1000)
 
@@ -45,37 +45,45 @@ export const convert = timestampSeconds => {
   var hours = date.getHours()
 
   // Minutes
-  var minutes = "0" + date.getMinutes()
+  var minutes = '0' + date.getMinutes()
 
   // Seconds
-  var seconds = "0" + date.getSeconds()
+  var seconds = '0' + date.getSeconds()
 
   // Display date time in MM-dd-yyyy h:m:s format
   var convdataTime =
     month +
-    "-" +
+    '-' +
     day +
-    "-" +
+    '-' +
     year +
-    " " +
+    ' ' +
     hours +
-    ":" +
+    ':' +
     minutes.substr(-2) +
-    ":" +
+    ':' +
     seconds.substr(-2)
 
   return convdataTime
 }
 
-export const titleToURL = title => {
-  return title.replace(/ /g, "-").toLowerCase()
+export const titleToURL = (title) => {
+  return title.replace(/ /g, '-').toLowerCase()
 }
+
+export const newFormatTime = (date) =>
+  Intl.DateTimeFormat('en-US', {
+    timeZone: 'GMT',
+    hour: 'numeric',
+    minute: 'numeric',
+    hour12: false,
+  }).format(date)
 
 export const formatTime = (date, nonVerbose) => {
   const hour = date.getHours()
   let minutes = date.getMinutes()
   if (minutes < 10) {
-    minutes = "0" + minutes
+    minutes = '0' + minutes
   }
   if (nonVerbose) {
     // þetta er hakk, laga síðar
@@ -95,6 +103,6 @@ export const formatTime = (date, nonVerbose) => {
   }
 }
 
-export const isCoupleOfMinutesOver = minutes => {
+export const isCoupleOfMinutesOver = (minutes) => {
   return minutes - 9 < 0
 }

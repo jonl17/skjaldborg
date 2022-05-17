@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { redColor, greenColor } from '../../../constants'
-import { formatTime, months_arr_is } from '../../../methods'
+import { formatTime, months_arr_is, newFormatTime } from '../../../methods'
 
 const Container = styled.div`
   display: flex;
@@ -27,7 +27,7 @@ const SingleDate = ({ dagsetning }) => {
       <h1 className='date text-primary'>{`${date.getDate()}. ${
         months_arr_is[date.getMonth()]
       }`}</h1>
-      <h1 className='time text-tertiary'>{formatTime(date)}</h1>
+      <h1 className='time text-tertiary'>{newFormatTime(date)}</h1>
     </DateWrap>
   )
 }

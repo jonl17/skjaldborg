@@ -1,6 +1,6 @@
 import cn from 'classnames'
 import { Link } from 'gatsby'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useGetMenu } from '../../hooks/useGetMenu'
 import { useLang, useMenu } from '../../store'
 
@@ -8,6 +8,14 @@ const NewMenu = () => {
   const { lang } = useLang()
   const menu = useGetMenu(lang)
   const { open, toggleMenu } = useMenu()
+
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'auto'
+    }
+  }, [open])
 
   return (
     <nav
