@@ -1,6 +1,6 @@
 import cn from 'classnames'
 import { Link } from 'gatsby'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useGetMenu } from '../../hooks/useGetMenu'
 import { useLang, useMenu } from '../../store'
 
@@ -8,6 +8,14 @@ const NewMenu = () => {
   const { lang } = useLang()
   const menu = useGetMenu(lang)
   const { open, toggleMenu } = useMenu()
+
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'auto'
+    }
+  }, [open])
 
   return (
     <nav
@@ -36,21 +44,13 @@ const NewMenu = () => {
             to={page.url}
             key={key}
             activeClassName='text-secondary'
+            partiallyActive
             className='hover:text-secondary'
             onClick={() => toggleMenu(false)}
           >
             <h1 className='text-4xl lg:text-6xl'>{page.label}</h1>
           </Link>
         ))}
-        <a
-          className='hover:text-secondary'
-          href='https://filmfreeway.com/Skjaldborg'
-          target='_blank'
-        >
-          <h1 className='text-4xl lg:text-6xl'>
-            {lang === 'is' ? 'Sækja um' : 'Apply here'}
-          </h1>
-        </a>
       </div>
     </nav>
   )

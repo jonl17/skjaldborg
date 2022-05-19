@@ -15,11 +15,21 @@ const gatsbySourcePrismic = {
       footer: require('./schemas/footer.json'),
       sponsors: require('./schemas/sponsors.json'),
       menu: require('./schemas/menu.json'),
+      movie: require('./schemas/movie.json'),
+      event: {},
     },
     linkResolver: require('./linkResolver').linkResolver,
   },
 }
 
+const gatsbySourcePrismicPreviews = {
+  resolve: 'gatsby-plugin-prismic-previews',
+  options: {
+    repositoryName: GATSBY_PRISMIC_REPO_NAME,
+  },
+}
+
 module.exports = {
   gatsbySourcePrismic,
+  gatsbySourcePrismicPreviews,
 }

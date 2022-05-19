@@ -136,6 +136,15 @@
             "display": "list",
             "non-repeat": {},
             "repeat": {}
+          },
+          "documentaries": {
+            "type": "Slice",
+            "fieldset": "documentaries",
+            "description": "documentaries displayed",
+            "icon": "local_movies",
+            "display": "list",
+            "non-repeat": {},
+            "repeat": {}
           }
         }
       }

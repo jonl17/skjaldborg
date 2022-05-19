@@ -1,16 +1,16 @@
 import cn from 'classnames'
-import React, { useEffect, useState } from "react"
-import { useSelector } from "react-redux"
-import useSetTargetBlank from "../../hooks/useSetTargetBlank"
-import { Container } from "./styled"
+import React, { useEffect, useState } from 'react'
+import { useSelector } from 'react-redux'
+import useSetTargetBlank from '../../hooks/useSetTargetBlank'
+import { Container } from './styled'
 
-const splitLang = html => {
-  return html.split("<p>--ENSKA--</p>")
+const splitLang = (html) => {
+  return html.split('<p>--ENSKA--</p>')
 }
 
-const Content = ({ html, className = "" }) => {
+const Content = ({ html, className = '' }) => {
   const [lang, setLang] = useState(splitLang(html)[0])
-  const icelandic = useSelector(state => state.reducer.icelandic)
+  const icelandic = useSelector((state) => state.reducer.icelandic)
 
   useEffect(() => {
     let languages = splitLang(html)
@@ -21,11 +21,11 @@ const Content = ({ html, className = "" }) => {
     }
   }, [icelandic, html])
 
-  useSetTargetBlank("content-wrap")
+  useSetTargetBlank('content-wrap')
 
   return (
     <Container
-      className={cn(className, 'text-lg')}
+      className={cn(className, 'text-lg content-rich-text')}
       id='content-wrap'
       dangerouslySetInnerHTML={{ __html: lang }}
     ></Container>

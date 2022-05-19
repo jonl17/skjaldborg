@@ -11,35 +11,35 @@ const Sponsors = () => {
       <h3 className='text-white text-center my-5'>Styrktaraðilar</h3>
       <div className='grid grid-cols-2 gap-5 lg:flex justify-between mb-10'>
         {firstRow.map((item, key) => (
-          <Link key={key} to={item.website.url}>
+          <a key={key} target='_blank' href={item.website.url}>
             <GatsbyImage
               objectFit='contain'
               className='h-56 w-40 max-h-[150px]'
               image={item.logo.gatsbyImageData}
-              alt={item.logo.alt}
+              alt={item.logo.alt ?? ''}
             />
-          </Link>
+          </a>
         ))}
       </div>
       <div className='grid gap-5 grid-cols-2 lg:grid-cols-5 justify-between mb-10'>
         {secondRow.map((item, key) => (
-          <Link key={key} to={item.website.url}>
+          <a key={key} href={item.website.url} target='_blank'>
             <GatsbyImage
               objectFit='contain'
               className='h-56 w-40 max-h-[75px]'
               image={item.logo.gatsbyImageData}
-              alt={item.logo.alt}
+              alt={item.logo.alt ?? ''}
             />
-          </Link>
+          </a>
         ))}
       </div>
       <div className='grid place-content-center'>
         {honours.map((item, key) => (
-          <Link to={item.website.url}>
+          <a key={key} target='_blank' href={item.website.url}>
             <div className='h-56 flex justify-center text-white'>
               <GatsbyImage
                 image={item.logo.gatsbyImageData}
-                alt={item.logo.alt}
+                alt={item.logo.alt ?? ''}
                 objectFit='contain'
                 className='h-full lg:w-72'
               />
@@ -50,7 +50,7 @@ const Sponsors = () => {
                 fill='none'
                 xmlns='http://www.w3.org/2000/svg'
               >
-                <path d='M1 0V64' stroke='white' stroke-width='2' />
+                <path d='M1 0V64' stroke='white' strokeWidth='2' />
               </svg>
 
               <div className='w-72'>
@@ -59,7 +59,7 @@ const Sponsors = () => {
                 </p>
               </div>
             </div>
-          </Link>
+          </a>
         ))}
       </div>
     </section>

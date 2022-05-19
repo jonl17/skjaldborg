@@ -8,6 +8,10 @@ const linkResolver = (doc) => {
     } else {
       return doc.uid === 'frontpage' ? '/en' : `/en/${doc.uid}`
     }
+  } else if (doc.type === 'movie') {
+    return doc.lang === 'is'
+      ? `/heimildamyndir/${doc.uid}`
+      : `/en/documentaries/${doc.uid}`
   }
 
   // Backup for all other types

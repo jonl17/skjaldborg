@@ -15,15 +15,25 @@ const MarkDownMovie = ({ data: { movie } }) => {
     { key: 'editing', name: frontmatter.editing },
     { key: 'filming', name: frontmatter.filming },
     { key: 'composer', name: frontmatter.composer },
-    { key: 'sound_desing', name: frontmatter.sound_design }
+    { key: 'sound_desing', name: frontmatter.sound_design },
   ]
 
   return (
     <>
       <PageContainer>
         <CoverImage image={frontmatter.image} />
-        <Banner title={frontmatter.title} title_en={frontmatter.title_en} director={frontmatter.director} year='2020' />
-        <Info html={html} videoSrc={frontmatter.Trailer} dates={frontmatter.dagskra} participants={participants} />
+        <Banner
+          backLink='/sarpur/2020'
+          title={frontmatter.title}
+          title_en={frontmatter.title_en}
+          director={frontmatter.director}
+          year='2020'
+        />
+        <Info
+          html={html}
+          dates={frontmatter.dagskra}
+          participants={participants}
+        />
       </PageContainer>
     </>
   )

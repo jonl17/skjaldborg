@@ -38,6 +38,10 @@ export const fragment = graphql`
         ... on PrismicPageDataBodySarpur {
           ...sarpurSlice
         }
+        ... on PrismicPageDataBodyDocumentaries {
+          id
+          slice_type
+        }
       }
     }
   }

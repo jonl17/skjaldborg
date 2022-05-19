@@ -2,6 +2,7 @@ import React from 'react'
 import { useGetSarpurYears } from '../../hooks/useGetSarpurYears'
 import BlockGrid from '../../reusableComponents/BlockGrid/BlockGrid'
 import { cleanUpSlug, handleCloudinaryImage } from '../../utils'
+import { Link } from 'gatsby'
 
 const SarpurYear = ({ data, pageContext }) => {
   const year = useGetSarpurYears().find(

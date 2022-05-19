@@ -3,6 +3,7 @@ import { Link } from 'gatsby'
 import React from 'react'
 import { useLang } from '../../store'
 import { cleanUpTitle } from '../../utils'
+import { GatsbyImage } from 'gatsby-plugin-image'
 
 const LinkBlock = ({ item }) => {
   const [active, setActive] = React.useState(false)
@@ -29,10 +30,19 @@ const LinkBlock = ({ item }) => {
       onMouseLeave={() => toggleActive(false)}
     >
       <div className={cn('h-96 lg:h-72 brightness-75', {})}>
-        <img
-          className='h-full w-full object-cover z-0 pointer-events-none'
-          src={item.image}
-        />
+        {item.image.gatsbyImageData ? (
+          <GatsbyImage
+            objectFit='cover'
+            className='w-full h-full'
+            image={item.image.gatsbyImageData}
+            alt={item.image.alt ?? ''}
+          />
+        ) : (
+          <img
+            className='h-full w-full object-cover z-0 pointer-events-none'
+            src={item.image}
+          />
+        )}
       </div>
       <div
         className={cn(
