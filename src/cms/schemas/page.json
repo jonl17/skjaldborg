@@ -145,6 +145,15 @@
             "display": "list",
             "non-repeat": {},
             "repeat": {}
+          },
+          "events": {
+            "type": "Slice",
+            "fieldset": "Events",
+            "description": "Fetches all events",
+            "icon": "event_available",
+            "display": "list",
+            "non-repeat": {},
+            "repeat": {}
           }
         }
       }

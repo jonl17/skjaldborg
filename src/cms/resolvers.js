@@ -20,3 +20,14 @@ export const movieResolver = (node) => ({
   scheduled: node.data.scheduled,
   otherRoles: node.data.other_roles,
 })
+
+export const eventResolver = (node) => ({
+  lang: node.lang,
+  url: node.url,
+  uid: node.uid,
+  title: node.data.title.text,
+  description: node.data.rich_text,
+  image: node.data.featured_image,
+  type: node.data.type,
+  scheduled: node.data.scheduled,
+})

@@ -12,9 +12,9 @@ export default function Banner({ title, title_en, director, year, backLink }) {
   return (
     <Container>
       <div className='title-container'>
-        <div className='max-w-lg'>
+        <div className='max-w-xl'>
           <Fade right distance='15px'>
-            <h1 className='text-6xl drop-shadow-lg'>
+            <h1 className='text-4xl lg:text-6xl drop-shadow-lg'>
               {icelandic
                 ? cleanUpTitle(title)
                 : cleanUpTitle(title_en) ?? cleanUpTitle(title)}

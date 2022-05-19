@@ -6,6 +6,7 @@ import Sponsors from './slices/Sponsors'
 import RichText from './slices/RichText/RichText'
 import Sarpur from './slices/NewSarpur'
 import Documentaries from './slices/Documentaries'
+import Events from './slices/Events'
 
 const Slices = {
   banner_media: BannerMedia,
@@ -15,6 +16,7 @@ const Slices = {
   rich_text: RichText,
   sarpur: Sarpur,
   documentaries: Documentaries,
+  events: Events,
 }
 
 const propResolver = (slice) => {

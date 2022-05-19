@@ -12,6 +12,8 @@ const linkResolver = (doc) => {
     return doc.lang === 'is'
       ? `/heimildamyndir/${doc.uid}`
       : `/en/documentaries/${doc.uid}`
+  } else if (doc.type === 'event') {
+    return doc.lang === 'is' ? `/vidburdir/${doc.uid}` : `/en/events/${doc.uid}`
   }
 
   // Backup for all other types

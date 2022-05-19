@@ -87,6 +87,8 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     'src/templates/heimildamynd/prismic.js'
   )
 
+  const prismicEventTemplate = path.resolve('src/templates/Event/Event.js')
+
   const prismicResults = await graphql(`
     {
       allPrismicPage {
@@ -99,6 +101,15 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         }
       }
       allPrismicMovie {
+        nodes {
+          uid
+          url
+          lang
+          id
+          prismicId
+        }
+      }
+      allPrismicEvent {
         nodes {
           uid
           url
@@ -217,6 +228,16 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     createPage({
       path: node.url,
       component: prismicMovieDetailsTemplate,
+      context: {
+        ...node,
+      },
+    })
+  })
+
+  prismicResults.data.allPrismicEvent.nodes.map((node) => {
+    createPage({
+      path: node.url,
+      component: prismicEventTemplate,
       context: {
         ...node,
       },
