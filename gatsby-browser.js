@@ -11,22 +11,29 @@ import {
 import { linkResolver } from './src/cms/linkResolver'
 import PageTemplate from './src/templates/Page/Page'
 import MovieTemplate from './src/templates/heimildamynd/prismic'
+import React from 'react'
 
-export const wrapRootElement = ({ element }) => (
-  <Provider>
-    <PrismicPreviewProvider
-      repositoryConfigs={[
-        {
-          repositoryName: process.env.GATSBY_PRISMIC_REPO_NAME,
-          linkResolver,
-          componentResolver: componentResolverFromMap({
-            page: PageTemplate,
-            movie: MovieTemplate,
-          }),
-        },
-      ]}
-    >
-      {element}
-    </PrismicPreviewProvider>
-  </Provider>
-)
+const { GATSBY_PRISMIC_REPO_NAME: repoName } = process.env
+
+export const wrapRootElement = ({ element }) => {
+  return (
+    <>
+      <Provider>
+        <PrismicPreviewProvider
+          repositoryConfigs={[
+            {
+              repositoryName: repoName,
+              linkResolver,
+              componentResolver: componentResolverFromMap({
+                page: PageTemplate,
+                movie: MovieTemplate,
+              }),
+            },
+          ]}
+        >
+          {element}
+        </PrismicPreviewProvider>
+      </Provider>
+    </>
+  )
+}
