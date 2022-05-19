@@ -88,6 +88,10 @@ export const fragment = graphql`
         url
       }
       link_label
+      second_link {
+        url
+      }
+      second_link_label
     }
   }
 

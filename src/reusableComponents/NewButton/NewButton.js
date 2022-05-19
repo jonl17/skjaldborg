@@ -5,7 +5,7 @@ const NewButton = ({ children, onClick, external = false }) => {
   const [active, setActive] = useState(false)
 
   const wrapperClassName =
-    'overflow-hidden left-chevron relative px-14 py-2 bg-secondary text-tertiary lg:text-secondary lg:bg-transparent border-2 transition-colors'
+    'overflow-hidden left-chevron relative px-14 py-2 bg-secondary text-tertiary lg:text-secondary lg:bg-transparent border-2 transition-colors text-center'
 
   const Fill = ({ children }) => (
     <span

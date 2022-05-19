@@ -39,6 +39,10 @@ const propResolver = (slice) => {
           url: slice.primary.link.url,
           label: slice.primary.link_label,
         },
+        secondLink: {
+          url: slice.primary.second_link.url,
+          label: slice.primary.second_link_label,
+        },
       }
     }
     default: {

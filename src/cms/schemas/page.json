@@ -106,6 +106,19 @@
                 "config": {
                   "label": "Link label"
                 }
+              },
+              "second_link": {
+                "type": "Link",
+                "config": {
+                  "allowTargetBlank": true,
+                  "label": "second link"
+                }
+              },
+              "second_link_label": {
+                "type": "Text",
+                "config": {
+                  "label": "second link label"
+                }
               }
             },
             "repeat": {}
