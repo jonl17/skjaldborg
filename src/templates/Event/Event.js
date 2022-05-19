@@ -9,7 +9,6 @@ import { eventResolver } from '../../cms/resolvers'
 import { withPrismicPreview } from 'gatsby-plugin-prismic-previews'
 
 const PrismicEvent = ({ data, pageContext }) => {
-  console.log(data)
   const event = eventResolver(data.prismicEvent)
 
   return (
