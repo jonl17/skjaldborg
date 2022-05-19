@@ -4,9 +4,9 @@ import PageContainer from '../../layouts/PageContainer'
 import Banner from './components/Banner'
 import CoverImage from './components/CoverImage'
 import Info from './components/Info'
-
 import '../../cms/fragments/movie'
 import { movieResolver } from '../../cms/resolvers'
+import { withPrismicPreview } from 'gatsby-plugin-prismic-previews'
 
 const PrismicMovie = ({ data, pageContext }) => {
   const movie = movieResolver(data.prismicMovie)
@@ -38,12 +38,13 @@ const PrismicMovie = ({ data, pageContext }) => {
   )
 }
 
+export default withPrismicPreview(PrismicMovie)
+
 export const query = graphql`
   query($id: String!, $lang: String!) {
     prismicMovie(id: { eq: $id }, lang: { eq: $lang }) {
+      _previewable
       ...movieFragmentFull
     }
   }
 `
-
-export default PrismicMovie

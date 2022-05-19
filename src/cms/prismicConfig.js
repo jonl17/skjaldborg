@@ -21,6 +21,14 @@ const gatsbySourcePrismic = {
   },
 }
 
+const gatsbySourcePrismicPreviews = {
+  resolve: 'gatsby-plugin-prismic-previews',
+  options: {
+    repositoryName: GATSBY_PRISMIC_REPO_NAME,
+  },
+}
+
 module.exports = {
   gatsbySourcePrismic,
+  gatsbySourcePrismicPreviews,
 }
