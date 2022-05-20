@@ -54,7 +54,7 @@ const LinkBlock = ({ item }) => {
           }
         )}
       >
-        <h2 className='text-3xl text-center py-3'>
+        <h2 className='text-3xl text-center py-3 text-secondary'>
           {cleanUpTitle(item.title)}
         </h2>
         {item.type && (
