@@ -17,6 +17,8 @@ const LinkBlock = ({ item }) => {
         return lang === 'is' ? 'Frumsýning' : 'Premiere'
       case 'wip':
         return lang === 'is' ? 'Verk i vinnslu' : 'Work in progress'
+      case 'regular':
+        return lang === 'is' ? 'Sýning' : 'Screening'
       default:
         return ''
     }

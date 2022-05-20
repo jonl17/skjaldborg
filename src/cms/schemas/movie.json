@@ -9,7 +9,7 @@
     "type": {
       "type": "Select",
       "config": {
-        "options": ["premiere", "wip", "honourGuest"],
+        "options": ["premiere", "regular", "wip", "honourGuest"],
         "default_value": "premiere",
         "label": "type"
       }

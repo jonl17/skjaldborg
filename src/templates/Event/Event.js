@@ -21,6 +21,7 @@ const PrismicEvent = ({ data, pageContext }) => {
           director={''}
           year='2022'
           backLink={event.lang === 'is' ? '/vidburdir' : '/en/events'}
+          backLinkText={event.lang === 'is' ? 'Viðburðir 2022' : 'Events 2022'}
         />
         <Info
           html={event.description.html}

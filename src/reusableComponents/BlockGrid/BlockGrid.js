@@ -1,4 +1,4 @@
-import { Link } from 'gatsby'
+import { Link, navigate } from 'gatsby'
 import React from 'react'
 import { cleanUpTitle } from '../../utils'
 import LinkBlock from '../LinkBlock'
@@ -13,12 +13,12 @@ const BlockGrid = ({ items, title, showBackBtn = true }) => {
     <div className='mt-36'>
       <div className='text-center'>
         {showBackBtn && (
-          <Link className='inline-flex' to='/sarpur'>
+          <button className='inline-flex' onClick={() => navigate(-1)}>
             <Arrow rotation='-180deg' />
             <h2 className='ml-4 text-xl text-tertiary'>
               {lang === 'is' ? 'Tilbaka' : 'Go back'}
             </h2>
-          </Link>
+          </button>
         )}
         <h1 className='page-heading text-tertiary text-center'>
           {cleanUpTitle(title)}
