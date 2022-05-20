@@ -23,9 +23,9 @@ const Header = () => {
         <Link to={lang === 'is' ? '/' : '/en'}>
           <Logo />
         </Link>
-        <div className='text-current mt-7 lg:mt-0'>
-          <h6>{meta.date}</h6>
-          <h6>{meta.place}</h6>
+        <div className='text-secondary mt-7 lg:mt-0'>
+          <h6 className='text-current'>{meta.date}</h6>
+          <h6 className='text-current'>{meta.place}</h6>
         </div>
         <Burger />
       </section>
