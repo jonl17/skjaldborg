@@ -49,16 +49,17 @@ const SingleScheduleItem = ({
         <div className='pl-6 lg:pl-24 '>
           <div className='flex pt-5 w-44 lg:w-full'>
             <button
-              className='hover:opacity-50'
+              className='hover:opacity-70 flex'
               onClick={() => setExpanded((prev) => !prev)}
             >
               <p className='text-5xl text-secondary mr-3 -mt-2'>
                 {expanded ? '-' : '+'}
               </p>
+
+              <p className='text-xl text-left lg:text-3xl font-bold font-regular uppercase'>
+                {title}
+              </p>
             </button>
-            <p className='text-xl text-left lg:text-3xl font-bold font-regular uppercase'>
-              {title}
-            </p>
           </div>
           {expanded && (
             <div>
