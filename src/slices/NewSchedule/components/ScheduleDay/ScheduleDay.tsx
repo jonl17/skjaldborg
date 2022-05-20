@@ -5,7 +5,6 @@ import { IScheduleItem } from '../../../../types'
 import { handleDate } from '../../utils'
 import cn from 'classnames'
 import { GatsbyImage } from 'gatsby-plugin-image'
-import { Link } from 'gatsby'
 
 const SingleScheduleItem = ({
   date,
@@ -13,9 +12,12 @@ const SingleScheduleItem = ({
   image,
   excerpt,
   url,
-}: IScheduleItem) => {
+  prevDate,
+}: IScheduleItem & { prevDate: Date | null }) => {
   const [expanded, setExpanded] = useState(false)
   const { lang } = useLang()
+
+  const sameSlot = date.getTime() === prevDate?.getTime()
 
   return (
     <div
@@ -41,11 +43,14 @@ const SingleScheduleItem = ({
         })}
       >
         <p className='font-bold text-3xl border-current h-full w-32 lg:w-36 flex pl-3 pt-5 border-r-2'>
-          {newFormatTime(date)}
+          {!sameSlot && newFormatTime(date)}
         </p>
         <div className='pl-6 lg:pl-24 '>
           <div className='flex pt-5 w-44 lg:w-full'>
-            <button onClick={() => setExpanded((prev) => !prev)}>
+            <button
+              className='hover:opacity-50'
+              onClick={() => setExpanded((prev) => !prev)}
+            >
               <p className='text-5xl text-secondary mr-3 -mt-2'>
                 {expanded ? '-' : '+'}
               </p>
@@ -90,7 +95,11 @@ const ScheduleDay = ({ items }: Props) => {
       </div>
       <div className='border-t-2 border-current grid'>
         {items.map((item, key) => (
-          <SingleScheduleItem key={key} {...item} />
+          <SingleScheduleItem
+            key={key}
+            {...item}
+            prevDate={key !== 0 ? items[key - 1].date : null}
+          />
         ))}
       </div>
     </section>
