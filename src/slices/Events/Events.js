@@ -9,8 +9,6 @@ const Events = () => {
 
   const events = useGetEvents(lang)
 
-  console.log(events)
-
   return (
     <section className='h-full relative p-4 lg:p-8'>
       <BlockGrid

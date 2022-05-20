@@ -21,20 +21,19 @@ const SingleScheduleItem = ({
     <div
       className={cn('flex overflow-hidden relative transition-all', {
         'h-36 lg:h-24': !expanded,
-        'h-72 lg:h-56 bg-primary/50': expanded,
+        'h-72 lg:h-56 bg-primary/75': expanded,
       })}
     >
-      <GatsbyImage
-        className={cn(
-          'absolute left-0 top-0 h-full w-full transition-opacity',
-          {
+      <div className='absolute left-0 top-0 h-full w-full'>
+        <GatsbyImage
+          className={cn('h-full w-full transition-opacity', {
             'opacity-0': !expanded,
             'opacity-50': expanded,
-          }
-        )}
-        image={image.gatsbyImageData}
-        alt={image.alt}
-      />
+          })}
+          image={image.gatsbyImageData}
+          alt={image.alt}
+        />
+      </div>
       <div
         className={cn('relative flex', {
           'text-primary': !expanded,
