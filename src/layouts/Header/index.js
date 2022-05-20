@@ -12,18 +12,25 @@ const Header = () => {
   const { pathname } = useLocation()
   const { lang } = useLang()
 
+  const frontpage = pathname === '/' || pathname === '/en'
+
   return (
     <header
       className={cn('absolute top-0 z-30 p-4 lg:p-8 text-secondary', {
-        'text-secondary': pathname === '/' || pathname === '/en',
-        'text-tertiary': pathname !== '/' && pathname !== '/en',
+        'text-secondary': frontpage,
+        'text-tertiary': !frontpage,
       })}
     >
       <section className='lg:grid gap-12 grid-flow-col'>
         <Link to={lang === 'is' ? '/' : '/en'}>
           <Logo />
         </Link>
-        <div className='text-secondary mt-7 lg:mt-0'>
+        <div
+          className={cn('mt-7 lg:mt-0', {
+            'text-secondary': frontpage,
+            'text-tertiary': !frontpage,
+          })}
+        >
           <h6 className='text-current'>{meta.date}</h6>
           <h6 className='text-current'>{meta.place}</h6>
         </div>

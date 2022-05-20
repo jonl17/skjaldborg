@@ -58,7 +58,7 @@ const LinkBlock = ({ item }) => {
           {cleanUpTitle(item.title)}
         </h2>
         {item.type && (
-          <h6 className='text-center absolute bottom-10 w-full'>
+          <h6 className='text-center absolute bottom-10 w-full text-secondary'>
             {handleType(item.type)}
           </h6>
         )}
