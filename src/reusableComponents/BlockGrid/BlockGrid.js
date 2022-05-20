@@ -20,7 +20,7 @@ const BlockGrid = ({ items, title, showBackBtn = true }) => {
             </h2>
           </Link>
         )}
-        <h1 className='text-3xl lg:text-6xl mb-12 text-tertiary text-center'>
+        <h1 className='page-heading text-tertiary text-center'>
           {cleanUpTitle(title)}
         </h1>
       </div>

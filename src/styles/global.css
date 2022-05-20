@@ -68,4 +68,12 @@
   .content-rich-text iframe {
     @apply w-full md:w-[450px] lg:w-[650px] lg:h-[500px];
   }
+
+  .page-heading {
+    @apply text-3xl lg:text-6xl mb-12 text-center;
+  }
+
+  .hide-iframe iframe {
+    display: none;
+  }
 }

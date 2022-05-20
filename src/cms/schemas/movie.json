@@ -21,6 +21,14 @@
         "label": "title"
       }
     },
+    "excerpt": {
+      "type": "StructuredText",
+      "config": {
+        "single": "paragraph",
+        "label": "excerpt",
+        "placeholder": "Stutt lýsing fyrir dagskrá (1 málsgrein)"
+      }
+    },
     "featured_image": {
       "type": "Image",
       "config": {

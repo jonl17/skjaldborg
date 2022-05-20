@@ -46,6 +46,10 @@ export const fragment = graphql`
           id
           slice_type
         }
+        ... on PrismicPageDataBodySchedule {
+          id
+          slice_type
+        }
       }
     }
   }

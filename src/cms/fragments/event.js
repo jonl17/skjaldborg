@@ -10,6 +10,9 @@ export const fragment = graphql`
       title {
         text
       }
+      excerpt {
+        html
+      }
       rich_text {
         html
       }

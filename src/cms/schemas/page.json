@@ -111,7 +111,8 @@
                 "type": "Link",
                 "config": {
                   "allowTargetBlank": true,
-                  "label": "second link"
+                  "label": "second link",
+                  "select": null
                 }
               },
               "second_link_label": {
@@ -164,6 +165,15 @@
             "fieldset": "Events",
             "description": "Fetches all events",
             "icon": "event_available",
+            "display": "list",
+            "non-repeat": {},
+            "repeat": {}
+          },
+          "schedule": {
+            "type": "Slice",
+            "fieldset": "Schedule",
+            "description": "Þessi eining býr til dagskrá úr movie + event",
+            "icon": "schedule",
             "display": "list",
             "non-repeat": {},
             "repeat": {}
