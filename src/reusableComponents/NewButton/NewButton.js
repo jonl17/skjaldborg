@@ -36,7 +36,7 @@ const NewButton = ({ children, onClick, external = false }) => {
 
   const Content = () => (
     <>
-      <h3 className='uppercase relative'>{children}</h3>
+      <h3 className='uppercase relative text-secondary'>{children}</h3>
       <Fill>
         <h3 className='uppercase relative text-tertiary'>{children}</h3>
       </Fill>
