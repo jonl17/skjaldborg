@@ -43,14 +43,14 @@ const SingleScheduleItem = ({
         <p className='font-bold text-3xl border-current h-full w-32 lg:w-36 flex pl-3 pt-5 border-r-2'>
           {newFormatTime(date)}
         </p>
-        <div className='pl-6 lg:pl-36 '>
+        <div className='pl-6 lg:pl-24 '>
           <div className='flex pt-5 w-44 lg:w-full'>
             <button onClick={() => setExpanded((prev) => !prev)}>
               <p className='text-5xl text-secondary mr-3 -mt-2'>
                 {expanded ? '-' : '+'}
               </p>
             </button>
-            <p className='text-2xl text-left lg:text-3xl font-regular'>
+            <p className='text-xl text-left lg:text-3xl font-bold font-regular uppercase'>
               {title}
             </p>
           </div>
