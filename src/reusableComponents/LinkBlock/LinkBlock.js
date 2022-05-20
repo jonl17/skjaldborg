@@ -43,6 +43,7 @@ const LinkBlock = ({ item }) => {
           <img
             className='h-full w-full object-cover z-0 pointer-events-none'
             src={item.image}
+            alt={item.image.alt ?? ''}
           />
         )}
       </div>

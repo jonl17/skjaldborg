@@ -1,18 +1,8 @@
 import React from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { triggerMenu } from '../../state/action'
 import { useMenu } from '../../store'
 import { Container, Line } from './styled'
 
-// open burger menu
-const dispatches = (dispatch, trigger) => {
-  dispatch(triggerMenu(trigger))
-}
-
 const Burger = () => {
-  const menu = useSelector((state) => state.reducer.menu)
-  const dispatch = useDispatch()
-
   const { open, toggleMenu } = useMenu()
 
   return !open ? (

@@ -22,18 +22,6 @@ const NewButton = ({ children, onClick, external = false }) => {
     </span>
   )
 
-  const Corner = () => (
-    <div
-      className={cn('absolute h-full w-5 grid -left-3 -top-[13px] bottom-0', {
-        'text-tertiary': active,
-        'text-white': !active,
-      })}
-    >
-      <span className='h-10 w-5 bg-current rotate-[25deg]' />
-      <span className='h-10 w-5 bg-current -rotate-[25deg]' />
-    </div>
-  )
-
   const Content = () => (
     <>
       <h3 className='uppercase relative text-secondary'>{children}</h3>
@@ -54,6 +42,7 @@ const NewButton = ({ children, onClick, external = false }) => {
         })}
         href={onClick}
         target='_blank'
+        rel='noreferrer'
       >
         <Content />
       </a>

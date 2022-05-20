@@ -3,7 +3,6 @@ import useSetPlatform from '../hooks/useSetPlatform'
 
 /** components */
 import { GlobalStyle } from './GlobalStyle'
-import PageContainer from './PageContainer'
 import SEO from './seo'
 import { useDispatch } from 'react-redux'
 import { SET_PATHNAME } from '../state/action'
@@ -30,7 +29,7 @@ const Layout = ({ children, location }) => {
     } else {
       toggleLang('is')
     }
-  }, [pathname])
+  }, [pathname, toggleLang])
 
   return (
     <>

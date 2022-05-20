@@ -1,14 +1,12 @@
-import { Link, navigate } from 'gatsby'
+import { navigate } from 'gatsby'
 import React from 'react'
 import { cleanUpTitle } from '../../utils'
 import LinkBlock from '../LinkBlock'
 import Arrow from '../Arrow'
 import { useLang } from '../../store'
-import { useLocation } from '@reach/router'
 
 const BlockGrid = ({ items, title, showBackBtn = true }) => {
   const { lang } = useLang()
-  const { pathname } = useLocation()
   return (
     <div className='mt-36'>
       <div className='text-center'>

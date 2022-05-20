@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { redColor, greenColor } from '../../../constants'
-import { formatTime, months_arr_is, newFormatTime } from '../../../methods'
+import { months_arr_is, newFormatTime } from '../../../methods'
 
 const Container = styled.div`
   display: flex;

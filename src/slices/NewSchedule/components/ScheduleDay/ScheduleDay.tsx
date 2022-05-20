@@ -15,6 +15,7 @@ const SingleScheduleItem = ({
   prevDate,
 }: IScheduleItem & { prevDate: Date | null }) => {
   const [expanded, setExpanded] = useState(false)
+
   const { lang } = useLang()
 
   const sameSlot = date.getTime() === prevDate?.getTime()

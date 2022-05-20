@@ -1,6 +1,5 @@
 import React from 'react'
 import { useGetEvents } from '../../hooks/useGetEvents'
-import { useGetMovies } from '../../hooks/useGetMovies'
 import BlockGrid from '../../reusableComponents/BlockGrid/BlockGrid'
 import { useLang } from '../../store'
 

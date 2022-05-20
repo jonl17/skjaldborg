@@ -1,11 +1,8 @@
 import React from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
 import { useGetPages } from '../../hooks/useGetPages'
 import { Link } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
-import { useLocation } from '@reach/router'
 import { useLang } from '../../store'
-import cn from 'classnames'
 
 const InfoPages = () => {
   const { lang } = useLang()
