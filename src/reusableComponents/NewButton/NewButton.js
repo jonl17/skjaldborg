@@ -53,7 +53,7 @@ const NewButton = ({ children, onClick, external = false }) => {
     <button
       onClick={onClick}
       className={cn(wrapperClassName, {
-        'border-white': !active,
+        'border-secondary': !active,
         'border-primary': active,
       })}
       onMouseEnter={() => setActive(true)}
