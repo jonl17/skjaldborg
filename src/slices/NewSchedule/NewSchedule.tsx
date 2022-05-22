@@ -58,6 +58,7 @@ export default () => {
     image: movie.image,
     url: movie.url,
     excerpt: movie.excerpt,
+    sameSlotSort: movie.sameSlotSort,
   }))
 
   const items2: IScheduleItem[] = events.map((event: any) => ({
@@ -67,11 +68,23 @@ export default () => {
     image: event.image,
     url: event.url,
     excerpt: event.excerpt,
+    sameSlotSort: event.sameSlotSort,
   }))
 
-  const scheduleItems = [...items1, ...items2].sort(
-    (a, b) => a.date.getTime() - b.date.getTime()
-  )
+  const scheduleItems = [...items1, ...items2].sort((a, b) => {
+    const d1 = a.date.getTime()
+    const d2 = b.date.getTime()
+
+    if (d1 < d2) {
+      return -1
+    } else if (d1 > d2) {
+      return 1
+    }
+    // same slot items are sorted by this value
+    else {
+      return a.sameSlotSort - b.sameSlotSort
+    }
+  })
 
   return <NewSchedule items={scheduleItems} />
 }

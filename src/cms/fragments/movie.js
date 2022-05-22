@@ -28,6 +28,7 @@ export const fragment = graphql`
       }
       type
       scheduled
+      same_slot_sort
     }
   }
 `

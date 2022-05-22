@@ -88,6 +88,10 @@
     @apply font-bold uppercase text-primary;
   }
 
+  .content-rich-text strong {
+    @apply uppercase;
+  }
+
   .content-rich-text h1 {
     @apply text-6xl mb-3;
   }

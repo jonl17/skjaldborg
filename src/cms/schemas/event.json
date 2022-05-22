@@ -20,6 +20,12 @@
         "label": "Title"
       }
     },
+    "same_slot_sort": {
+      "type": "Number",
+      "config": {
+        "label": "same slot sort"
+      }
+    },
     "excerpt": {
       "type": "StructuredText",
       "config": {

@@ -20,6 +20,7 @@ export const movieResolver = (node) => ({
   scheduled: node.data.scheduled,
   otherRoles: node.data.other_roles,
   excerpt: node.data.excerpt,
+  sameSlotSort: node.data.same_slot_sort ?? 0,
 })
 
 export const eventResolver = (node) => ({
@@ -32,4 +33,5 @@ export const eventResolver = (node) => ({
   type: node.data.type,
   scheduled: node.data.scheduled,
   excerpt: node.data.excerpt,
+  sameSlotSort: node.data.same_slot_sort ?? 0,
 })

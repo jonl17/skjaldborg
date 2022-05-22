@@ -15,4 +15,5 @@ export interface IScheduleItem {
   excerpt: {
     html: string
   }
+  sameSlotSort: number
 }
