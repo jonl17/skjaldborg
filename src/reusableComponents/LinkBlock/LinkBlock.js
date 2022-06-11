@@ -20,7 +20,7 @@ const LinkBlock = ({ item }) => {
       case 'regular':
         return lang === 'is' ? 'Sýning' : 'Screening'
       default:
-        return ''
+        return type
     }
   }
 

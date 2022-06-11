@@ -29,7 +29,6 @@ const DocsAndEvents = ({ items }: Queries.PrismicPageDataBodyDocsAndEvents) => {
                 guest.frontmatter.image.childImageSharp.gatsbyImageData,
             },
             title: guest.frontmatter?.title,
-            type: 'Heiðursgestur',
           }))}
           showBackBtn={false}
         />
