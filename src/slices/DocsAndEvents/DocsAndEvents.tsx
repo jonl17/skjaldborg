@@ -5,7 +5,6 @@ import BlockGrid from '../../reusableComponents/BlockGrid/BlockGrid'
 
 const DocsAndEvents = ({ items }: Queries.PrismicPageDataBodyDocsAndEvents) => {
   const oldGuests = useGetOldHonourGuest()
-  console.log(items)
   return (
     <div>
       <section className='h-full relative p-4 lg:p-8'>

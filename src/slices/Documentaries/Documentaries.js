@@ -11,7 +11,7 @@ const Documentaries = () => {
   return (
     <section className='h-full relative p-4 lg:p-8'>
       <BlockGrid
-        title={lang === 'is' ? 'Heimildamyndir' : 'Documentaries'}
+        title={lang === 'is' ? 'Verk 2022' : 'Documentaries 2022'}
         items={movies.map((item) => ({
           ...item,
           slug: item.url,

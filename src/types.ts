@@ -16,4 +16,5 @@ export interface IScheduleItem {
     html: string
   }
   sameSlotSort: number
+  type?: string
 }

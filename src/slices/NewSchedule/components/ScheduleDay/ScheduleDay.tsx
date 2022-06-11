@@ -13,6 +13,7 @@ const SingleScheduleItem = ({
   excerpt,
   url,
   prevDate,
+  type,
 }: IScheduleItem & { prevDate: Date | null }) => {
   const [expanded, setExpanded] = useState(false)
 
@@ -23,7 +24,7 @@ const SingleScheduleItem = ({
   return (
     <div
       className={cn('flex overflow-hidden relative transition-all', {
-        'h-36 lg:h-24': !expanded,
+        'h-44 lg:h-24': !expanded,
         'h-72 lg:h-56 bg-primary/75': expanded,
       })}
     >
@@ -56,9 +57,12 @@ const SingleScheduleItem = ({
                 {expanded ? '-' : '+'}
               </p>
 
-              <p className='text-xl text-left lg:text-3xl font-bold font-regular uppercase'>
-                {title}
-              </p>
+              <div>
+                <p className='text-xl text-left lg:text-3xl font-bold font-regular uppercase'>
+                  {title}
+                </p>
+                {type === 'wip' && <p className='text-left'>Verk í vinnslu</p>}
+              </div>
             </button>
           </div>
           {expanded && (
