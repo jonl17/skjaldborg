@@ -1,6 +1,7 @@
 import { graphql } from 'gatsby'
 import React from 'react'
 import PageContainer from '../../layouts/PageContainer'
+import SEO from '../../reusableComponents/SEO'
 import Banner from './components/Banner'
 import CoverImage from './components/CoverImage'
 import Info from './components/Info'

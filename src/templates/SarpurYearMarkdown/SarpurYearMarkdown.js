@@ -19,6 +19,7 @@ const SarpurYearMarkdown = ({ data }) => {
     <section className='h-full relative p-4 lg:p-8'>
       <BlockGrid
         title='Sarpur 2020'
+        showBackBtn={false}
         items={movieArr
           .sort((a, b) => {
             if (a.frontmatter.title < b.frontmatter.title) return -1

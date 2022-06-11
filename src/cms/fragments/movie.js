@@ -12,6 +12,7 @@ export const fragment = graphql`
       }
       excerpt {
         html
+        text
       }
       description {
         html
