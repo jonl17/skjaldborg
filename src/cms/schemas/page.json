@@ -177,6 +177,24 @@
             "display": "list",
             "non-repeat": {},
             "repeat": {}
+          },
+          "docs_and_events": {
+            "type": "Slice",
+            "fieldset": "Docs and events",
+            "description": "Add events or docs",
+            "icon": "directions_bike",
+            "display": "list",
+            "non-repeat": {},
+            "repeat": {
+              "item": {
+                "type": "Link",
+                "config": {
+                  "select": "document",
+                  "customtypes": ["movie", "event"],
+                  "label": "Item"
+                }
+              }
+            }
           }
         }
       }
