@@ -62,7 +62,7 @@ const SingleScheduleItem = ({
               <div>
                 <p className='text-xl text-left lg:text-3xl font-bold font-regular uppercase'>
                   {title}
-                  {`${length && " '"}${length}`}
+                  {length && ` '${length}`}
                 </p>
                 {type === 'wip' ? (
                   <p className='text-left'>Verk í vinnslu</p>
