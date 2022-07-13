@@ -30,7 +30,7 @@ export default function Banner({
           <Fade right distance='12.5px' delay={150}>
             <h2 className='text-xl drop-shadow'>{director}</h2>
           </Fade>
-          <Fade right distance='10px' delay={250}>
+          {/* <Fade right distance='10px' delay={250}>
             <Link to={backLink}>
               <div className='back-btn-wrap'>
                 <Arrow rotation='-180deg' />
@@ -39,7 +39,7 @@ export default function Banner({
                 </h3>
               </div>
             </Link>
-          </Fade>
+          </Fade> */}
         </div>
       </div>
     </Container>

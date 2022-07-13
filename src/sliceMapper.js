@@ -28,6 +28,7 @@ const propResolver = (slice) => {
     case 'docs_and_events': {
       return {
         items: slice.items,
+        heading: slice.primary.heading,
       }
     }
     case 'rich_text': {

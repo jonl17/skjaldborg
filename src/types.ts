@@ -17,4 +17,6 @@ export interface IScheduleItem {
   }
   sameSlotSort: number
   type?: string
+  director?: string
+  length?: number
 }

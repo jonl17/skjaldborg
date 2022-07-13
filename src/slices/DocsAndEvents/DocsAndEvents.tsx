@@ -3,13 +3,18 @@ import { useGetOldHonourGuest } from '../../hooks/useGetOldHonourGest'
 import { cleanUpSlug } from '../../utils'
 import BlockGrid from '../../reusableComponents/BlockGrid/BlockGrid'
 
-const DocsAndEvents = ({ items }: Queries.PrismicPageDataBodyDocsAndEvents) => {
+type Props = {
+  heading: string
+  items: any[]
+}
+
+const DocsAndEvents = ({ items, heading }: Props) => {
   const oldGuests = useGetOldHonourGuest()
   return (
     <div>
       <section className='h-full relative p-4 lg:p-8'>
         <BlockGrid
-          title='2022'
+          title={heading}
           items={items.map((doc) => ({
             slug: doc.item?.url,
             image: doc.item?.document?.data.featured_image,
@@ -20,8 +25,8 @@ const DocsAndEvents = ({ items }: Queries.PrismicPageDataBodyDocsAndEvents) => {
       </section>
       <section className='h-full relative p-4 lg:p-8'>
         <BlockGrid
-          title='2019'
-          items={oldGuests.map((guest) => ({
+          title='2020'
+          items={oldGuests.map((guest: any) => ({
             slug: cleanUpSlug(guest.frontmatter?.title, '/sarpur/'),
             image: {
               gatsbyImageData:

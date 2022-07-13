@@ -14,6 +14,8 @@ const SingleScheduleItem = ({
   url,
   prevDate,
   type,
+  director,
+  length,
 }: IScheduleItem & { prevDate: Date | null }) => {
   const [expanded, setExpanded] = useState(false)
 
@@ -60,8 +62,13 @@ const SingleScheduleItem = ({
               <div>
                 <p className='text-xl text-left lg:text-3xl font-bold font-regular uppercase'>
                   {title}
+                  {`${length && " '"}${length}`}
                 </p>
-                {type === 'wip' && <p className='text-left'>Verk í vinnslu</p>}
+                {type === 'wip' ? (
+                  <p className='text-left'>Verk í vinnslu</p>
+                ) : director ? (
+                  <p className='text-left'>{director}</p>
+                ) : null}
               </div>
             </button>
           </div>

@@ -60,6 +60,8 @@ export default () => {
     excerpt: movie.excerpt,
     sameSlotSort: movie.sameSlotSort,
     type: movie.type,
+    director: movie.director,
+    length: movie.length,
   }))
 
   const items2: IScheduleItem[] = events.map((event: any) => ({

@@ -184,7 +184,15 @@
             "description": "Add events or docs",
             "icon": "directions_bike",
             "display": "list",
-            "non-repeat": {},
+            "non-repeat": {
+              "heading": {
+                "type": "Text",
+                "config": {
+                  "label": "heading",
+                  "placeholder": "2022"
+                }
+              }
+            },
             "repeat": {
               "item": {
                 "type": "Link",

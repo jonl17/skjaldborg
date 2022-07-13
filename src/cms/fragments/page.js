@@ -64,6 +64,9 @@ export const fragment = graphql`
   fragment docsAndEventsSlice on PrismicPageDataBodyDocsAndEvents {
     id
     slice_type
+    primary {
+      heading
+    }
     items {
       item {
         url

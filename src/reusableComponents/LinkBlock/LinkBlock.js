@@ -19,6 +19,8 @@ const LinkBlock = ({ item }) => {
         return lang === 'is' ? 'Verk i vinnslu' : 'Work in progress'
       case 'regular':
         return lang === 'is' ? 'Sýning' : 'Screening'
+      case 'honourGuest':
+        return lang === 'is' ? 'Heiðursgestur' : 'Guest of honour'
       default:
         return type
     }

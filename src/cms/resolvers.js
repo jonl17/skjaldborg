@@ -21,6 +21,7 @@ export const movieResolver = (node) => ({
   otherRoles: node.data.other_roles,
   excerpt: node.data.excerpt,
   sameSlotSort: node.data.same_slot_sort ?? 0,
+  length: node.data.length,
 })
 
 export const eventResolver = (node) => ({

@@ -1,7 +1,7 @@
 import { graphql, useStaticQuery } from 'gatsby'
 
 export const useGetOldHonourGuest = () => {
-  const result: Queries.OldHonourGuestsQuery = useStaticQuery(graphql`
+  const result = useStaticQuery(graphql`
     query OldHonourGuests {
       allMarkdownRemark(
         filter: { frontmatter: { honour_guest: { eq: true } } }

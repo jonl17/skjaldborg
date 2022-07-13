@@ -1,6 +1,7 @@
 import { graphql } from 'gatsby'
 import React from 'react'
 import PageContainer from '../../layouts/PageContainer'
+import SEO from '../../reusableComponents/SEO'
 import { handleCloudinaryImage } from '../../utils'
 import Banner from './components/Banner'
 import CoverImage from './components/CoverImage'
@@ -19,6 +20,7 @@ const FirebaseMovie = ({ data, pageContext }) => {
 
   return (
     <>
+      <SEO title={title} description={director} image={cloudinaryImg} />
       <PageContainer>
         <CoverImage image={cloudinaryImg} />
         <Banner

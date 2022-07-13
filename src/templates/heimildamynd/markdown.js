@@ -21,6 +21,11 @@ const MarkDownMovie = ({ data: { movie } }) => {
 
   return (
     <>
+      <SEO
+        title={frontmatter.title}
+        description={frontmatter.director}
+        image={frontmatter.image}
+      />
       <PageContainer>
         <CoverImage image={frontmatter.image} />
         <Banner

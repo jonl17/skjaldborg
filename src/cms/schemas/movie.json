@@ -21,6 +21,13 @@
         "label": "title"
       }
     },
+    "length": {
+      "type": "Number",
+      "config": {
+        "label": "length",
+        "placeholder": "in minutes"
+      }
+    },
     "same_slot_sort": {
       "type": "Number",
       "config": {
