@@ -198,7 +198,10 @@
                 "type": "Link",
                 "config": {
                   "select": "document",
-                  "customtypes": ["movie", "event"],
+                  "customtypes": [
+                    "movie",
+                    "event"
+                  ],
                   "label": "Item"
                 }
               }

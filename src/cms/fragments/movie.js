@@ -21,6 +21,11 @@ export const fragment = graphql`
         url
         alt
         gatsbyImageData
+        thumbnails {
+          seo {
+            url
+          }
+        }
       }
       director
       other_roles {

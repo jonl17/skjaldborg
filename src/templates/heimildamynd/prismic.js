@@ -1,14 +1,13 @@
 import { graphql } from 'gatsby'
+import { withPrismicPreview } from 'gatsby-plugin-prismic-previews'
 import React from 'react'
+import '../../cms/fragments/movie'
+import { movieResolver } from '../../cms/resolvers'
 import PageContainer from '../../layouts/PageContainer'
+import SEO from '../../reusableComponents/SEO'
 import Banner from './components/Banner'
 import CoverImage from './components/CoverImage'
 import Info from './components/Info'
-import '../../cms/fragments/movie'
-import { movieResolver } from '../../cms/resolvers'
-import { withPrismicPreview } from 'gatsby-plugin-prismic-previews'
-import { Helmet } from 'react-helmet'
-import SEO from '../../reusableComponents/SEO'
 
 const PrismicMovie = ({ data, pageContext }) => {
   const movie = movieResolver(data.prismicMovie)
@@ -18,7 +17,7 @@ const PrismicMovie = ({ data, pageContext }) => {
       <SEO
         title={movie.title}
         description={movie.excerpt.text}
-        image={movie.image}
+        image={movie.image.thumbnails.seo ?? movie.image}
       />
       <PageContainer>
         <CoverImage image={movie.image} />
