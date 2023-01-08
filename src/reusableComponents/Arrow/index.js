@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default ({ rotation, hideonstate, onClick }) => {
+const Arrow = ({ rotation, hideonstate, onClick }) => {
   if (hideonstate) return null
   else {
     return (
@@ -26,3 +26,5 @@ export default ({ rotation, hideonstate, onClick }) => {
     )
   }
 }
+
+export default Arrow

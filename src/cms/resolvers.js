@@ -19,4 +19,20 @@ export const movieResolver = (node) => ({
   type: node.data.type,
   scheduled: node.data.scheduled,
   otherRoles: node.data.other_roles,
+  excerpt: node.data.excerpt,
+  sameSlotSort: node.data.same_slot_sort ?? 0,
+  length: node.data.length,
+})
+
+export const eventResolver = (node) => ({
+  lang: node.lang,
+  url: node.url,
+  uid: node.uid,
+  title: node.data.title.text,
+  description: node.data.rich_text,
+  image: node.data.featured_image,
+  type: node.data.type,
+  scheduled: node.data.scheduled,
+  excerpt: node.data.excerpt,
+  sameSlotSort: node.data.same_slot_sort ?? 0,
 })

@@ -5,6 +5,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+
+
 # Runtime data
 pids
 *.pid
@@ -72,3 +74,5 @@ yarn-error.log
 priv-key.json
 
 .env.development
+
+gatsby-types.d.ts

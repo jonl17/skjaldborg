@@ -1,7 +1,5 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useGetSarpurYears } from '../../hooks/useGetSarpurYears'
-import { Link } from 'gatsby'
-import LinkBlock from '../../reusableComponents/LinkBlock'
 import BlockGrid from '../../reusableComponents/BlockGrid/BlockGrid'
 
 const NewSarpur = () => {

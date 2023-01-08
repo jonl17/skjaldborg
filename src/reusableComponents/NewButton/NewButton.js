@@ -5,7 +5,7 @@ const NewButton = ({ children, onClick, external = false }) => {
   const [active, setActive] = useState(false)
 
   const wrapperClassName =
-    'overflow-hidden left-chevron relative px-14 py-2 bg-secondary text-tertiary lg:text-secondary lg:bg-transparent border-2 transition-colors'
+    'overflow-hidden left-chevron relative px-14 py-2 bg-secondary text-tertiary lg:text-secondary lg:bg-transparent border-2 transition-colors text-center'
 
   const Fill = ({ children }) => (
     <span
@@ -22,21 +22,9 @@ const NewButton = ({ children, onClick, external = false }) => {
     </span>
   )
 
-  const Corner = () => (
-    <div
-      className={cn('absolute h-full w-5 grid -left-3 -top-[13px] bottom-0', {
-        'text-tertiary': active,
-        'text-white': !active,
-      })}
-    >
-      <span className='h-10 w-5 bg-current rotate-[25deg]' />
-      <span className='h-10 w-5 bg-current -rotate-[25deg]' />
-    </div>
-  )
-
   const Content = () => (
     <>
-      <h3 className='uppercase relative'>{children}</h3>
+      <h3 className='uppercase relative text-secondary'>{children}</h3>
       <Fill>
         <h3 className='uppercase relative text-tertiary'>{children}</h3>
       </Fill>
@@ -54,6 +42,7 @@ const NewButton = ({ children, onClick, external = false }) => {
         })}
         href={onClick}
         target='_blank'
+        rel='noreferrer'
       >
         <Content />
       </a>
@@ -64,7 +53,7 @@ const NewButton = ({ children, onClick, external = false }) => {
     <button
       onClick={onClick}
       className={cn(wrapperClassName, {
-        'border-white': !active,
+        'border-secondary': !active,
         'border-primary': active,
       })}
       onMouseEnter={() => setActive(true)}

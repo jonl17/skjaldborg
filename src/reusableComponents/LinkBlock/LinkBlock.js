@@ -17,8 +17,12 @@ const LinkBlock = ({ item }) => {
         return lang === 'is' ? 'Frumsýning' : 'Premiere'
       case 'wip':
         return lang === 'is' ? 'Verk i vinnslu' : 'Work in progress'
+      case 'regular':
+        return lang === 'is' ? 'Sýning' : 'Screening'
+      case 'honourGuest':
+        return lang === 'is' ? 'Heiðursgestur' : 'Guest of honour'
       default:
-        return ''
+        return type
     }
   }
 
@@ -41,6 +45,7 @@ const LinkBlock = ({ item }) => {
           <img
             className='h-full w-full object-cover z-0 pointer-events-none'
             src={item.image}
+            alt={item.image.alt ?? ''}
           />
         )}
       </div>
@@ -52,11 +57,11 @@ const LinkBlock = ({ item }) => {
           }
         )}
       >
-        <h2 className='text-3xl text-center py-3'>
+        <h2 className='text-3xl text-center py-3 text-secondary'>
           {cleanUpTitle(item.title)}
         </h2>
         {item.type && (
-          <h6 className='text-center absolute bottom-10 w-full'>
+          <h6 className='text-center absolute bottom-10 w-full text-secondary'>
             {handleType(item.type)}
           </h6>
         )}

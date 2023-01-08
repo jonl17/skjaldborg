@@ -7,7 +7,11 @@ const CoverImage = ({ image }) => {
   if (image.childImageSharp) {
     return (
       <CoverImageContainer>
-        <Img style={{ height: '100%' }} fluid={image.childImageSharp.fluid} />
+        <Img
+          alt='some random image'
+          style={{ height: '100%' }}
+          fluid={image.childImageSharp.fluid}
+        />
       </CoverImageContainer>
     )
   } else if (image.gatsbyImageData) {
@@ -17,7 +21,7 @@ const CoverImage = ({ image }) => {
           objectFit='cover'
           className='w-full h-full'
           image={image.gatsbyImageData}
-          alt={image.alt}
+          alt={image.alt ?? ''}
         />
       </CoverImageContainer>
     )
@@ -25,7 +29,7 @@ const CoverImage = ({ image }) => {
 
   return (
     <CoverImageContainer>
-      <img className='h-full w-full object-cover' src={image} />
+      <img alt='' className='h-full w-full object-cover' src={image} />
     </CoverImageContainer>
   )
 }

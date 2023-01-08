@@ -10,6 +10,10 @@ export const fragment = graphql`
       title {
         text
       }
+      excerpt {
+        html
+        text
+      }
       description {
         html
       }
@@ -17,6 +21,13 @@ export const fragment = graphql`
         url
         alt
         gatsbyImageData
+        seo: gatsbyImageData(height: 630, width: 1200)
+        banner: gatsbyImageData
+        thumbnails {
+          seo {
+            url
+          }
+        }
       }
       director
       other_roles {
@@ -25,6 +36,8 @@ export const fragment = graphql`
       }
       type
       scheduled
+      same_slot_sort
+      length
     }
   }
 `

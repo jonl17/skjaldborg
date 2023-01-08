@@ -9,7 +9,12 @@
     "type": {
       "type": "Select",
       "config": {
-        "options": ["premiere", "wip", "honourGuest"],
+        "options": [
+          "premiere",
+          "regular",
+          "wip",
+          "honourGuest"
+        ],
         "default_value": "premiere",
         "label": "type"
       }
@@ -21,11 +26,38 @@
         "label": "title"
       }
     },
+    "length": {
+      "type": "Number",
+      "config": {
+        "label": "length",
+        "placeholder": "in minutes"
+      }
+    },
+    "same_slot_sort": {
+      "type": "Number",
+      "config": {
+        "label": "same slot sort"
+      }
+    },
+    "excerpt": {
+      "type": "StructuredText",
+      "config": {
+        "single": "paragraph",
+        "label": "excerpt",
+        "placeholder": "Stutt lýsing fyrir dagskrá (1 málsgrein)"
+      }
+    },
     "featured_image": {
       "type": "Image",
       "config": {
         "constraint": {},
-        "thumbnails": [],
+        "thumbnails": [
+          {
+            "name": "seo",
+            "width": 1200,
+            "height": 630
+          }
+        ],
         "label": "featured image"
       }
     },

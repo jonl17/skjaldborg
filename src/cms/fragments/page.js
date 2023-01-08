@@ -1,4 +1,6 @@
 import { graphql } from 'gatsby'
+import './movie'
+import './event'
 
 export const fragment = graphql`
   fragment pageFragment on PrismicPage {
@@ -42,6 +44,40 @@ export const fragment = graphql`
           id
           slice_type
         }
+        ... on PrismicPageDataBodyEvents {
+          id
+          slice_type
+        }
+        ... on PrismicPageDataBodySchedule {
+          id
+          slice_type
+        }
+        ... on PrismicPageDataBodyDocsAndEvents {
+          id
+          slice_type
+          ...docsAndEventsSlice
+        }
+      }
+    }
+  }
+
+  fragment docsAndEventsSlice on PrismicPageDataBodyDocsAndEvents {
+    id
+    slice_type
+    primary {
+      heading
+    }
+    items {
+      item {
+        url
+        document {
+          ... on PrismicMovie {
+            ...movieFragmentFull
+          }
+          ... on PrismicEvent {
+            ...eventFragmentFull
+          }
+        }
       }
     }
   }
@@ -84,6 +120,10 @@ export const fragment = graphql`
         url
       }
       link_label
+      second_link {
+        url
+      }
+      second_link_label
     }
   }
 

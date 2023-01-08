@@ -29,12 +29,14 @@
   h6 {
     @apply font-bold;
     @apply uppercase;
+    @apply antialiased;
   }
 
   p,
   a,
   span {
     @apply font-normal;
+    @apply antialiased;
   }
 
   h3 {
@@ -48,7 +50,7 @@
     transition: clip-path 0.2s;
   }
   .rich-text > p {
-    @apply mb-6;
+    @apply mb-6 text-secondary;
     font-size: 24px;
   }
 
@@ -58,14 +60,59 @@
   }
 
   .rich-text > h3 {
-    @apply mb-3;
+    @apply mb-3 text-secondary;
   }
 
   .content-rich-text {
     @apply w-full;
   }
 
+  .content-rich-text p {
+    @apply text-xl leading-9 mb-2 text-primary font-normal;
+  }
+
   .content-rich-text iframe {
     @apply w-full md:w-[450px] lg:w-[650px] lg:h-[500px];
+  }
+
+  .content-rich-text a {
+    @apply underline;
+  }
+
+  .content-rich-text h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold uppercase text-primary;
+  }
+
+  .content-rich-text strong {
+    @apply uppercase;
+  }
+
+  .content-rich-text h1 {
+    @apply text-6xl mb-3;
+  }
+
+  .content-rich-text h2 {
+    @apply text-5xl mb-3;
+  }
+  .content-rich-text h3 {
+    @apply text-4xl mb-2;
+  }
+  .content-rich-text h3 {
+    @apply text-2xl mb-2;
+  }
+  .content-rich-text h4 {
+    @apply text-lg mb-2;
+  }
+  .page-heading {
+    @apply text-3xl lg:text-6xl mb-12 text-center;
+  }
+
+  .hide-iframe iframe {
+    display: none;
   }
 }

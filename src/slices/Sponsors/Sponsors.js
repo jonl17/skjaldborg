@@ -1,6 +1,5 @@
 import React from 'react'
 import { useGetSponsors } from '../../hooks/useGetSponsors'
-import { Link } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
 
 const Sponsors = () => {
@@ -11,7 +10,7 @@ const Sponsors = () => {
       <h3 className='text-white text-center my-5'>Styrktaraðilar</h3>
       <div className='grid grid-cols-2 gap-5 lg:flex justify-between mb-10'>
         {firstRow.map((item, key) => (
-          <a key={key} target='_blank' href={item.website.url}>
+          <a key={key} target='_blank' href={item.website.url} rel='noreferrer'>
             <GatsbyImage
               objectFit='contain'
               className='h-56 w-40 max-h-[150px]'
@@ -23,7 +22,7 @@ const Sponsors = () => {
       </div>
       <div className='grid gap-5 grid-cols-2 lg:grid-cols-5 justify-between mb-10'>
         {secondRow.map((item, key) => (
-          <a key={key} href={item.website.url} target='_blank'>
+          <a key={key} href={item.website.url} target='_blank' rel='noreferrer'>
             <GatsbyImage
               objectFit='contain'
               className='h-56 w-40 max-h-[75px]'
@@ -35,7 +34,7 @@ const Sponsors = () => {
       </div>
       <div className='grid place-content-center'>
         {honours.map((item, key) => (
-          <a key={key} target='_blank' href={item.website.url}>
+          <a key={key} target='_blank' href={item.website.url} rel='noreferrer'>
             <div className='h-56 flex justify-center text-white'>
               <GatsbyImage
                 image={item.logo.gatsbyImageData}

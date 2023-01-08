@@ -1,26 +1,24 @@
-import { Link } from 'gatsby'
+import { navigate } from 'gatsby'
 import React from 'react'
 import { cleanUpTitle } from '../../utils'
 import LinkBlock from '../LinkBlock'
 import Arrow from '../Arrow'
 import { useLang } from '../../store'
-import { useLocation } from '@reach/router'
 
 const BlockGrid = ({ items, title, showBackBtn = true }) => {
   const { lang } = useLang()
-  const { pathname } = useLocation()
   return (
     <div className='mt-36'>
       <div className='text-center'>
         {showBackBtn && (
-          <Link className='inline-flex' to='/sarpur'>
+          <button className='inline-flex' onClick={() => navigate(-1)}>
             <Arrow rotation='-180deg' />
             <h2 className='ml-4 text-xl text-tertiary'>
               {lang === 'is' ? 'Tilbaka' : 'Go back'}
             </h2>
-          </Link>
+          </button>
         )}
-        <h1 className='text-3xl lg:text-6xl mb-12 text-tertiary text-center'>
+        <h1 className='page-heading text-tertiary text-center'>
           {cleanUpTitle(title)}
         </h1>
       </div>

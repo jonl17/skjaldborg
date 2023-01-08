@@ -48,7 +48,7 @@ const NewMenu = () => {
             className='hover:text-secondary'
             onClick={() => toggleMenu(false)}
           >
-            <h1 className='text-4xl lg:text-6xl'>{page.label}</h1>
+            <h1 className='text-2xl lg:text-4xl'>{page.label}</h1>
           </Link>
         ))}
       </div>

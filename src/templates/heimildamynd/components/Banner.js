@@ -6,15 +6,22 @@ import Arrow from '../../../reusableComponents/Arrow'
 import { cleanUpTitle } from '../../../utils'
 import { Container } from '../styled'
 
-export default function Banner({ title, title_en, director, year, backLink }) {
+export default function Banner({
+  title,
+  title_en,
+  director,
+  year,
+  backLink,
+  backLinkText,
+}) {
   const icelandic = useSelector((state) => state.reducer.icelandic)
 
   return (
     <Container>
       <div className='title-container'>
-        <div className='max-w-lg'>
+        <div className='max-w-xl'>
           <Fade right distance='15px'>
-            <h1 className='text-6xl drop-shadow-lg'>
+            <h1 className='text-4xl lg:text-6xl drop-shadow-lg'>
               {icelandic
                 ? cleanUpTitle(title)
                 : cleanUpTitle(title_en) ?? cleanUpTitle(title)}
@@ -23,14 +30,16 @@ export default function Banner({ title, title_en, director, year, backLink }) {
           <Fade right distance='12.5px' delay={150}>
             <h2 className='text-xl drop-shadow'>{director}</h2>
           </Fade>
-          <Fade right distance='10px' delay={250}>
+          {/* <Fade right distance='10px' delay={250}>
             <Link to={backLink}>
               <div className='back-btn-wrap'>
                 <Arrow rotation='-180deg' />
-                <h3 className='text-lg drop-shadow'>Tilbaka</h3>
+                <h3 className='text-lg drop-shadow'>
+                  {backLinkText ?? 'Tilbaka'}
+                </h3>
               </div>
             </Link>
-          </Fade>
+          </Fade> */}
         </div>
       </div>
     </Container>

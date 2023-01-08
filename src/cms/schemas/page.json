@@ -106,6 +106,20 @@
                 "config": {
                   "label": "Link label"
                 }
+              },
+              "second_link": {
+                "type": "Link",
+                "config": {
+                  "allowTargetBlank": true,
+                  "label": "second link",
+                  "select": null
+                }
+              },
+              "second_link_label": {
+                "type": "Text",
+                "config": {
+                  "label": "second link label"
+                }
               }
             },
             "repeat": {}
@@ -145,6 +159,53 @@
             "display": "list",
             "non-repeat": {},
             "repeat": {}
+          },
+          "events": {
+            "type": "Slice",
+            "fieldset": "Events",
+            "description": "Fetches all events",
+            "icon": "event_available",
+            "display": "list",
+            "non-repeat": {},
+            "repeat": {}
+          },
+          "schedule": {
+            "type": "Slice",
+            "fieldset": "Schedule",
+            "description": "Þessi eining býr til dagskrá úr movie + event",
+            "icon": "schedule",
+            "display": "list",
+            "non-repeat": {},
+            "repeat": {}
+          },
+          "docs_and_events": {
+            "type": "Slice",
+            "fieldset": "Docs and events",
+            "description": "Add events or docs",
+            "icon": "directions_bike",
+            "display": "list",
+            "non-repeat": {
+              "heading": {
+                "type": "Text",
+                "config": {
+                  "label": "heading",
+                  "placeholder": "2022"
+                }
+              }
+            },
+            "repeat": {
+              "item": {
+                "type": "Link",
+                "config": {
+                  "select": "document",
+                  "customtypes": [
+                    "movie",
+                    "event"
+                  ],
+                  "label": "Item"
+                }
+              }
+            }
           }
         }
       }

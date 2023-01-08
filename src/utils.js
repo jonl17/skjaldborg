@@ -1,4 +1,3 @@
-const { replace } = require('lodash')
 const slugify = require('slugify')
 
 const handleCloudinaryImage = (movie, year) => {
@@ -11,7 +10,8 @@ const handleCloudinaryImage = (movie, year) => {
   } else return ''
 }
 
-const cleanUpSlug = (title, prefix = '/') => `${prefix}${slugify(title, { lower: true, remove: /[*?+#;~.()'"!:@]/g })}`
+const cleanUpSlug = (title, prefix = '/') =>
+  `${prefix}${slugify(title, { lower: true, remove: /[*?+#;~.()'"!:@]/g })}`
 
 const cleanUpTitle = (title) => title.replace('&#8211;', '')
 

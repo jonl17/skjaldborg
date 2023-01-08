@@ -2,7 +2,7 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
-const SEO = ({
+const Seo = ({
   data: {
     site: { siteMetadata: meta },
   },
@@ -22,7 +22,7 @@ const SEO = ({
       {meta.subtitle && (
         <meta property='og:description' content={meta.subtitle} />
       )}
-      {meta.logo && <meta property='og:image' content={meta.logo} />}
+      {/* {meta.logo && <meta property='og:image' content={meta.logo} />} */}
 
       <link sizes='20x20' href='/favicon.ico' rel='icon'></link>
     </Helmet>
@@ -44,6 +44,6 @@ export default (props) => (
         }
       }
     `}
-    render={(data) => <SEO data={data} {...props}></SEO>}
+    render={(data) => <Seo data={data} {...props}></Seo>}
   ></StaticQuery>
 )

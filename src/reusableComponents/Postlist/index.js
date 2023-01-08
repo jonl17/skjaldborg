@@ -7,7 +7,6 @@ import { RootContext } from '../../context/main'
 
 // components
 import { Form, Input, Button } from './styled'
-import NewButton from '../NewButton/NewButton'
 
 const Postlist = ({ className }) => {
   const [store, setStore] = useState(null)

@@ -1,8 +1,7 @@
 import cn from 'classnames'
 import React from 'react'
-import { useSelector } from 'react-redux'
 import styled from 'styled-components'
-import { greenColor, redColor } from '../../../constants'
+import { redColor } from '../../../constants'
 import { useLang } from '../../../store'
 
 const ParticipantWrap = styled.div`

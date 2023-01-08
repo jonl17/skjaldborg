@@ -1,12 +1,13 @@
 import { graphql } from 'gatsby'
+import { withPrismicPreview } from 'gatsby-plugin-prismic-previews'
 import React from 'react'
+import '../../cms/fragments/movie'
+import { movieResolver } from '../../cms/resolvers'
 import PageContainer from '../../layouts/PageContainer'
+import SEO from '../../reusableComponents/SEO'
 import Banner from './components/Banner'
 import CoverImage from './components/CoverImage'
 import Info from './components/Info'
-import '../../cms/fragments/movie'
-import { movieResolver } from '../../cms/resolvers'
-import { withPrismicPreview } from 'gatsby-plugin-prismic-previews'
 
 const PrismicMovie = ({ data, pageContext }) => {
   const movie = movieResolver(data.prismicMovie)
@@ -20,8 +21,9 @@ const PrismicMovie = ({ data, pageContext }) => {
           title_en=''
           director={movie.director}
           year='2022'
-          backLink={
-            movie.lang === 'is' ? '/heimildamyndir' : '/en/documentaries'
+          backLink={movie.lang === 'is' ? '/verk-2022' : '/en/works-2022'}
+          backLinkText={
+            movie.lang === 'is' ? 'Öll verk 2022' : 'All works 2022'
           }
         />
         <Info
@@ -48,3 +50,20 @@ export const query = graphql`
     }
   }
 `
+
+export function Head({ data }) {
+  const movie = movieResolver(data.prismicMovie)
+  console.log(movie)
+
+  return (
+    <SEO
+      title={movie.title}
+      description={movie.excerpt.text}
+      image={
+        movie.image.thumbnails.seo
+          ? movie.image.thumbnails.seo
+          : movie.image.url
+      }
+    />
+  )
+}

@@ -1,6 +1,7 @@
 import { graphql } from 'gatsby'
 import React from 'react'
 import PageContainer from '../../layouts/PageContainer'
+import SEO from '../../reusableComponents/SEO'
 import Banner from './components/Banner'
 import CoverImage from './components/CoverImage'
 import Info from './components/Info'
@@ -20,6 +21,11 @@ const MarkDownMovie = ({ data: { movie } }) => {
 
   return (
     <>
+      <SEO
+        title={frontmatter.title}
+        description={frontmatter.director}
+        image={frontmatter.image}
+      />
       <PageContainer>
         <CoverImage image={frontmatter.image} />
         <Banner
