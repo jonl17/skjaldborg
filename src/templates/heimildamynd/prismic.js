@@ -53,11 +53,13 @@ export const query = graphql`
 
 export function Head({ data }) {
   const movie = movieResolver(data.prismicMovie)
+  console.log(movie)
+
   return (
     <SEO
       title={movie.title}
       description={movie.excerpt.text}
-      image={movie.image.seo.images.fallback.src}
+      image={movie.image.thumbnails.seo.url}
     />
   )
 }
