@@ -21,6 +21,8 @@ export const fragment = graphql`
         url
         alt
         gatsbyImageData
+        seo: gatsbyImageData(height: 630, width: 1200)
+        banner: gatsbyImageData
         thumbnails {
           seo {
             url

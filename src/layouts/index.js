@@ -33,7 +33,7 @@ const Layout = ({ children, location }) => {
 
   return (
     <>
-      <SEO></SEO>
+      {/* <SEO></SEO> */}
       <GlobalStyle></GlobalStyle>
       <Header />
       <main className='relative h-full w-full'>{children}</main>

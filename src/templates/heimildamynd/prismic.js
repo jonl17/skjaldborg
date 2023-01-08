@@ -14,11 +14,6 @@ const PrismicMovie = ({ data, pageContext }) => {
 
   return (
     <>
-      <SEO
-        title={movie.title}
-        description={movie.excerpt.text}
-        image={movie.image.thumbnails.seo ?? movie.image}
-      />
       <PageContainer>
         <CoverImage image={movie.image} />
         <Banner
@@ -55,3 +50,14 @@ export const query = graphql`
     }
   }
 `
+
+export function Head({ data }) {
+  const movie = movieResolver(data.prismicMovie)
+  return (
+    <SEO
+      title={movie.title}
+      description={movie.excerpt.text}
+      image={movie.image.seo.images.fallback.src}
+    />
+  )
+}

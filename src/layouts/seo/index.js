@@ -22,7 +22,7 @@ const Seo = ({
       {meta.subtitle && (
         <meta property='og:description' content={meta.subtitle} />
       )}
-      {meta.logo && <meta property='og:image' content={meta.logo} />}
+      {/* {meta.logo && <meta property='og:image' content={meta.logo} />} */}
 
       <link sizes='20x20' href='/favicon.ico' rel='icon'></link>
     </Helmet>
