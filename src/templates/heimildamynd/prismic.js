@@ -59,7 +59,11 @@ export function Head({ data }) {
     <SEO
       title={movie.title}
       description={movie.excerpt.text}
-      image={movie.image.thumbnails.seo.url}
+      image={
+        movie.image.thumbnails.seo
+          ? movie.image.thumbnails.seo
+          : movie.image.url
+      }
     />
   )
 }
