@@ -13,7 +13,6 @@ const SEO = ({
   description = 'Hátíð íslenskra heimildamynda',
   image,
 }: SEOProps) => {
-  console.log(image)
   return (
     <>
       <meta charSet='utf-8' />
