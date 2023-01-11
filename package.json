@@ -45,7 +45,7 @@
     "gatsby-source-filesystem": "^4.7.0",
     "gatsby-source-firestore": "^1.0.3",
     "gatsby-source-prismic": "^5.2.5",
-    "gatsby-transformer-remark": "^5.7.0",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^4.7.0",
     "gsap": "^3.2.6",
     "hyphen": "^1.6.2",
