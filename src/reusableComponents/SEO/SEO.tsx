@@ -22,7 +22,12 @@ const SEO = ({
 
       <meta property='description' name='description' content={description} />
       {image && (
-        <meta property='og:image' name='og:image' content={image.url} />
+        <meta
+          id='og-image'
+          property='og:image'
+          name='og:image'
+          content={image.url}
+        />
       )}
       <meta
         property='og:description'

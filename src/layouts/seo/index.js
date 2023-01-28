@@ -13,7 +13,7 @@ const Seo = ({
 
       <title>Skjaldborg</title>
 
-      <meta name='image' content={meta.logo} />
+      <meta id='og-image' name='image' content={meta.logo} />
 
       {meta.url && <meta property='og:url' content={meta.url} />}
 
