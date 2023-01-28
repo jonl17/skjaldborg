@@ -23,7 +23,7 @@ export const Line = styled.span`
   ${(props) =>
     props.ex &&
     css`
-      border-color: white;
+      border-color: rgb(250 204 21);
       ${(props) =>
         props.one &&
         css`

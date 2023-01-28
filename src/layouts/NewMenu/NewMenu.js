@@ -28,16 +28,18 @@ const NewMenu = () => {
       )}
     >
       <button
-        className='w-1/2 hidden md:block'
+        className='w-1/2 hidden md:block '
         onClick={() => toggleMenu(false)}
       ></button>
       <div className='grid place-content-center relative h-full gap-10 w-full lg:w-1/2 bg-primary text-tertiary'>
         <Link
-          className='absolute bottom-12 lg:top-12 left-12 hover:text-secondary'
+          className='absolute bottom-12 lg:top-12 left-12 hover:text-secondary '
           to={lang === 'is' ? '/en' : '/'}
           onClick={() => toggleMenu(false)}
         >
-          <h6>{lang === 'is' ? 'English' : 'Íslenska'}</h6>
+          <h6 className='text-yellow-400'>
+            {lang === 'is' ? 'English' : 'Íslenska'}
+          </h6>
         </Link>
         {menu.map((page, key) => (
           <Link
