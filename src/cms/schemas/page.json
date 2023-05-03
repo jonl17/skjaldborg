@@ -157,7 +157,15 @@
             "description": "documentaries displayed",
             "icon": "local_movies",
             "display": "list",
-            "non-repeat": {},
+            "non-repeat": {
+              "year": {
+                "type": "Text",
+                "config": {
+                  "label": "year",
+                  "placeholder": "2023"
+                }
+              }
+            },
             "repeat": {}
           },
           "events": {
@@ -166,7 +174,14 @@
             "description": "Fetches all events",
             "icon": "event_available",
             "display": "list",
-            "non-repeat": {},
+            "non-repeat": {
+              "year": {
+                "type": "Text",
+                "config": {
+                  "label": "year"
+                }
+              }
+            },
             "repeat": {}
           },
           "schedule": {

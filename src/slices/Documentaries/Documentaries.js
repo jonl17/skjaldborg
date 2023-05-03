@@ -3,10 +3,10 @@ import { useGetMovies } from '../../hooks/useGetMovies'
 import BlockGrid from '../../reusableComponents/BlockGrid/BlockGrid'
 import { useLang } from '../../store'
 
-const Documentaries = () => {
+const Documentaries = ({ primary }) => {
   const { lang } = useLang()
 
-  const movies = useGetMovies(lang)
+  const movies = useGetMovies(lang, parseInt(primary.year) ?? 2023)
 
   return (
     <section className='h-full relative p-4 lg:p-8'>

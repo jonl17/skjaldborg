@@ -3,10 +3,10 @@ import { useGetEvents } from '../../hooks/useGetEvents'
 import BlockGrid from '../../reusableComponents/BlockGrid/BlockGrid'
 import { useLang } from '../../store'
 
-const Events = () => {
+const Events = ({ primary }) => {
   const { lang } = useLang()
 
-  const events = useGetEvents(lang)
+  const events = useGetEvents(lang, parseInt(primary.year) ?? 2023)
 
   return (
     <section className='h-full relative p-4 lg:p-8'>
