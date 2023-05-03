@@ -6,12 +6,14 @@ import { useLang } from '../../store'
 const Documentaries = ({ primary }) => {
   const { lang } = useLang()
 
-  const movies = useGetMovies(lang, parseInt(primary.year) ?? 2023)
+  const year = parseInt(primary.year) ?? 2023
+
+  const movies = useGetMovies(lang, year)
 
   return (
     <section className='h-full relative p-4 lg:p-8'>
       <BlockGrid
-        title={lang === 'is' ? 'Verk 2022' : 'Documentaries 2022'}
+        title={lang === 'is' ? `Verk ${year}` : `Documentaries ${year}`}
         items={movies.map((item) => ({
           ...item,
           slug: item.url,

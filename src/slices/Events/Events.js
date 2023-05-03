@@ -6,12 +6,14 @@ import { useLang } from '../../store'
 const Events = ({ primary }) => {
   const { lang } = useLang()
 
-  const events = useGetEvents(lang, parseInt(primary.year) ?? 2023)
+  const year = parseInt(primary.year) ?? 2023
+
+  const events = useGetEvents(lang, year)
 
   return (
     <section className='h-full relative p-4 lg:p-8'>
       <BlockGrid
-        title={lang === 'is' ? 'Viðburðir' : 'Events'}
+        title={lang === 'is' ? `Viðburðir ${year}` : `Events ${year}`}
         items={events.map((item) => ({
           ...item,
           slug: item.url,
