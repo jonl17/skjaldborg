@@ -7,9 +7,10 @@ import ScheduleDay from './components/ScheduleDay'
 
 interface Props {
   items: IScheduleItem[]
+  year: number
 }
 
-const NewSchedule = ({ items }: Props) => {
+const NewSchedule = ({ items, year }: Props) => {
   const { lang } = useLang()
 
   const splitIntoDays = useMemo(
@@ -36,7 +37,7 @@ const NewSchedule = ({ items }: Props) => {
     <section className='h-full relative p-4 lg:p-8'>
       <div className='mt-36'>
         <h1 className='page-heading text-primary'>
-          {lang === 'is' ? 'Dagskrá 2022' : 'Schedule 2022'}
+          {lang === 'is' ? `Dagskrá ${year}` : `Schedule ${year}`}
         </h1>
 
         {schedule.map((item, key) => (
@@ -99,5 +100,5 @@ export default ({ primary }: SliceProps) => {
     }
   })
 
-  return <NewSchedule items={scheduleItems} />
+  return <NewSchedule items={scheduleItems} year={year} />
 }
