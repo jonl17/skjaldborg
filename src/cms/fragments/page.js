@@ -51,6 +51,9 @@ export const fragment = graphql`
         ... on PrismicPageDataBodySchedule {
           id
           slice_type
+          primary {
+            year
+          }
         }
         ... on PrismicPageDataBodyDocsAndEvents {
           id

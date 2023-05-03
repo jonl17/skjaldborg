@@ -175,7 +175,15 @@
             "description": "Þessi eining býr til dagskrá úr movie + event",
             "icon": "schedule",
             "display": "list",
-            "non-repeat": {},
+            "non-repeat": {
+              "year": {
+                "type": "Text",
+                "config": {
+                  "label": "year",
+                  "placeholder": "2023"
+                }
+              }
+            },
             "repeat": {}
           },
           "docs_and_events": {
@@ -198,10 +206,7 @@
                 "type": "Link",
                 "config": {
                   "select": "document",
-                  "customtypes": [
-                    "movie",
-                    "event"
-                  ],
+                  "customtypes": ["movie", "event"],
                   "label": "Item"
                 }
               }

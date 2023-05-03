@@ -56,7 +56,7 @@ const propResolver = (slice) => {
       }
     }
     default: {
-      return {}
+      return slice
     }
   }
 }

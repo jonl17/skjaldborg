@@ -47,9 +47,19 @@ const NewSchedule = ({ items }: Props) => {
   )
 }
 
-export default () => {
-  const movies = useGetMovies()
-  const events = useGetEvents()
+type SliceProps = {
+  primary: {
+    year: string
+  }
+}
+
+export default ({ primary }: SliceProps) => {
+  const year = parseInt(primary.year)
+
+  const { lang } = useLang()
+
+  const movies = useGetMovies(lang, year)
+  const events = useGetEvents(lang, year)
 
   const items1: IScheduleItem[] = movies.map((movie: any) => ({
     date: new Date(movie.scheduled),
